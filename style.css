@@ -119,7 +119,7 @@ body {
   bottom: 65px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1450px) {
   .hero h1 {
     font-size: 5em;
   }
@@ -129,7 +129,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1250px) {
   .hero h1 {
     font-size: 3em;
   }
@@ -147,6 +147,10 @@ body {
 @media only screen and (max-width: 992px) {
   .hero {
     flex-direction: column;
+  }
+
+  .hero h3 {
+    font-size: 3em;
   }
 
   .logo {
@@ -185,12 +189,21 @@ body {
 
   .logo {
     margin-right: 0;
+    background-color: black;
+    width: 100vw;
+    padding: 0px 50px 15px 50px;
+    border-bottom: 3px solid var(--main-text-color);
   }
 
   .nav-links {
+    margin-top: 15px;
     font-size: 1.5em;
     height: 50px;
     border-left: 5px solid var(--main-text-color);
     border-right: 5px solid var(--main-text-color);
+  }
+
+  .list {
+    height: 100%;
   }
 }
