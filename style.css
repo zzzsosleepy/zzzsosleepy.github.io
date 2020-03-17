@@ -27,12 +27,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(images/bg1.jpg);
+  /*background-image: url(images/bg1.jpg);*/
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
-
 .nav-links {
   position: relative;
   border-left: 15px solid var(--main-text-color);
@@ -49,7 +48,7 @@ body {
 
 .list {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   height: 75%;
   justify-content: center;
   align-items: center;
