@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css?family=Caveat|Crete+Round|Fredoka+One&display=swap");
+* {
+  box-sizing: border-box;
+  --main-text-color: rgb(67, 194, 88);
+  user-select: none;
+  -moz-user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fredoka One";
+  background-color: rgb(39, 39, 39);
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/bg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.nav-links {
+  position: relative;
+  border-left: 15px solid var(--main-text-color);
+  border-right: 15px solid var(--main-text-color);
+  height: 66px;
+  display: flex;
+  font-size: 2rem;
+  color: white;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  font-family: "Crete Round";
+}
+
+.list {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 75%;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 15px;
+  margin-left: 15px;
+  transition: 200ms ease;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  color: var(--main-text-color);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.hero {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(32, 32, 32, 0.95);
+  border-top: 5px solid rgba(52, 155, 70, 0.6);
+  border-bottom: 5px solid rgba(52, 155, 70, 0.6);
+}
+
+.hero h1 {
+  font-size: 6em;
+  color: var(--main-text-color);
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.hero h3 {
+  color: white;
+  font-size: 5em;
+  margin-bottom: 0;
+  margin-top: -25px;
+  text-align: right;
+  letter-spacing: 5px;
+  white-space: nowrap;
+}
+
+.hero::before {
+  content: "";
+  transform: translateX(-500px);
+  transition: 700ms ease;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 65px;
+  transition: 1200ms ease;
+}
+
+.hero img {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  right: 0;
+  bottom: 65px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .hero h1 {
+    font-size: 5em;
+  }
+
+  .hero h3 {
+    font-size: 4em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero h1 {
+    font-size: 3em;
+  }
+
+  .hero h3 {
+    font-size: 2em;
+    margin-top: -15px;
+  }
+
+  .logo {
+    margin-bottom: 35px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .nav-links {
+    margin-top: 15px;
+  }
+
+  .nav-item {
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    border-bottom: none;
+    border-top: none;
+  }
+
+  .hero h1 {
+    font-size: 2.2em;
+  }
+
+  .hero h3 {
+    margin-top: -10px;
+    font-size: 2em;
+  }
+  .hero img {
+    width: 50px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .nav-links {
+    font-size: 1.5em;
+    height: 50px;
+    border-left: 5px solid var(--main-text-color);
+    border-right: 5px solid var(--main-text-color);
+  }
+}
