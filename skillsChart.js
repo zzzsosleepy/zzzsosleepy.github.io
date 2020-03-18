@@ -19,11 +19,6 @@ let chart = new Chart(ctx2, {
   // Configuration options go here
   options: {
     legend: { display: false },
-    responsive: true,
-    scales: {
-      scaleLabel: {
-        fontColor: "red"
-      }
-    }
+    responsive: true
   }
 });

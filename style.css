@@ -187,13 +187,14 @@ body {
 
 .skillsSection h1 {
   color: white;
+  font-family: "Crete Round";
   font-size: 5em;
   text-shadow: 0 0 15px var(--smooth-shadow);
   margin: 0;
 }
 
 .skillsChart {
-  width: 75vw;
+  width: 50vw;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -241,6 +242,9 @@ body {
   .nav-item {
     font-size: 0.75em;
   }
+  .arrow {
+    left: 45%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -250,6 +254,10 @@ body {
     justify-content: flex-start;
     border-bottom: none;
     border-top: none;
+  }
+
+  #bgCanvas {
+    display: none;
   }
 
   .hero h1 {
@@ -282,5 +290,9 @@ body {
 
   .list {
     height: 100%;
+  }
+
+  .arrow {
+    left: 45%;
   }
 }
