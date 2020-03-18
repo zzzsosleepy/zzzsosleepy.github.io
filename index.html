@@ -8,31 +8,55 @@
   </head>
   <body>
     <div class="content">
-      <div class="main">
-        <div class="hero">
-          <canvas id="canvas"> </canvas>
-          <div class="logo">
-            <h1>HELLO, MY NAME IS</h1>
-            <h3>JEFFREY</h3>
+      <div class="hero">
+        <canvas id="bgCanvas"></canvas>
+        <div class="logo">
+          <h1>HELLO, MY NAME IS</h1>
+          <h3>JEFFREY</h3>
+        </div>
+        <ul class="nav-links">
+          <div class="list">
+            <li id="skillsBtn" class="nav-item">
+              Skills
+            </li>
+            -
+            <li class="nav-item">
+              Projects
+            </li>
+            -
+            <li class="nav-item">
+              Hire Me
+            </li>
           </div>
-          <ul class="nav-links">
-            <div class="list">
-              <li class="nav-item">
-                Projects
-              </li>
-              -
-              <li class="nav-item">
-                Skills
-              </li>
-              -
-              <li class="nav-item">
-                Hire Me
-              </li>
-            </div>
-          </ul>
+        </ul>
+      </div>
+      <div id="arrow" class="arrow">
+        <i class="fas fa-arrow-down"></i>
+      </div>
+    </div>
+    <div id="secondContent" class="content">
+      <div class="aboutme">
+        <div class="skillsSection">
+          <h1>Skills</h1>
+          <div class="skillsChart">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="skillsSection">
+          <h1>Skills</h1>
+        </div>
+        <div class="skillsSection">
+          <h1>Skills</h1>
         </div>
       </div>
     </div>
+    <script src="heroBG.js"></script>
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="skillsChart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f39575d584.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

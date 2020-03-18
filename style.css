@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Caveat|Crete+Round|Fredoka+One&display=swap");
+
 * {
   box-sizing: border-box;
   --main-text-color: rgb(67, 194, 88);
+  --smooth-shadow: rgba(0, 0, 0, 0.7);
   user-select: none;
   -moz-user-select: none;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 body {
@@ -13,7 +22,7 @@ body {
   background-color: rgb(39, 39, 39);
 }
 
-#canvas {
+#bgCanvas {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -83,6 +92,7 @@ body {
   color: var(--main-text-color);
   margin-bottom: 0;
   white-space: nowrap;
+  text-shadow: 0 0 5px var(--smooth-shadow);
 }
 
 .hero h3 {
@@ -93,6 +103,7 @@ body {
   text-align: right;
   letter-spacing: 2px;
   white-space: nowrap;
+  text-shadow: 0 0 5px var(--smooth-shadow);
 }
 
 .hero::before {
@@ -117,6 +128,72 @@ body {
   width: 150px;
   right: 0;
   bottom: 65px;
+}
+
+/* */
+
+.arrow {
+  display: block;
+  text-align: center;
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  color: var(--main-text-color);
+  font-size: 4em;
+  animation-duration: 1s;
+  animation-name: hover;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  text-shadow: 0 0 10px var(--smooth-shadow);
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: white;
+  transition: 300ms ease;
+  text-shadow: 0 0 5px black;
+}
+
+@keyframes hover {
+  from {
+    bottom: 2%;
+  }
+
+  to {
+    bottom: 1%;
+  }
+}
+
+/* SECOND CONTENT AREA */
+
+#secondContent {
+  display: block;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+}
+
+.aboutme {
+  width: 100vw;
+  height: 300vh;
+}
+
+.skillsSection {
+  padding-top: 50px;
+  padding-left: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.skillsSection h1 {
+  color: white;
+  font-size: 5em;
+  text-shadow: 0 0 15px var(--smooth-shadow);
+  margin: 0;
+}
+
+.skillsChart {
+  width: 75vw;
 }
 
 @media only screen and (max-width: 1450px) {
