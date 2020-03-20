@@ -8,6 +8,10 @@ let skillsBtn = document.getElementById("skillsBtn");
 let aboutmeBtn = document.getElementById("aboutmeBtn");
 let projectsBtn = document.getElementById("projectsBtn");
 
+let instaBtn = document.getElementById("instagramBtn");
+let githubBtn = document.getElementById("githubBtn");
+let linkedBtn = document.getElementById("linkedBtn");
+
 scrollArrow.addEventListener("click", function() {
   secondContent.scrollIntoView();
 });
@@ -30,3 +34,18 @@ whoArrow.addEventListener("click", function() {
 skillsArrow.addEventListener("click", function() {
   fourthContent.scrollIntoView();
 });
+
+githubBtn.addEventListener("click", function() {
+  window.open("https://github.com/zzzsosleepy");
+});
+
+instaBtn.addEventListener("click", function() {
+  window.open("https://www.instagram.com/zzzjeffrey/");
+});
+
+linkedBtn.addEventListener("click", function() {
+  window.open("https://www.linkedin.com/in/jeffrey-chipman-1a4289172/");
+});
+var a = ["dog", "cat"];
+a[100] = "fox";
+console.log("a");
