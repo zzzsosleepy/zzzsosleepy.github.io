@@ -321,6 +321,12 @@ body {
   z-index: 1;
 }
 
+#myChart {
+  box-shadow: 0 2px 5px var(--smooth-shadow);
+  background-color: rgb(36, 36, 36);
+  border-radius: 25px 0 25px 0;
+}
+
 .rotate180 {
   transform: scaleX(-1) rotateZ(180deg);
 }
@@ -488,14 +494,22 @@ body {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--main-text-color);
+  padding-top: 5px;
+  margin-top: 0;
 }
 
 .projectCard p {
   font-family: "Crete Round";
+  margin-bottom: 5px;
+  font-size: 0.9em;
 }
 
 .projectCard img {
-  width: 100%;
+  width: 450px;
+  height: 300px;
+
+  /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+  object-fit: scale-down;
   border-radius: 5px;
   border: 7px solid var(--main-text-color);
 }
