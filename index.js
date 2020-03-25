@@ -1,55 +1,51 @@
-let scrollArrow = document.getElementById("arrow");
-let whoArrow = document.getElementById("whoarrow");
-let skillsArrow = document.getElementById("skillsarrow");
-let secondContent = document.getElementById("secondContent");
-let thirdContent = document.getElementById("thirdContent");
-let fourthContent = document.getElementById("fourthContent");
+let toTopBtn = document.getElementById("toTopBtn");
+let y = window.scrollY;
+
+let sectionOne = document.getElementById("sectionOne");
+let sectionTwo = document.getElementById("sectionTwo");
+let sectionThree = document.getElementById("sectionThree");
+let sectionFour = document.getElementById("sectionFour");
+
+let aboutBtn = document.getElementById("aboutBtn");
 let skillsBtn = document.getElementById("skillsBtn");
-let aboutmeBtn = document.getElementById("aboutmeBtn");
 let projectsBtn = document.getElementById("projectsBtn");
 
-let instaBtn = document.getElementById("instagramBtn");
-let githubBtn = document.getElementById("githubBtn");
-let linkedBtn = document.getElementById("linkedBtn");
-
-let demoCTABtn = document.getElementById("demoCTABtn");
-
-scrollArrow.addEventListener("click", function() {
-  secondContent.scrollIntoView();
+toTopBtn.addEventListener("click", function() {
+  sectionOne.scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
-aboutmeBtn.addEventListener("click", function() {
-  secondContent.scrollIntoView();
+aboutBtn.addEventListener("click", function() {
+  sectionTwo.scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
 skillsBtn.addEventListener("click", function() {
-  thirdContent.scrollIntoView();
+  sectionThree.scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
 projectsBtn.addEventListener("click", function() {
-  fourthContent.scrollIntoView();
+  sectionFour.scrollIntoView({
+    behavior: "smooth"
+  });
 });
 
-whoArrow.addEventListener("click", function() {
-  thirdContent.scrollIntoView();
-});
-skillsArrow.addEventListener("click", function() {
-  fourthContent.scrollIntoView();
-});
+const scrollFunc = () => {
+  // Get the current scroll value
+  let y = window.scrollY;
 
-githubBtn.addEventListener("click", function() {
-  window.open("https://github.com/zzzsosleepy");
-});
+  // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
+  if (y > 900) {
+    toTopBtn.className = "backToTop show";
+  } else {
+    toTopBtn.className = "backToTop hide";
+  }
+};
 
-instaBtn.addEventListener("click", function() {
-  window.open("https://www.instagram.com/zzzjeffrey/");
-});
+window.addEventListener("scroll", scrollFunc);
 
-linkedBtn.addEventListener("click", function() {
-  window.open("https://www.linkedin.com/in/jeffrey-chipman-1a4289172/");
-});
-
-demoCTABtn.addEventListener("click", function() {});
-var a = ["dog", "cat"];
-a[100] = "fox";
-console.log("a");
+console.log(y);

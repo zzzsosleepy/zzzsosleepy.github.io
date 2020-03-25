@@ -3,211 +3,146 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Jeffrey Chipman - Web Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <title>Jeffrey Chipman</title>
   </head>
   <body>
-    <div class="content">
-      <div class="hero">
-        <canvas id="bgCanvas"></canvas>
-        <div class="logo">
-          <h1>HELLO, MY NAME IS</h1>
-          <h3>JEFFREY</h3>
-        </div>
-        <ul class="nav-links">
-          <div class="list">
-            <li id="aboutmeBtn" class="nav-item">
-              About Me
-            </li>
-            -
-            <li id="skillsBtn" class="nav-item">
-              Skills
-            </li>
-            -
-            <li id="projectsBtn" class="nav-item">
-              Projects
-            </li>
-            -
-            <li class="nav-item">
-              Hire Me
-            </li>
-          </div>
+    <div id="toTopBtn" class="backToTop hide">
+      <i class="fi-cnsuxl-chevron-solid"></i>
+    </div>
+    <div class="navbar">
+      <ul class="navList">
+        <li id="aboutBtn" class="navLink">
+          <i class="fi-cnluxl-user-circle"></i>
+        </li>
+        <li id="skillsBtn" class="navLink">
+          <i class="fi-xnsuhl-bar-chart-solid"></i>
+        </li>
+        <li id="projectsBtn" class="navLink">
+          <i class="fi-xwsuxl-folder-solid"></i>
+        </li>
+      </ul>
+    </div>
+    <div id="sectionOne" class="sectionOne">
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
-      <div id="arrow" class="arrow">
-        <i class="fas fa-arrow-down"></i>
+      <div class="nameTitle">
+        <h1>Hello, my name is</h1>
+        <h2>Jeffrey</h2>
       </div>
     </div>
-    <div id="secondContent" class="content">
-      <div class="aboutme">
-        <div class="whoami">
-          <div class="titles">
-            <h1>Who am I?</h1>
-            <p>
-              I'm a web developer from Nova Scotia, Canada.
+    <div id="sectionTwo" class="sectionTwo">
+      <div
+        class="area continous"
+        style="transform: rotateZ(180deg) rotateY(180deg);"
+      >
+        <ul class="circles invert">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="title">
+        <h1 class="sectionTitle">Who am I?</h1>
+        <hr />
+      </div>
+      <div class="descContainer">
+        <p class="description">
+          I'm a web developer from Nova Scotia, Canada.
+        </p>
+        <p class="description">
+          I have a passion for taking ideas and bringing them to life on a
+          screen.
+        </p>
+        <div class="aboutImg">
+          <img src="images/head.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="sectionThree" class="sectionThree">
+      <div class="title">
+        <h1 class="sectionTitle light">What can I do for you?</h1>
+        <hr class="light" />
+      </div>
+      <div class="descContainer">
+        <p class="description light slim">
+          I can take your design or vision and turn it into a fully functioning
+          website.
+        </p>
+      </div>
+      <ul class="skillsList">
+        <li class="skillBlock">
+          HTML
+        </li>
+        <li class="skillBlock">
+          CSS
+        </li>
+        <li class="skillBlock">
+          Javascript
+        </li>
+        <li class="skillBlock">
+          Electron
+        </li>
+        <li class="skillBlock">
+          React
+        </li>
+        <li class="skillBlock">
+          C#
+        </li>
+        <li class="skillBlock">
+          Photoshop
+        </li>
+      </ul>
+    </div>
+    <div id="sectionFour" class="sectionFour">
+      <div class="title">
+        <h1 class="sectionTitle">My Work</h1>
+        <hr />
+      </div>
+      <div class="projectContainer">
+        <ul class="projectList">
+          <li class="project sleepystory">
+            <h1 class="projTitle">SleepyStory</h1>
+            <p class="projDesc">
+              A 2D platformer game developed using C# and Unity
             </p>
-            <p>
-              I have a passion for taking ideas and bringing them to life on a
-              screen.
+          </li>
+          <li class="project weatherornot">
+            <h1 class="projTitle">WeatherOrNot</h1>
+            <p class="projDesc">
+              An ambient noise weather app built using Electron
             </p>
-            <ul class="contactLinks">
-              <li id="githubBtn" class="contactIcon">
-                <i class="fab fa-github-square"> </i>
-              </li>
-              <li id="instagramBtn" class="contactIcon">
-                <i class="fab fa-instagram-square"> </i>
-              </li>
-              <li id="linkedBtn" class="contactIcon">
-                <i class="fab fa-linkedin"> </i>
-              </li>
-            </ul>
-          </div>
-          <div class="meimg">
-            <img src="images/me.jpg" alt="" />
-          </div>
-          <div id="whoarrow" class="arrow">
-            <i class="fas fa-arrow-down"></i>
-          </div>
-        </div>
-        <div class="area">
-          <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
+          </li>
+          <li class="project sleepystory">
+            <h1 class="projTitle">ShiftWork</h1>
+            <p class="projDesc">
+              An app for shift workers used to keep track of hours and predict
+              pay
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
-    <div id="thirdContent" class="thirdContent">
-      <div class="skillsSection">
-        <div class="skillsChart">
-          <h1>What can I do for you?</h1>
-          <canvas id="myChart"></canvas>
-        </div>
-        <h3>I continue to actively learn every day.</h3>
-        <div id="skillsarrow" class="arrow">
-          <i class="fas fa-arrow-down"></i>
-        </div>
-      </div>
-
-      <div class="rotate180">
-        <div class="area">
-          <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div id="fourthContent" class="fourthContent">
-      <div class="projectsSection">
-        <div class="projectTitle">
-          <h1>Projects</h1>
-        </div>
-        <div class="projectContainer">
-          <ul class="projectList">
-            <li class="projectCard">
-              <h1 class="projectTitle">
-                [ SleepyStory ]
-              </h1>
-              <p>
-                A 2D platformer game written in C# using the Unity game engine.
-              </p>
-
-              <img src="images/projects/proj1.png" alt="" />
-              <div id="demoCTABtn" class="demoCTABtn">
-                <h1>
-                  Try the demo!
-                </h1>
-              </div>
-              <div class="githubLinkBtn">
-                <a
-                  href="https://github.com/zzzsosleepy/sleepystory"
-                  class="contactIconLink"
-                >
-                  <div class="contactIcon-small projectGithubBtn">
-                    <i class="fab fa-github-square"> </i>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li class="projectCard">
-              <h1 class="projectTitle">
-                [ WeatherOrNot ]
-              </h1>
-              <p>
-                An ambient-noise weather app.
-              </p>
-
-              <img src="images/projects/proj2.png" alt="" />
-              <div id="demoCTABtn" class="demoCTABtn">
-                <h1>
-                  Try the demo!
-                </h1>
-              </div>
-              <div class="githubLinkBtn">
-                <a
-                  href="https://github.com/zzzsosleepy/weatherornot"
-                  class="contactIconLink"
-                >
-                  <div class="contactIcon-small projectGithubBtn">
-                    <i class="fab fa-github-square"> </i>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li class="projectCard">
-              <h1 class="projectTitle">
-                [ ShiftWork ]
-              </h1>
-              <p>
-                An app for shift workers to keep track of their hours & pay.
-              </p>
-
-              <img src="images/projects/proj3.png" alt="" />
-              <div id="demoCTABtn" class="demoCTABtn">
-                <h1>
-                  Try the demo!
-                </h1>
-              </div>
-              <div class="githubLinkBtn">
-                <a
-                  href="https://github.com/zzzsosleepy/sleepystory"
-                  class="contactIconLink"
-                >
-                  <div class="contactIcon-small projectGithubBtn">
-                    <i class="fab fa-github-square"> </i>
-                  </div>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <script src="heroBG.js"></script>
     <script src="index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <script src="skillsChart.js"></script>
-    <script
-      src="https://kit.fontawesome.com/f39575d584.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
