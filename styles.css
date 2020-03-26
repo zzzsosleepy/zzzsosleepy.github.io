@@ -137,7 +137,7 @@ body {
 
 .sectionTitle {
   position: relative;
-  padding-top: 15px;
+  padding-top: 0x;
   font-size: 4em;
   font-family: "Signika";
   color: var(--gray-bg-color);
@@ -181,14 +181,14 @@ hr.light {
 .aboutImg {
   display: flex;
   justify-content: center;
-  padding: 15px 15px 0 15px;
+  padding: 0px 15px 45px 15px;
   border-radius: 5px;
 }
 
 .aboutImg img {
-  width: 100%;
+  width: 300px;
   border-radius: 5px;
-  border: 5px solid var(--offwhite);
+  border: 5px solid var(--gray-bg-color);
 }
 
 /*   */
