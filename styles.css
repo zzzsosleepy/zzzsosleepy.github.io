@@ -17,7 +17,7 @@
 body {
   height: 400vh;
   width: 100%;
-  background-color: coral;
+  background-color: var(--primary-darker);
 }
 
 .backToTop {
@@ -26,6 +26,7 @@ body {
   right: 25px;
   color: white;
   font-size: 3em;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 1);
 }
 
 .backToTop:hover {
@@ -37,6 +38,7 @@ body {
   visibility: visible;
   opacity: 1;
   transition: 200ms ease;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 1);
 }
 
 .backToTop.hide {
@@ -142,7 +144,6 @@ body {
   font-family: "Signika";
   color: var(--gray-bg-color);
   text-align: center;
-  text-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sectionTitle.light {
@@ -155,7 +156,6 @@ hr {
   border: 3px solid var(--gray-bg-color);
   border-radius: 5px;
   margin-bottom: 25px;
-  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 hr.light {
@@ -233,36 +233,86 @@ hr.light {
 .sectionFour {
   position: relative;
   display: block;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  height: 200vh;
   background-color: var(--primary-darker);
   z-index: -2;
 }
-
-.projectContainer {
-}
-
 .projectList {
   display: flex;
   flex-direction: column;
+  gap: 25px;
   list-style: none;
   justify-content: center;
   align-items: center;
 }
 
 .project {
+  background-color: rgb(52, 117, 63);
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
   text-align: center;
-  height: 250px;
-  border-radius: 15px;
+  width: 250px;
+  height: 350px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid var(--offwhite);
 }
 
-.project.sleepystory {
+.projImg.sleepystory {
+  border: 6px solid var(--gray-bg-color);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
   background-image: url("images/sleepystory.png");
   background-position: center;
   background-size: cover;
+}
+
+.projImg.weatherornot {
+  border: 6px solid var(--gray-bg-color);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/weatherornot.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.projImg.shiftwork {
+  border: 6px solid var(--gray-bg-color);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/shiftwork.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.projTitle {
+  font-family: "Fredoka One";
+  font-size: 1.4em;
+}
+
+.projDesc {
+  font-family: "Signika";
+  margin-bottom: 15px;
+}
+
+.footerTitle {
+  text-align: center;
+  margin-top: 35px;
+  font-family: "Fredoka One";
+  padding-left: 15px;
+  color: var(--offwhite);
+}
+
+.footerSub {
+  text-align: center;
+  font-family: "Signika";
+  padding-left: 15px;
+  font-size: 1.2em;
 }
 /*   */
 
