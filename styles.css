@@ -22,10 +22,10 @@ body {
 
 .backToTop {
   position: fixed;
-  top: 25px;
-  right: 25px;
+  top: 15px;
+  right: 15px;
   color: white;
-  font-size: 6em;
+  font-size: 4em;
   z-index: 5;
 }
 
@@ -494,9 +494,14 @@ hr.light {
 
 /* RESPONSIVENESS */
 @media screen and (min-width: 600px) {
+  .backToTop {
+    font-size: 5em;
+  }
+
   .sectionOne {
     padding-left: 65px;
   }
+
   .sectionTwo {
     display: flex;
     flex-direction: column;
