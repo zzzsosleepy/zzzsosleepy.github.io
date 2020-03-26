@@ -268,7 +268,7 @@ hr.light {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  height: 200vh;
+  height: 265vh;
   background-color: var(--primary-darker);
   z-index: -2;
 }
@@ -597,7 +597,7 @@ hr.light {
   }
 
   .footerTitle {
-    margin-top: 0;
+    margin-top: 50px;
   }
 
   .navbar {
