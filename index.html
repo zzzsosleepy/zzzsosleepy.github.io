@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="https://friconix.com/cdn/friconix.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f39575d584.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Jeffrey Chipman</title>
   </head>
   <body>
@@ -13,14 +17,17 @@
     </div>
     <div class="navbar">
       <ul class="navList">
+        <li id="homeBtn" class="navLink">
+          <i class="fas fa-home"></i>
+        </li>
         <li id="aboutBtn" class="navLink">
-          <i class="fi-cnluxl-user-circle"></i>
+          <i class="fas fa-address-card"></i>
         </li>
         <li id="skillsBtn" class="navLink">
-          <i class="fi-xnsuhl-bar-chart-solid"></i>
+          <i class="fas fa-code"></i>
         </li>
         <li id="projectsBtn" class="navLink">
-          <i class="fi-xwsuxl-folder-solid"></i>
+          <i class="fas fa-folder"></i>
         </li>
       </ul>
     </div>
@@ -66,20 +73,51 @@
         <h1 class="sectionTitle">Who am I?</h1>
         <hr />
       </div>
+
       <div class="descContainer">
         <div class="aboutImg">
           <img src="images/head.png" alt="" />
         </div>
-        <p class="description">
-          I'm a web developer from Nova Scotia, Canada.
-        </p>
-        <p class="description">
-          I have a passion for taking ideas and bringing them to life on a
-          screen.
-        </p>
+        <div class="descriptions">
+          <p class="description">
+            My name's Jeffrey Chipman.
+          </p>
+          <p class="description">
+            I'm a web developer from Nova Scotia, Canada.
+          </p>
+          <p class="description">
+            I have a passion for taking ideas and bringing them to life on a
+            screen.
+          </p>
+          <ul class="contactIconsList">
+            <li class="contactIcon">
+              <i class="fab fa-instagram-square"></i>
+            </li>
+            <li class="contactIcon">
+              <i class="fab fa-linkedin"></i>
+            </li>
+            <li class="contactIcon">
+              <i class="fab fa-github-square"></i>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div id="sectionThree" class="sectionThree">
+      <div class="area">
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       <div class="title">
         <h1 class="sectionTitle light">What can I do for you?</h1>
         <hr class="light" />
@@ -115,6 +153,23 @@
       </ul>
     </div>
     <div id="sectionFour" class="sectionFour">
+      <div
+        class="area continous"
+        style="transform: rotateZ(180deg) rotateY(180deg);"
+      >
+        <ul class="circles invert">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       <div class="title">
         <h1 class="sectionTitle">My Work</h1>
         <hr />
@@ -128,10 +183,12 @@
           <div class="projImg sleepystory"></div>
         </li>
         <li class="project weatherornot">
-          <h1 class="projTitle">WeatherOrNot</h1>
-          <p class="projDesc">
-            An ambient noise weather app built using Electron
-          </p>
+          <div class="projectInfo">
+            <h1 class="projTitle">WeatherOrNot</h1>
+            <p class="projDesc">
+              An ambient noise weather app built using Electron
+            </p>
+          </div>
           <div class="projImg weatherornot"></div>
         </li>
         <li class="project">
@@ -142,8 +199,10 @@
           <div class="projImg shiftwork"></div>
         </li>
       </ul>
-      <h1 class="footerTitle">Let's work together!</h1>
-      <h2 class="footerSub">Contact me at: zzzsojeffrey@gmail.com</h2>
+      <div class="contact">
+        <h1 class="footerTitle">Let's work together!</h1>
+        <h2 class="footerSub">Contact me at: zzzsojeffrey@gmail.com</h2>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
