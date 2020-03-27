@@ -156,7 +156,6 @@ hr {
   width: 300px;
   border: 3px solid var(--gray-bg-color);
   border-radius: 5px;
-  margin-bottom: 25px;
 }
 
 hr.light {
@@ -238,6 +237,7 @@ hr.light {
 }
 
 .skillsList {
+  overflow: auto;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -273,13 +273,16 @@ hr.light {
   z-index: -2;
 }
 .projectList {
+  overflow: auto;
   display: flex;
   flex-direction: column;
   list-style: none;
   align-items: center;
+  justify-content: center;
 }
 
 .project {
+  overflow: auto;
   background-color: rgb(52, 117, 63);
   display: flex;
   flex-direction: column;
@@ -291,8 +294,7 @@ hr.light {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border: 3px solid var(--offwhite);
-  margin-bottom: 45px;
-  margin-top: -35px;
+  margin-top: 15px;
 }
 
 .projImg.sleepystory {
@@ -336,7 +338,8 @@ hr.light {
 }
 
 .footerTitle {
-  margin-top: -45px;
+  margin-top: 25px;
+
   text-align: center;
   font-family: "Fredoka One";
   padding-left: 15px;
@@ -348,6 +351,7 @@ hr.light {
   font-family: "Signika";
   padding-left: 15px;
   font-size: 1.2em;
+  margin-bottom: 85px;
 }
 /*   */
 
@@ -516,9 +520,7 @@ hr.light {
   .title {
     position: relative;
     font-size: 1.7em;
-    padding-top: 35px;
-    padding-bottom: 5px;
-    margin-top: -75px;
+    margin-bottom: 55px;
   }
 
   .sectionTwo hr {
@@ -571,6 +573,7 @@ hr.light {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    padding-top: 0;
     padding-left: 65px;
   }
 
@@ -587,7 +590,7 @@ hr.light {
     background-color: rgb(52, 117, 63);
     display: flex;
     flex-direction: column;
-    align-items: space-between;
+    align-items: center;
     text-align: center;
     width: 450px;
     height: 350px;
@@ -596,6 +599,8 @@ hr.light {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border: 3px solid var(--offwhite);
     margin-right: 25px;
+    margin-bottom: 0;
+    margin-top: 25px;
   }
 
   .footerTitle {
