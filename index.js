@@ -6,9 +6,16 @@ let sectionTwo = document.getElementById("sectionTwo");
 let sectionThree = document.getElementById("sectionThree");
 let sectionFour = document.getElementById("sectionFour");
 
+let homeBtn = document.getElementById("homeBtn");
 let aboutBtn = document.getElementById("aboutBtn");
 let skillsBtn = document.getElementById("skillsBtn");
 let projectsBtn = document.getElementById("projectsBtn");
+
+homeBtn.addEventListener("click", function() {
+  sectionOne.scrollIntoView({
+    behavior: "smooth"
+  });
+});
 
 toTopBtn.addEventListener("click", function() {
   sectionOne.scrollIntoView({
@@ -39,7 +46,7 @@ const scrollFunc = () => {
   let y = window.scrollY;
 
   // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
-  if (y > 900) {
+  if (y > 700) {
     toTopBtn.className = "backToTop show";
   } else {
     toTopBtn.className = "backToTop hide";

@@ -15,30 +15,30 @@
 }
 
 body {
-  height: 400vh;
+  height: 300vh;
   width: 100%;
   background-color: var(--primary-darker);
 }
 
 .backToTop {
   position: fixed;
-  top: 25px;
-  right: 25px;
+  top: 15px;
+  right: 15px;
   color: white;
-  font-size: 3em;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+  font-size: 4em;
+  z-index: 5;
 }
 
 .backToTop:hover {
   cursor: pointer;
-  color: var(--primary-darker);
+  color: var(--primary-color);
 }
 
 .backToTop.show {
   visibility: visible;
   opacity: 1;
   transition: 200ms ease;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .backToTop.hide {
@@ -55,7 +55,7 @@ body {
   background-color: black;
   height: 65px;
   box-shadow: 0 3px 5px black;
-  z-index: 3;
+  z-index: 4;
 }
 
 .navList {
@@ -128,14 +128,13 @@ body {
 /* SECTION TWO */
 .sectionTwo {
   position: relative;
-  display: block;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--primary-darker);
-  z-index: -1;
+  z-index: 3;
   padding-bottom: 50px;
 }
 
@@ -165,11 +164,22 @@ hr.light {
 }
 
 .description {
+  position: relative;
   color: var(--gray-bg-color);
   font-size: 1.5em;
   font-family: "Signika";
   text-align: center;
-  text-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.descriptions {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
 }
 
 .description.light {
@@ -180,10 +190,29 @@ hr.light {
   padding: 0px 15px;
 }
 
+.contactIconsList {
+  position: relative;
+  padding-top: 0px;
+  list-style: none;
+  display: flex;
+  z-index: 3;
+}
+
+.contactIcon {
+  font-size: 4em;
+  margin-right: 25px;
+}
+
+.contactIcon:hover {
+  color: white;
+  transition: 200ms ease;
+  cursor: pointer;
+}
+
 .aboutImg {
   display: flex;
   justify-content: center;
-  padding: 0px 15px 45px 15px;
+  padding: 0px 15px 15px 15px;
   border-radius: 5px;
 }
 
@@ -211,7 +240,6 @@ hr.light {
 .skillsList {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
   list-style: none;
   justify-content: center;
   align-items: center;
@@ -228,23 +256,26 @@ hr.light {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 /*   */
 
 /* SECTION FOUR */
 .sectionFour {
   position: relative;
-  display: block;
-  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 165vh;
   background-color: var(--primary-darker);
   z-index: -2;
 }
 .projectList {
   display: flex;
   flex-direction: column;
-  gap: 25px;
   list-style: none;
-  justify-content: center;
   align-items: center;
 }
 
@@ -260,6 +291,8 @@ hr.light {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border: 3px solid var(--offwhite);
+  margin-bottom: 45px;
+  margin-top: -35px;
 }
 
 .projImg.sleepystory {
@@ -303,8 +336,8 @@ hr.light {
 }
 
 .footerTitle {
+  margin-top: -45px;
   text-align: center;
-  margin-top: 35px;
   font-family: "Fredoka One";
   padding-left: 15px;
   color: var(--offwhite);
@@ -331,7 +364,7 @@ hr.light {
 .area.continous {
   position: absolute;
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   padding-bottom: 15px;
   z-index: -1;
 }
@@ -456,4 +489,145 @@ hr.light {
   }
 }
 
+/*   */
+
+/* RESPONSIVENESS */
+@media screen and (min-width: 600px) {
+  .backToTop {
+    font-size: 5em;
+  }
+
+  .sectionOne {
+    padding-left: 65px;
+  }
+
+  .sectionTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 65px;
+  }
+
+  .sectionThree {
+    padding-left: 65px;
+  }
+
+  .title {
+    position: relative;
+    font-size: 1.7em;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    margin-top: -75px;
+  }
+
+  .sectionTwo hr {
+    margin-top: -15px;
+    width: 550px;
+    border: 5px solid var(--gray-bg-color);
+  }
+
+  .sectionTwo p {
+    font-size: 3em;
+    width: 700px;
+    text-align: left;
+  }
+
+  .aboutImg {
+    padding: 0 25px 0 0;
+  }
+
+  .aboutImg img {
+    width: 500px;
+    border-radius: 5px;
+    border: 5px solid var(--gray-bg-color);
+  }
+
+  .descContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  .descriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .contactIconsList {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .contactIcon {
+    margin-right: 25px;
+  }
+
+  .sectionFour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-left: 65px;
+  }
+
+  .projectList {
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .project {
+    background-color: rgb(52, 117, 63);
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    text-align: center;
+    width: 450px;
+    height: 350px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--offwhite);
+    margin-right: 25px;
+  }
+
+  .footerTitle {
+    margin-top: 50px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .footerSub {
+    padding-left: 0;
+  }
+
+  .navbar {
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    background-color: black;
+    width: 65px;
+    box-shadow: 0 3px 5px black;
+    z-index: 4;
+  }
+
+  .navList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 25px;
+    align-items: center;
+  }
+
+  .navLink {
+    margin-bottom: 25px;
+  }
+}
 /*   */
