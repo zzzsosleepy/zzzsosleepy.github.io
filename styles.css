@@ -502,7 +502,6 @@ hr.light {
   }
 
   .sectionOne {
-    padding-left: 65px;
   }
 
   .sectionTwo {
@@ -510,11 +509,9 @@ hr.light {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 65px;
   }
 
   .sectionThree {
-    padding-left: 65px;
   }
 
   .title {
@@ -574,7 +571,6 @@ hr.light {
     justify-content: center;
     height: 100vh;
     padding-top: 0;
-    padding-left: 65px;
   }
 
   .projectList {
