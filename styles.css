@@ -501,9 +501,6 @@ hr.light {
     font-size: 5em;
   }
 
-  .sectionOne {
-  }
-
   .sectionTwo {
     display: flex;
     flex-direction: column;
@@ -617,6 +614,7 @@ hr.light {
     width: 65px;
     box-shadow: 0 3px 5px black;
     z-index: 4;
+    overflow: visible;
   }
 
   .navList {
