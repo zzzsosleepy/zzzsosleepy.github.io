@@ -199,7 +199,10 @@ hr.light {
 
 .contactIcon {
   font-size: 4em;
-  margin-right: 25px;
+  color: var(--gray-bg-color);
+  padding-left: 0px !important;
+  padding-top: 15px;
+  padding-right: 15px;
 }
 
 .contactIcon:hover {
@@ -553,11 +556,14 @@ hr.light {
   .contactIconsList {
     list-style: none;
     display: flex;
-    justify-content: flex-start;
   }
 
   .contactIcon {
-    margin-right: 25px;
+    font-size: 4em;
+    color: var(--gray-bg-color);
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .sectionFour {
