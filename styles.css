@@ -284,6 +284,7 @@ hr.light {
 }
 
 .project {
+  color: white;
   overflow: auto;
   background-color: rgb(52, 117, 63);
   display: flex;

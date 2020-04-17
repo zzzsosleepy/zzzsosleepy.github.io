@@ -11,34 +11,40 @@ let aboutBtn = document.getElementById("aboutBtn");
 let skillsBtn = document.getElementById("skillsBtn");
 let projectsBtn = document.getElementById("projectsBtn");
 
-homeBtn.addEventListener("click", function() {
+let rippleBox = document.getElementById("rippleBox");
+
+homeBtn.addEventListener("click", function () {
   sectionOne.scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
-toTopBtn.addEventListener("click", function() {
+toTopBtn.addEventListener("click", function () {
   sectionOne.scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
-aboutBtn.addEventListener("click", function() {
+aboutBtn.addEventListener("click", function () {
   sectionTwo.scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
-skillsBtn.addEventListener("click", function() {
+skillsBtn.addEventListener("click", function () {
   sectionThree.scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
-projectsBtn.addEventListener("click", function() {
+projectsBtn.addEventListener("click", function () {
   sectionFour.scrollIntoView({
-    behavior: "smooth"
+    behavior: "smooth",
   });
+});
+
+rippleBox.addEventListener("click", function () {
+  document.location = "www.jeffreychipman.com/rippl";
 });
 
 const scrollFunc = () => {
