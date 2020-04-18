@@ -8,6 +8,9 @@ downloadBtn.addEventListener("click", DownloadImages);
 let images = [];
 function DownloadImages() {
   const searchParam = document.getElementById("inputText").value;
+  if (searchParam == "") {
+    return;
+  }
   let newUrl = new URL(myUrl + searchParam);
 
   var getHTML = function (url, callback) {
