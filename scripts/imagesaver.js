@@ -9,7 +9,6 @@ let images = [];
 function DownloadImages() {
   const searchParam = document.getElementById("inputText").value;
   let newUrl = new URL(myUrl + searchParam);
-  console.log(newUrl);
 
   var getHTML = function (url, callback) {
     // Feature detection
@@ -46,7 +45,6 @@ function urlToPromise(url) {
     JSZipUtils.getBinaryContent(url, function (err, data) {
       if (err) {
         reject(err);
-        console.log("HI");
       } else {
         resolve(data);
       }

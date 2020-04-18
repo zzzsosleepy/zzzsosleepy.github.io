@@ -15,7 +15,6 @@ function ChangeSearchText() {
   if (randNum != selectedIndex) {
     selectedIndex = randNum;
     $("#inputText").attr("placeholder", randomSearches[randNum]);
-    console.log("hi " + randomSearches[randNum]);
   } else {
     ChangeSearchText();
   }
