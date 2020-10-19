@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Righteous&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  --not-black: #24272c;
+  --not-black-2: #393a3f;
+  user-select: none;
+}
+
+/* BODY STUFF */
+body {
+  background-color: var(--not-black);
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* HEADER STUFF */
+
+header {
+  position: relative;
+  height: 800px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+.headerbg {
+  position: absolute;
+  top: 0;
+  height: 800px;
+  width: 100%;
+  background: rgb(255, 132, 95);
+  background: linear-gradient(
+    180deg,
+    rgb(224, 109, 109) 0%,
+    rgb(255, 140, 73) 100%
+  );
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+.headerbg-overlay {
+  position: absolute;
+  top: 0;
+  height: 800px;
+  width: 100%;
+  background-image: url("tavern-images/bg_cover.png");
+  background-size: 2%;
+  background-repeat: repeat;
+  z-index: 1;
+}
+
+nav {
+  top: 0;
+  margin: 0 auto 0 auto;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo h1 {
+  display: flex;
+  color: white;
+  text-align: left;
+  align-items: center;
+  font-size: 1.5em;
+  margin-left: 5px;
+  font-family: Righteous;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 50px;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  font-family: "Noto Sans TC";
+  color: white;
+  font-size: 0.9em;
+  margin-right: 50px;
+}
+
+nav li:nth-last-child(1) {
+  margin-right: 0;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+nav li a:active {
+  color: white;
+}
+
+nav li a:visited {
+  color: white;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+.nav-cta {
+  height: 100%;
+  background-color: white;
+  font-size: 0.8em;
+  color: var(--not-black);
+  border-radius: 25px;
+  padding: 10px 25px 10px 25px;
+  font-family: "Noto Sans TC";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.nav-cta:hover {
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.25);
+  color: rgba(255, 132, 95, 1);
+  transition: 200ms;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin: auto;
+  color: white;
+  font-family: Righteous;
+  width: 65%;
+  height: 500px;
+}
+
+.hero h1 {
+  font-size: 7em;
+  margin-top: -25px;
+  margin-left: -15px;
+  margin-bottom: -15px;
+}
+
+.hero h2 {
+  margin-top: -15px;
+  font-size: 2em;
+}
+
+.hero h3 {
+  font-size: 2em;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.3em;
+}
+
+.hero .cta-container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.hero .cta {
+  box-sizing: content-box;
+  margin-right: 15px;
+  margin-left: 10px;
+  background-color: var(--not-black);
+  color: white;
+  padding: 10px 35px 10px 35px;
+  border-radius: 25px;
+  width: 10%;
+  text-align: center;
+  font-size: 1.8em;
+  transition: 400ms;
+}
+
+.hero .cta:hover {
+  box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.15);
+  color: rgba(255, 132, 95, 1);
+  background-color: var(--not-black-2);
+  transition: 200ms;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+/* WAVE */
+.wave {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url("tavern-images/wave.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: -400px;
+}
