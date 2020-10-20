@@ -110,6 +110,7 @@ nav li:nth-last-child(1) {
 
 nav li a:link {
   text-decoration: none;
+  color: white;
 }
 
 nav li a:active {
