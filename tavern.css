@@ -80,13 +80,13 @@ nav {
   align-items: center;
   font-size: 1.5em;
   margin-left: 5px;
+  margin-top: 2px;
   font-family: Righteous;
   cursor: pointer;
 }
 
 .logo img {
   height: 50px;
-  margin-top: -4px;
   cursor: pointer;
 }
 
