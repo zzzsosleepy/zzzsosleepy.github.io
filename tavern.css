@@ -42,8 +42,8 @@ header {
   background: rgb(255, 132, 95);
   background: linear-gradient(
     180deg,
-    rgb(224, 109, 109) 0%,
-    rgb(255, 140, 73) 100%
+    rgb(255, 140, 73) 0%,
+    rgb(224, 109, 109) 100%
   );
   margin: 0;
   padding: 0;
