@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Righteous&family=Oxygen:wght@700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -56,6 +56,26 @@ header {
   padding: 0;
 }
 
+.headerbgDark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--not-black-2);
+  margin: 0;
+  padding: 0;
+}
+
+.inverted {
+  background: rgb(156, 95, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(156, 95, 255, 1) 0%,
+    rgba(246, 103, 255, 1) 100%
+  );
+}
+
 .headerbg-overlay {
   position: absolute;
   top: 0;
@@ -65,9 +85,6 @@ header {
   background-image: url("tavern-images/bg_cover.png");
   background-size: 2%;
   background-repeat: repeat;
-}
-
-nav {
 }
 
 .burger {
@@ -242,6 +259,62 @@ nav li a:hover {
   background-repeat: no-repeat;
 }
 
+.upsideDown {
+  transform: rotateX(180deg);
+}
+
+.flipped {
+  transform: rotateZ(-180deg);
+}
+
+.row {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.darkerBG {
+  background-color: var(--not-black);
+}
+
+.darkBG {
+  background-color: var(--not-black-2);
+}
+
+.contentContainer {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  margin: auto;
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.infoText {
+  padding-bottom: 55px;
+  width: 400px;
+  word-wrap: wrap;
+}
+
+.infoText h1 {
+  font-family: "Noto Sans TC";
+  color: var(--not-white);
+  font-size: 2.8em;
+  line-height: 1.2em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.infoText p {
+  width: 330px;
+  text-align: left;
+  font-family: "Oxygen";
+  color: var(--not-white);
+  font-size: 1.1em;
+}
+
 /* RESPONSIVENESS */
 @media all and (max-width: 600px) {
   /* HEADER */
@@ -261,8 +334,6 @@ nav li a:hover {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-  }
-  nav {
   }
 
   nav ul {
@@ -369,5 +440,26 @@ nav li a:hover {
 
   .heroimg {
     display: none;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .contentContainer img {
+    width: 350px;
+  }
+
+  #secondContentText {
+    order: 2;
+  }
+
+  #secondContentImg {
+    order: 1;
+  }
+
+  .infoText {
+    width: 300px;
   }
 }
