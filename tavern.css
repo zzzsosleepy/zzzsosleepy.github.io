@@ -328,6 +328,7 @@ hr {
 }
 
 .downloadSection {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -338,6 +339,7 @@ hr {
   padding: 45px;
   border-radius: 25px;
   box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.15);
+  z-index: 1;
 }
 
 .downloadBlock {
@@ -370,6 +372,13 @@ hr {
 }
 
 /* TAVERN PRO SECTION */
+
+.pro {
+  background-image: url("tavern-images/roombg.png");
+  width: 100%;
+  background-size: cover;
+}
+
 .priceSection {
   color: var(--not-white);
 }
@@ -385,6 +394,7 @@ hr {
 }
 
 table {
+  margin-right: 200px;
   border-collapse: collapse;
   border-spacing: 5px 5px;
   margin-top: -10px;
@@ -475,6 +485,30 @@ footer p {
   color: var(--not-white);
 }
 
+.attribution a {
+  color: var(--not-black);
+  font-style: none;
+  cursor: default;
+}
+
+.attribution a:visited {
+  color: var(--not-black-2);
+  font-style: none;
+  cursor: default;
+}
+
+.attribution a:active {
+  color: var(--not-black-2);
+  font-style: none;
+  cursor: default;
+}
+
+.attribution a:link {
+  color: var(--not-black-2);
+  font-style: none;
+  cursor: default;
+}
+
 .social i {
   color: var(--orange);
   font-size: 2.5em;
@@ -486,6 +520,7 @@ footer p {
   color: var(--not-white);
   cursor: pointer;
 }
+
 /* RESPONSIVENESS */
 @media all and (max-width: 600px) {
   /* HEADER */
