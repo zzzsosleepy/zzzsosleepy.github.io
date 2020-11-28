@@ -8,6 +8,8 @@
   --not-black-2: #393a3f;
   --not-white: #e7e7e7;
   --orange: rgba(255, 132, 95, 1);
+  --header-size: 2.8em;
+  --para-size: 1.1em;
 }
 
 /* BODY STUFF */
@@ -365,6 +367,94 @@ hr {
   color: var(--not-black);
   cursor: pointer;
   box-shadow: 0px 5px 8px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* TAVERN PRO SECTION */
+.priceSection {
+  color: var(--not-white);
+}
+
+.priceSection h1 {
+  font-family: "Oxygen";
+  font-size: var(--header-size);
+}
+
+.priceSection p {
+  font-family: "Oxygen";
+  font-size: var(--para-size);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 5px 5px;
+  margin-top: -10px;
+
+  border-radius: 25px;
+}
+
+table:not(.emptyTD) {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 140, 73) 0%,
+    rgb(224, 109, 109) 100%
+  );
+}
+
+td:not(.emptyTD):not(.price),
+th {
+  border-bottom: 5px solid var(--not-black);
+  padding: 15px;
+  border-right: 5px solid var(--not-black);
+}
+
+th {
+  font-family: "Oxygen";
+  font-size: 1.5em;
+  color: var(--not-black);
+  border-right: 5px solid var(--not-black);
+}
+
+.checkmark {
+  text-align: center;
+  font-size: 2em;
+  color: var(--not-black);
+}
+
+.service {
+  font-family: "Noto Sans TC";
+  font-size: 1.1em;
+  text-align: center;
+  color: var(--not-black);
+  border-right: 5px solid var(--not-black);
+  text-transform: uppercase;
+}
+
+.serviceName {
+  color: var(--not-white);
+  text-shadow: 2px 2px black;
+  text-transform: uppercase;
+  font-family: Righteous;
+}
+
+.price {
+  font-family: "Noto Sans TC";
+  font-size: 4em;
+  text-align: center;
+  color: var(--not-black);
+  border-right: 5px solid var(--not-black);
+  transition: 200ms;
+  background-color: var(--not-white);
+}
+
+.price:hover {
+  color: var(--not-white);
+  background-color: var(--not-black);
+  cursor: pointer;
+}
+
+.emptyTD {
+  border-right: 5px solid var(--not-black);
+  background-color: var(--not-black);
 }
 
 /* FOOTER SECTION */
