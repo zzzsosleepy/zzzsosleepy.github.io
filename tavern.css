@@ -376,7 +376,8 @@ hr {
 .pro {
   background-image: url("tavern-images/roombg.png");
   width: 100%;
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .priceSection {
@@ -604,10 +605,12 @@ footer p {
   }
 
   .herotext h3 {
+    text-align: center;
     font-size: 1.4em;
   }
 
   .herotext p {
+    text-align: center;
     margin-top: -5px;
     font-size: 1.25em;
   }
@@ -657,6 +660,10 @@ footer p {
     width: 350px;
   }
 
+  .contentContainer p {
+    width: 100%;
+  }
+
   #secondContentText {
     order: 2;
   }
@@ -667,5 +674,126 @@ footer p {
 
   .infoText {
     width: 300px;
+  }
+
+  .infoText h1 {
+    text-align: center;
+  }
+
+  .infoText p {
+    text-align: center;
+  }
+
+  /* TAVERN PRO SECTION */
+
+  .fullWidth {
+    width: 90%;
+  }
+
+  .priceSection .infoText h1 {
+    padding-top: 50px;
+  }
+
+  table {
+    margin-right: 0px;
+    border-collapse: collapse;
+    border-spacing: 5px 5px;
+    margin-top: -10px;
+    border-radius: 25px;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  table:not(.emptyTD) {
+    background: linear-gradient(
+      180deg,
+      rgb(255, 140, 73) 0%,
+      rgb(224, 109, 109) 100%
+    );
+  }
+
+  td:not(.emptyTD):not(.price),
+  th {
+    border-bottom: 5px solid var(--not-black);
+    padding: 5px;
+    border-right: 5px solid var(--not-black);
+  }
+
+  td {
+    padding: 15px;
+  }
+
+  .price {
+    font-size: 2em;
+    text-align: center;
+    padding: 0px 0px 5px 0px;
+  }
+
+  th {
+    padding: 0px 0px 0px 0px;
+    font-family: "Oxygen";
+    font-size: 1em;
+    color: var(--not-black);
+    border-right: 5px solid var(--not-black);
+  }
+
+  .checkmark {
+    text-align: center;
+    font-size: 1em;
+    color: var(--not-black);
+    padding: 15px;
+  }
+
+  .serviceName {
+    padding: 0px 5px 0px 0px;
+  }
+
+  .service {
+    padding: 15px;
+    font-family: "Noto Sans TC";
+    font-size: 0.8em;
+    text-align: center;
+    color: var(--not-black);
+    border-right: 5px solid var(--not-black);
+    text-transform: uppercase;
+  }
+
+  /* DOWNLOAD SECTION */
+
+  .downloadSection {
+    width: 100%;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+
+  .downloadBlock {
+    display: flex;
+    align-items: center;
+  }
+
+  .downloadBlock p {
+    font-size: 0.9em;
+  }
+
+  .downloadBtn {
+    padding: 15px;
+  }
+
+  /* FOOTER */
+
+  .attribution {
+    position: absolute;
+    display: none;
+  }
+
+  .social {
+    display: flex;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 0.7em;
   }
 }
