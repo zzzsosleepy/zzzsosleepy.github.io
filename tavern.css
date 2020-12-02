@@ -691,13 +691,13 @@ footer p {
   }
 
   .priceSection .infoText h1 {
-    padding-top: 50px;
+    padding-top: 125px;
   }
 
   table {
     margin-right: 0px;
     border-collapse: collapse;
-    border-spacing: 5px 5px;
+    border-spacing: 15px 15px;
     margin-top: -10px;
     border-radius: 25px;
     table-layout: fixed;
@@ -730,11 +730,12 @@ footer p {
   }
 
   th {
-    padding: 0px 0px 0px 0px;
+    padding: 15px 0px 15px 0px;
     font-family: "Oxygen";
     font-size: 1em;
     color: var(--not-black);
     border-right: 5px solid var(--not-black);
+    height: 25px;
   }
 
   .checkmark {
@@ -742,6 +743,7 @@ footer p {
     font-size: 1em;
     color: var(--not-black);
     padding: 15px;
+    height: 75px;
   }
 
   .serviceName {
@@ -763,7 +765,7 @@ footer p {
   .downloadSection {
     width: 100%;
     padding: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 75px;
   }
 
   .downloadBlock {
