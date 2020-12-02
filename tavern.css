@@ -740,7 +740,7 @@ footer p {
 
   .checkmark {
     text-align: center;
-    font-size: 1em;
+    font-size: 2em;
     color: var(--not-black);
     padding: 15px;
     height: 75px;
