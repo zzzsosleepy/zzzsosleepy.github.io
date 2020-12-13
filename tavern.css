@@ -552,6 +552,9 @@ footer p {
   }
 }
 @media all and (max-width: 600px) {
+  #videoBG {
+    display: none;
+  }
   /* HEADER */
   header {
     margin-bottom: 20px;
