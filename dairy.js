@@ -14,8 +14,7 @@ function SearchFood(){
     var newurl = url + searchParam;
     req.open('GET', newurl, false);
     req.setRequestHeader('Accept', "application/json");
-    req.setRequestHeader("Ocp-Apim-Subscription-Key","bfcab3c9c3324df1abc3d336648fa568")
-    req.overrideMimeType("text/html");
+    req.setRequestHeader("Ocp-Apim-Subscription-Key","7c422abe4d30476e9462ed842948b421")
     req.send(null);
     console.log(req.responseText);
 }
