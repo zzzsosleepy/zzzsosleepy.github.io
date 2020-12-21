@@ -1,5 +1,5 @@
 var req = new XMLHttpRequest();
-var url = 'https://nutrition-api.esha.com/foods?query=';
+var url = '/nutrition-api/foods?query=';
 
 var searchBox = document.getElementById('searchBox');
 var searchBtn = document.getElementById('searchBtn');
