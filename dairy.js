@@ -9,6 +9,7 @@ var resultsDiv = document.getElementById('results');
 searchBtn.addEventListener("click", function () {
     const searchParam = searchBox.value;
     if (searchParam == "") {
+        resultsDiv.innerHTML = "";
         return;
     };
     var newurl = url + searchParam + "&start=0&count=100";
