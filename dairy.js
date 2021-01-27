@@ -30,7 +30,7 @@ function LogData(data){
         if (i % 2 == 0){
             colorType = "darkBGListItem";
         } else {
-            colorType = lightBGListItem";
+            colorType = "lightBGListItem";
         }
         if ('characteristics' in data[i]){
             if (data[i].characteristics.includes("Dairy Free")) {
