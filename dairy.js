@@ -29,15 +29,16 @@ function LogData(data){
         if ('characteristics' in data[i]){
             if (data[i].characteristics.includes("Dairy Free")) {
                 htmlString += "<p>" + data[i].product + " - " + data[i].description + " is dairy free! </p>";
-                resultsDiv.insertAdjacentHTML('beforeend', htmlString)
             } else {
                 htmlString += "<p>" + data[i].product + " - " + data[i].description + " is NOT dairy free! </p>";
-                resultsDiv.insertAdjacentHTML('beforeend', htmlString)
             }
         } else {
             console.log("No characteristics for " + data[i]);
             console.log("---");
         }
+    }
+    if (htmlString != ""){
+        resultsDiv.insertAdjacentHTML('beforeend', htmlString)
     }
 }
 
