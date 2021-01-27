@@ -18,6 +18,11 @@ body {
   align-items: center;
 }
 
+#results p {
+  font-family: "Sniglet";
+  font-size: 1.1em;
+}
+
 .container {
   display: flex;
   justify-content: center;
