@@ -24,19 +24,16 @@ searchBtn.addEventListener("click", function () {
 
 function LogData(data){
     var htmlString = "";
-    var colorType = "darkBGListItem";
+    var colorType = "";
     console.log(data.length);
     for(var i = 0; i < data.length; i++){
-        if (i % 2 == 0){
-            colorType = "darkBGListItem";
-        } else {
-            colorType = "lightBGListItem";
-        }
         if ('characteristics' in data[i]){
             if (data[i].characteristics.includes("Dairy Free")) {
+                colorType = "greenListItem";
                 //<div class="listItem"><p>This is a test</p></div>
                 htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE ✔️ </p></div>";
             } else {
+                colorType = "redListItem";
                 htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY ❌ </p></div>";
             }
         } else {
