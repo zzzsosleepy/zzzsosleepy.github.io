@@ -48,6 +48,7 @@ body {
 }
 
 #results p {
+  max-width: 80%;
   font-family: "Sniglet";
   font-size: 1.8em;
 }
