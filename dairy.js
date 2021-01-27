@@ -23,6 +23,7 @@ searchBtn.addEventListener("click", function () {
 });
 
 function LogData(data){
+    resultsDiv.innerHTML = "";
     var htmlString = "";
     var colorType = "";
     console.log(data.length);
