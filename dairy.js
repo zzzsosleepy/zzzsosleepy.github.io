@@ -4,11 +4,9 @@ var url = '/nutrition-api/foods?query=';
 var searchBox = document.getElementById('searchBox');
 var searchBtn = document.getElementById('searchBtn');
 
-let resultsDiv = document.getElementById('results');
+var resultsDiv = document.getElementById('results');
 
-searchBtn.addEventListener("click", SearchFood)
-
-function SearchFood() {
+searchBtn.addEventListener("click", function () {
     const searchParam = searchBox.value;
     if (searchParam == "") {
         return;
@@ -22,7 +20,7 @@ function SearchFood() {
         LogData(myData.items);
     };
     req.send();
-}
+});
 
 function LogData(data){
     var htmlString = "";
