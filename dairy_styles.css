@@ -18,6 +18,14 @@ body {
   align-items: center;
 }
 
+.checkmark {
+  color: green;
+}
+
+.cancel {
+  color: red;
+}
+
 .redListItem {
   background-color: rgb(73, 0, 0);
 }

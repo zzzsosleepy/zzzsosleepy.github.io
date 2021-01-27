@@ -32,10 +32,10 @@ function LogData(data){
             if (data[i].characteristics.includes("Dairy Free")) {
                 colorType = "greenListItem";
                 //<div class="listItem"><p>This is a test</p></div>
-                htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE ✔️ </p></div>";
+                htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE " + "<i class='checkmark fas fa-check-square'></i></p></div>";
             } else {
                 colorType = "redListItem";
-                htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY ❌ </p></div>";
+                htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY " + "<i class='cancel fas fa-times-circle'></i> </p></div>";
             }
         } else {
             console.log("No characteristics for " + data[i]);
