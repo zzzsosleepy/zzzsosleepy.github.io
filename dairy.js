@@ -25,7 +25,9 @@ function SearchFood() {
 
 function LogData(data){
     for(var i = 0; i < data.length; i++){
-        console.log(data[i]);
+        if (data[i].characteristics.includes("Dairy Free")) {
+            console.log(data[i]);
+        }
     }
 }
 
