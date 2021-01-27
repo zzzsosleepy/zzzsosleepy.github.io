@@ -4,6 +4,8 @@ var url = '/nutrition-api/foods?query=';
 var searchBox = document.getElementById('searchBox');
 var searchBtn = document.getElementById('searchBtn');
 
+let resultsDiv = document.getElementById('results');
+
 searchBtn.addEventListener("click", SearchFood)
 
 function SearchFood() {
@@ -24,16 +26,14 @@ function SearchFood() {
 }
 
 function LogData(data){
+    var htmlString = "";
     for(var i = 0; i < data.length; i++){
         if ('characteristics' in data[i]){
             if (data[i].characteristics.includes("Dairy Free")) {
-                console.log("YES");
-                console.log(data[i]);
-                console.log("---");
+                htmlString += "<p>" + data[i].product + " - " + data[i].description + "is dairy free! </p>";
+                resultsDiv.insertAdjacentHTML('beforeend', htmlString)
             } else {
-                console.log("NO");
-                console.log(data[i]);
-                console.log("---");
+                htmlString += "<p>" + data[i].product + " - " + data[i].description + "is NOT dairy free! </p>";
             }
         } else {
             console.log("No characteristics for " + data[i]);
