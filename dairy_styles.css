@@ -18,9 +18,20 @@ body {
   align-items: center;
 }
 
+#results .listItem {
+  margin-top: 25px;
+  background-color: var(--not-black);
+  width: 100vw;
+  height: 100px;
+  text-align: center;
+  color: whitesmoke;
+  display: grid;
+  place-items: center;
+}
+
 #results p {
   font-family: "Sniglet";
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .container {

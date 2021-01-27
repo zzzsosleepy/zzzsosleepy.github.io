@@ -28,7 +28,8 @@ function LogData(data){
     for(var i = 0; i < data.length; i++){
         if ('characteristics' in data[i]){
             if (data[i].characteristics.includes("Dairy Free")) {
-                htmlString += "<p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE ✔️ </p>";
+                //<div class="listItem"><p>This is a test</p></div>
+                htmlString += "<div class='listItem'><p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE ✔️ </p></div>";
             } else {
                 htmlString += "<p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY ❌ </p>";
             }
