@@ -35,9 +35,9 @@ function LogData(data){
         if ('characteristics' in data[i]){
             if (data[i].characteristics.includes("Dairy Free")) {
                 //<div class="listItem"><p>This is a test</p></div>
-                htmlString += "<div class='listItem " + colorType + '><p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE ✔️ </p></div>";
+                htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE ✔️ </p></div>";
             } else {
-                htmlString += "<div class='listItem " + colorType + '><p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY ❌ </p></div>";
+                htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY ❌ </p></div>";
             }
         } else {
             console.log("No characteristics for " + data[i]);
