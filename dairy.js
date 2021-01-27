@@ -20,7 +20,6 @@ function SearchFood() {
     req.onload = function() {
         var myData = JSON.parse(req.responseText);
         LogData(myData.items);
-        console.log(myData.items);
     };
     req.send();
 }
