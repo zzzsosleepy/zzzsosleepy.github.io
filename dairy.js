@@ -17,10 +17,15 @@ function SearchFood() {
     req.setRequestHeader("Ocp-Apim-Subscription-Key", "7c422abe4d30476e9462ed842948b421")
     req.onload = function() {
         var myData = JSON.parse(req.responseText);
+        LogData(myData);
     }
     req.send();
-    for(var i = 0; i < myData.length; i++){
-        console.log(myData[i]);
+
+}
+
+function LogData(data){
+    for(var i = 0; i < data.length; i++){
+        console.log(data[i]);
     }
 }
 
