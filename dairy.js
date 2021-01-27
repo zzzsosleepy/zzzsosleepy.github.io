@@ -27,6 +27,8 @@ function LogData(data){
     for(var i = 0; i < data.length; i++){
         if (data[i].characteristics.includes("Dairy Free")) {
             console.log(data[i]);
+        } else {
+            console.log("NO");
         }
     }
 }
