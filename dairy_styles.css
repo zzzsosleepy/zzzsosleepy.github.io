@@ -18,9 +18,16 @@ body {
   align-items: center;
 }
 
+.darkBGListItem {
+  background-color: var(--not-black);
+}
+
+.lightBGListItem {
+  background-color: rgb(47, 47, 47);
+}
+
 #results .listItem {
   margin-top: 15px;
-  background-color: var(--not-black);
   width: 100vw;
   height: 80px;
   text-align: center;
