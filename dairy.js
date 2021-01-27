@@ -25,11 +25,18 @@ function SearchFood() {
 
 function LogData(data){
     for(var i = 0; i < data.length; i++){
-        if (data[i].characteristics.includes("Dairy Free")) {
-            console.log(data[i]);
+        if ('characteristics' in data[i]){
+            if (data[i].characteristics.includes("Dairy Free")) {
+                console.log("YES");
+                console.log(data[i]);
+                console.log("---");
+            } else {
+                console.log("NO");
+                console.log(data[i]);
+                console.log("---");
+            }
         } else {
-            console.log("NO");
-            console.log(data[i]);
+            console.log("No characteristics for " + data[i]);
             console.log("---");
         }
     }
