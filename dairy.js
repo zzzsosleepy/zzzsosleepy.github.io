@@ -11,7 +11,7 @@ searchBtn.addEventListener("click", function () {
     if (searchParam == "") {
         return;
     };
-    var newurl = url + searchParam + "&0&50";
+    var newurl = url + searchParam + "&start=0&count=50";
     req.open('GET', newurl, false);
     req.setRequestHeader('Accept', "application/json");
     req.setRequestHeader("Ocp-Apim-Subscription-Key", "7c422abe4d30476e9462ed842948b421")
