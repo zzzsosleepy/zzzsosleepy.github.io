@@ -31,7 +31,7 @@ function LogData(data){
                 //<div class="listItem"><p>This is a test</p></div>
                 htmlString += "<div class='listItem'><p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE ✔️ </p></div>";
             } else {
-                htmlString += "<p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY ❌ </p>";
+                htmlString += "<div class='listItem'><p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY ❌ </p></div>";
             }
         } else {
             console.log("No characteristics for " + data[i]);
