@@ -25,8 +25,7 @@ function SearchFood() {
 
 function LogData(data){
     for(var i = 0; i < data.length; i++){
-        console.log(data);
-        console.log("Hi");
+        console.log(data[i]);
     }
 }
 
