@@ -30,6 +30,7 @@ function LogData(data){
         } else {
             console.log("NO");
             console.log(data[i]);
+            console.log("---");
         }
     }
 }
