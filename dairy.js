@@ -28,9 +28,9 @@ function LogData(data){
     for(var i = 0; i < data.length; i++){
         if ('characteristics' in data[i]){
             if (data[i].characteristics.includes("Dairy Free")) {
-                htmlString += "<p>" + data[i].product + " - " + data[i].description + " is dairy free! </p>";
+                htmlString += "<p>" + data[i].product + " - " + data[i].description + " - DAIRY FREE ✔️ </p>";
             } else {
-                htmlString += "<p>" + data[i].product + " - " + data[i].description + " is NOT dairy free! </p>";
+                htmlString += "<p>" + data[i].product + " - " + data[i].description + " - CONTAINS DAIRY ❌ </p>";
             }
         } else {
             console.log("No characteristics for " + data[i]);
