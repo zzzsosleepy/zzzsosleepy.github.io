@@ -33,6 +33,7 @@ function LogData(data){
                 resultsDiv.insertAdjacentHTML('beforeend', htmlString)
             } else {
                 htmlString += "<p>" + data[i].product + " - " + data[i].description + " is NOT dairy free! </p>";
+                resultsDiv.insertAdjacentHTML('beforeend', htmlString)
             }
         } else {
             console.log("No characteristics for " + data[i]);
