@@ -29,6 +29,7 @@ function LogData(data){
             console.log(data[i]);
         } else {
             console.log("NO");
+            console.log(data[i]);
         }
     }
 }
