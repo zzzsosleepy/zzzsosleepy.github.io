@@ -33,10 +33,10 @@ function LogData(data){
             if (data[i].characteristics.includes("Dairy Free")) {
                 colorType = "greenListItem";
                 //<div class="listItem"><p>This is a test</p></div>
-                htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + "<br />DAIRY FREE " + "<i class='checkmark fas fa-check-square'></i></p></div>";
+                htmlString += "<div class='listItem module " + colorType + "'><p>" + data[i].product + " - " + data[i].description + "<br />DAIRY FREE " + "<i class='checkmark fas fa-check-square'></i></p></div>";
             } else {
                 colorType = "redListItem";
-                htmlString += "<div class='listItem " + colorType + "'><p>" + data[i].product + " - " + data[i].description + "<br />CONTAINS DAIRY " + "<i class='cancel fas fa-times-circle'></i> </p></div>";
+                htmlString += "<div class='listItem module " + colorType + "'><p>" + data[i].product + " - " + data[i].description + "<br />CONTAINS DAIRY " + "<i class='cancel fas fa-times-circle'></i> </p></div>";
             }
         } else {
             console.log("No characteristics for " + data[i]);
@@ -45,6 +45,66 @@ function LogData(data){
     }
     if (htmlString != ""){
         resultsDiv.insertAdjacentHTML('beforeend', htmlString)
+        AddSlideStyles();
     }
 }
+
+(function($) {
+
+    /**
+     * Copyright 2012, Digital Fusion
+     * Licensed under the MIT license.
+     * http://teamdf.com/jquery-plugins/license/
+     *
+     * @author Sam Sehnert
+     * @desc A small plugin that checks whether elements are within
+     *     the user visible viewport of a web browser.
+     *     only accounts for vertical position, not horizontal.
+     */
+  
+    $.fn.visible = function(partial) {
+      
+        var $t            = $(this),
+            $w            = $(window),
+            viewTop       = $w.scrollTop(),
+            viewBottom    = viewTop + $w.height(),
+            _top          = $t.offset().top,
+            _bottom       = _top + $t.height(),
+            compareTop    = partial === true ? _bottom : _top,
+            compareBottom = partial === true ? _top : _bottom;
+      
+      return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+  
+    };
+      
+  })(jQuery);
+  
+  function AddSlideStyles() {
+      var win = $(window);
+      var allMods = $(".module");
+      
+    //   allMods.each(function(i, el) {
+    //     var el = $(el);
+    //     if (el.visible(true)) {
+    //       el.addClass("already-visible"); 
+    //     } 
+    //   });
+        allMods.each(function(i, el) {
+          var el = $(el);
+          if (el.visible(true)) {
+            el.addClass("come-in"); 
+          }
+        });
+      win.scroll(function(event) {
+        
+        allMods.each(function(i, el) {
+          var el = $(el);
+          if (el.visible(true)) {
+            el.addClass("come-in"); 
+          } 
+        });
+      });
+  }
+
+
 

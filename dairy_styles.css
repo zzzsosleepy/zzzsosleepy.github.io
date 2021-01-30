@@ -66,6 +66,21 @@ body {
   font-size: 1.8em;
 }
 
+.come-in {
+  transform: translateX(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  transform: translateX(-150px);
+  animation-duration: 0.6s;
+}
+
+@keyframes come-in {
+  to {
+    transform: translateX(0);
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
