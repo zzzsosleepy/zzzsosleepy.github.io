@@ -66,24 +66,6 @@ body {
   font-size: 1.8em;
 }
 
-.come-in {
-  transform: translateX(100vw);
-  opacity: 0%;
-  animation: come-in 0.4s ease forwards;
-}
-.come-in:nth-child(odd) {
-  opacity: 0%;
-  transform: translateX(-100vw);
-  animation-duration: 0.3s;
-}
-
-@keyframes come-in {
-  to {
-    transform: translateX(0);
-    opacity: 100%;
-  }
-}
-
 .container {
   display: flex;
   justify-content: center;
