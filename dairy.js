@@ -27,7 +27,6 @@ function LogData(data){
     resultsDiv.innerHTML = "";
     var htmlString = "";
     var colorType = "";
-    console.log(data.length);
     for(var i = 0; i < data.length; i++){
         if ('characteristics' in data[i]){
             if (data[i].characteristics.includes("Dairy Free")) {
