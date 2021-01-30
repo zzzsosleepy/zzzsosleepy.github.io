@@ -3,7 +3,6 @@ var url = '/nutrition-api/foods?query=';
 
 var searchBox = document.getElementById('searchBox');
 var searchBtn = document.getElementById('searchBtn');
-
 var resultsDiv = document.getElementById('results');
 
 
@@ -46,6 +45,7 @@ function LogData(data){
     }
     if (htmlString != ""){
         resultsDiv.insertAdjacentHTML('beforeend', htmlString)
+        AddSlideStyles();
     }
 }
 
@@ -79,27 +79,27 @@ function LogData(data){
       
   })(jQuery);
   
-  var win = $(window);
-  
-  var allMods = $(".module");
-  
-  allMods.each(function(i, el) {
-    var el = $(el);
-    if (el.visible(true)) {
-      el.addClass("already-visible"); 
-    } 
-  });
-  
-  win.scroll(function(event) {
-    
-    allMods.each(function(i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("come-in"); 
-      } 
-    });
-    
-  });
+  function AddSlideStyles() {
+      var win = $(window);
+      var allMods = $(".module");
+      
+      allMods.each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+          el.addClass("already-visible"); 
+        } 
+      });
+      
+      win.scroll(function(event) {
+        
+        allMods.each(function(i, el) {
+          var el = $(el);
+          if (el.visible(true)) {
+            el.addClass("come-in"); 
+          } 
+        });
+      });
+  }
 
 
 
