@@ -45,8 +45,13 @@ body {
   height: fit-content;
   padding-top: 5px;
   padding-bottom: 5px; */
-  width: 48%;
-  min-height: 200px;
+  width: 100vw;
+  min-height: 80px;
+  text-align: center;
+  color: whitesmoke;
+  display: grid;
+  place-items: center;
+  height: fit-content;
   position: relative;
   padding: 20px;
   margin-bottom: 4%;
