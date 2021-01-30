@@ -24,6 +24,9 @@ searchBtn.addEventListener("click", function () {
 });
 
 function LogData(data){
+    if (data == null) {
+        return;
+    }
     resultsDiv.innerHTML = "";
     var htmlString = "";
     var colorType = "";
