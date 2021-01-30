@@ -83,12 +83,12 @@ function LogData(data){
       var win = $(window);
       var allMods = $(".module");
       
-      allMods.each(function(i, el) {
-        var el = $(el);
-        if (el.visible(true)) {
-          el.addClass("already-visible"); 
-        } 
-      });
+    //   allMods.each(function(i, el) {
+    //     var el = $(el);
+    //     if (el.visible(true)) {
+    //       el.addClass("already-visible"); 
+    //     } 
+    //   });
       
       win.scroll(function(event) {
         
