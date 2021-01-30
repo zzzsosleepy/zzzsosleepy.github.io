@@ -89,11 +89,12 @@ function LogData(data){
     //       el.addClass("already-visible"); 
     //     } 
     //   });
-    allMods.each(function(i, el) {
-        var el = $(el);
-        if (el.visible(true)) {
-          el.addClass("come-in"); 
-        } 
+        allMods.each(function(i, el) {
+          var el = $(el);
+          if (el.visible(true)) {
+            el.addClass("come-in"); 
+          }
+        });
       win.scroll(function(event) {
         
         allMods.each(function(i, el) {
