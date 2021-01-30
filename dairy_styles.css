@@ -127,7 +127,7 @@ body {
   width: 50%;
   font-family: "Sniglet";
   text-align: center;
-  font-size: 4em;
+  font-size: 1.8em;
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
@@ -188,12 +188,12 @@ footer {
   }
 
   .searchBox {
-    font-size: 2em;
+    font-size: 1em;
     width: 70%;
   }
 
   .searchBox:focus {
-    font-size: 2.5em;
+    font-size: 1.1em;
     width: 80%;
   }
 
@@ -219,7 +219,7 @@ footer {
   }
 
   .searchBox:focus {
-    font-size: 2.5em;
+    font-size: 2.1em;
     width: 80%;
   }
 
@@ -240,12 +240,12 @@ footer {
   }
 
   .searchBox {
-    font-size: 3em;
+    font-size: 1.8em;
     width: 440px;
   }
 
   .searchBox:focus {
-    font-size: 3em;
+    font-size: 1.9em;
     width: 540px;
   }
 
