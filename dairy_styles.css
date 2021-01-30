@@ -133,6 +133,8 @@ body {
   border-left-style: hidden;
   border-bottom-style: hidden;
   padding-right: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   padding-left: 15px;
   transition: width 200ms, height 100ms, font-size 200ms, box-shadow 200ms;
   color: rgb(37, 37, 37);
