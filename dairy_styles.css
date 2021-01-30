@@ -35,7 +35,7 @@ body {
 }
 
 #results .listItem {
-  margin-top: 15px;
+  /* margin-top: 15px;
   width: 100vw;
   height: 80px;
   text-align: center;
@@ -44,7 +44,13 @@ body {
   place-items: center;
   height: fit-content;
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 5px; */
+  width: 48%;
+  min-height: 200px;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 4%;
+  box-shadow: 0 1px 3px rgba(black, 0.2);
 }
 
 #results p {
