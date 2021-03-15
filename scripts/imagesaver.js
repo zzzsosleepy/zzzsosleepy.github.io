@@ -1,7 +1,7 @@
 const downloadBtn = document.getElementById("downloadBtn");
 
 const myUrl = new URL(
-  "https://cors-anywhere.herokuapp.com/https://unsplash.com/s/photos/"
+  "/unsplash/"
 );
 const className = "IEpfq";
 downloadBtn.addEventListener("click", DownloadImages);
@@ -33,12 +33,15 @@ function DownloadImages() {
     xhr.responseType = "document";
     xhr.send();
   };
+
   getHTML(newUrl, function (response) {
-    let classObjects = response.getElementsByClassName(className);
+    let classObjects = response.querySelector("img");
+    // let classObjects = response.getElementsByClassName(className);
     for (var i = 0; i < classObjects.length; i++) {
       images.push(classObjects[i].childNodes[0].src + ".jpg");
     }
   });
+
   setTimeout(() => {
     ZipImages();
   }, 500);
