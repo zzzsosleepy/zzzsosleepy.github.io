@@ -1,2 +1,2 @@
 /nutrition-api/* https://nutrition-api.esha.com/:splat 200
-/unsplash/* https://unsplash.com/s/photos/:splat 200
+/unsplash/* https://unsplash.com/:splat 200
