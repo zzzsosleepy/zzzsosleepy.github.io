@@ -1,7 +1,7 @@
 const downloadBtn = document.getElementById("downloadBtn");
 
 const myUrl = new URL(
-  "/unsplash/s/photos"
+  "https://unsplash.com/s/photos"
 );
 const className = "IEpfq";
 downloadBtn.addEventListener("click", DownloadImages);
