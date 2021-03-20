@@ -1,64 +1,51 @@
-let toTopBtn = document.getElementById("toTopBtn");
-let y = window.scrollY;
+AOS.init({
+     duration: 1200,
+ })
 
-let sectionOne = document.getElementById("sectionOne");
-let sectionTwo = document.getElementById("sectionTwo");
-let sectionThree = document.getElementById("sectionThree");
-let sectionFour = document.getElementById("sectionFour");
+ let homeSection = document.getElementById("home");
+ let aboutSection = document.getElementById("about");
+ let skillsSection = document.getElementById("skills");
+ let projectsSection = document.getElementById("projects");
 
-let homeBtn = document.getElementById("homeBtn");
-let aboutBtn = document.getElementById("aboutBtn");
-let skillsBtn = document.getElementById("skillsBtn");
-let projectsBtn = document.getElementById("projectsBtn");
+ let navHomeBtn = document.getElementById("navHomeBtn");
+ let navAboutBtn = document.getElementById("navAboutBtn");
+ let navSkillsBtn = document.getElementById("navSkillsBtn");
+ let navProjectsBtn = document.getElementById("navProjectsBtn");
 
-let rippleBox = document.getElementById("rippleBox");
+ let btn_list = [];
+    btn_list.push(navHomeBtn, navAboutBtn, navSkillsBtn, navProjectsBtn);
 
-homeBtn.addEventListener("click", function () {
-  sectionOne.scrollIntoView({
-    behavior: "smooth",
-  });
-});
+ navHomeBtn.addEventListener("click", () => ScrollToSection(homeSection));
+ navAboutBtn.addEventListener("click", () => ScrollToSection(aboutSection));
+ navSkillsBtn.addEventListener("click", () => ScrollToSection(skillsSection));
+ navProjectsBtn.addEventListener("click", () => ScrollToSection(projectsSection));
 
-toTopBtn.addEventListener("click", function () {
-  sectionOne.scrollIntoView({
-    behavior: "smooth",
-  });
-});
+ function ScrollToSection(sectionName){
+    sectionName.scrollIntoView({ 
+        behavior: 'smooth'
+    });
+ }
 
-aboutBtn.addEventListener("click", function () {
-  sectionTwo.scrollIntoView({
-    behavior: "smooth",
-  });
-});
+let bottomLoadingTextTop = document.getElementById("btm_loading_txt_top");
+let bottomLoadingTextBottom = document.getElementById("btm_loading_txt_bot");
 
-skillsBtn.addEventListener("click", function () {
-  sectionThree.scrollIntoView({
-    behavior: "smooth",
-  });
-});
+let circleTypeTop = new CircleType(bottomLoadingTextTop);
+let circleTypeBot = new CircleType(bottomLoadingTextBottom);
+circleTypeTop.radius(125);
+circleTypeBot.radius(125).dir(-1);
 
-projectsBtn.addEventListener("click", function () {
-  sectionFour.scrollIntoView({
-    behavior: "smooth",
-  });
-});
-
-rippleBox.addEventListener("click", function () {
-  document.location = "www.jeffreychipman.com/rippl";
-});
-
-const scrollFunc = () => {
-  // Get the current scroll value
-  let y = window.scrollY;
-
-  // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
-  if (y > 700) {
-    toTopBtn.className = "backToTop show";
-  } else {
-    toTopBtn.className = "backToTop hide";
-  }
-};
-
-window.addEventListener("scroll", scrollFunc);
-
-console.log(y);
+const loader = document.querySelector(".loader");
+window.onload = function(){
+  setTimeout(function(){
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+    btn_list.forEach((btn, i) => {
+      setTimeout(() => {
+        btn.style.transform = "translateX(0px)";
+      }, i * 100);
+    });
+    setTimeout(function(){
+      loader.style.display = "none";
+    }, 1700);
+  },1800);
+}
