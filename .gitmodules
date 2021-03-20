@@ -1,0 +1,3 @@
+[submodule "plugins/plugins/CircleType"]
+	path = plugins/plugins/CircleType
+	url = https://github.com/peterhry/circletype
