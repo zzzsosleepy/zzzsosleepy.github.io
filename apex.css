@@ -69,7 +69,7 @@ h3 {
   align-items: center;
   justify-content: center;
   height: 80%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.15);
   background-blend-mode: darken;
   background-image: url("apeximg/kc.png");
   background-size: cover;
