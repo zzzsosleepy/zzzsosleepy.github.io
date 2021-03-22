@@ -11,6 +11,10 @@ let apiKey = "yQIQPeqeq9RnbCh7s507";
 
 let url = "https://api.mozambiquehe.re/maprotation?auth=" + apiKey;
 
+let hour = 0;
+let min = 0;
+let sec = 0;
+
 GetMapInfo();
 
 function GetMapInfo(){
@@ -65,8 +69,20 @@ function SetNextMap(next){
     nextMap.innerText = next;
 }
 function SetTimeLeft(time){
-    let hour = time.slice(0,2);
-    let mins = time.slice(3,5);
-    timeLeft.innerText = hour + " HOUR " + mins + " MIN ";
+    hour = time.slice(0,2);
+    mins = time.slice(3,5);
+    secs = time.slice(6,8);
+    sec = parseInt(secs);
+    timeLeft.innerText = hour + ":" + mins + ":" + sec;
 }
+
+function SubtractSeconds(){
+    if (sec - 1 <= -1){
+        sec = 60;
+        mins -= 1;
+    }
+    sec -= 1;
+    timeLeft.innerText = hour + ":" + mins + ":" + sec;
+}
+setInterval(SubtractSeconds, 1000);
 setInterval(GetMapInfo, 6000);
