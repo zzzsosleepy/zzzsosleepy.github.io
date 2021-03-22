@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  --ff-main: "Oswald";
+  --clr-light: rgb(212, 212, 212);
+  --clr-dark: rgb(24, 24, 24);
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--ff-main);
+  text-transform: uppercase;
+  margin: 0;
+  margin-inline: 0rem;
+  line-height: 5rem;
+  font-size: 4rem;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+}
+
+.main h2 {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+}
+
+.footer h2 {
+  font-size: 2rem;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
+  color: var(--clr-dark);
+}
+
+h2 {
+  font-family: var(--ff-main);
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 2rem;
+  margin-bottom: 0rem;
+  max-height: 100%;
+}
+
+h3 {
+  max-height: 100%;
+  color: var(--clr-light);
+  font-family: var(--ff-main);
+  font-size: 2rem;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.content {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+  background-image: url("apeximg/kc.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--clr-light);
+}
+
+.footer {
+  border-top: 5px solid var(--clr-dark);
+  margin: auto;
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url("apeximg/ol.png");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+}
+
+@media (min-width: 40rem) {
+  h1 {
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  .footer h2 {
+    font-size: 7rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+}
