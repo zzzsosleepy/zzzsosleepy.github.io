@@ -83,7 +83,7 @@ h3 {
   align-items: center;
 }
 
-@media (min-width: 80rem) {
+@media screen and (min-width: 80rem) {
   h1 {
     font-size: 15rem;
     line-height: 15rem;
