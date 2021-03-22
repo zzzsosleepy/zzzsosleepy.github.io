@@ -70,7 +70,7 @@ h3 {
   justify-content: center;
   height: 80%;
   background-color: rgba(0, 0, 0, 0.35);
-  background-blend-mode: 200en;
+  background-blend-mode: darken;
   background-image: url("apeximg/kc.png");
   background-size: cover;
   background-position: center;
@@ -93,7 +93,7 @@ h3 {
 
 @media (forced-colors: active) {
   .footer h2 {
-    color: var(--clr-200);
+    color: var(--clr-200) !important;
   }
 }
 
