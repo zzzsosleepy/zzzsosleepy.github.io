@@ -3,8 +3,8 @@
 *::after {
   box-sizing: border-box;
   --ff-main: "Oswald";
-  --clr-light: rgb(212, 212, 212);
-  --clr-dark: rgb(24, 24, 24);
+  --clr-100: rgb(212, 212, 212);
+  --clr-200: rgb(24, 24, 24);
 }
 
 body {
@@ -39,14 +39,14 @@ h2 {
 .footer h2 {
   font-size: 2rem;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
-  color: var(--clr-dark) !important;
+  color: var(--clr-200) !important;
   display: inline-block;
 }
 
 h3 {
   text-align: center;
   max-height: 100%;
-  color: var(--clr-light);
+  color: var(--clr-100);
   font-family: var(--ff-main);
   font-size: 2rem;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
@@ -70,16 +70,16 @@ h3 {
   justify-content: center;
   height: 80%;
   background-color: rgba(0, 0, 0, 0.35);
-  background-blend-mode: darken;
+  background-blend-mode: 200en;
   background-image: url("apeximg/kc.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: var(--clr-light);
+  color: var(--clr-100);
 }
 
 .footer {
-  border-top: 5px solid var(--clr-dark);
+  border-top: 5px solid var(--clr-200);
   min-height: 20%;
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ h3 {
 
 @media (forced-colors: active) {
   .footer h2 {
-    color: var(--clr-dark);
+    color: var(--clr-200);
   }
 }
 
