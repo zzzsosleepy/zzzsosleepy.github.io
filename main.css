@@ -126,14 +126,14 @@ header {
 header p {
   font-family: var(--ff-accent);
   font-weight: normal;
-  font-size: 3rem;
+  font-size: 2rem;
   opacity: 35%;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.1rem;
   margin-bottom: 0;
 }
 
 header h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   font-family: var(--ff-accent);
   font-weight: normal;
 }
