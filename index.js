@@ -1,5 +1,6 @@
 AOS.init({
      duration: 1200,
+     disable: 'mobile',
  })
 
  let homeSection = document.getElementById("home");
