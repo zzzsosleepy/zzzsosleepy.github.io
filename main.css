@@ -130,7 +130,7 @@ header {
 header p {
   font-family: var(--ff-accent);
   font-weight: normal;
-  font-size: 2rem;
+  font-size: 1.5rem;
   opacity: 35%;
   letter-spacing: 0.25rem;
   margin-bottom: 0;
