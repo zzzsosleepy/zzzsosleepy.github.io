@@ -27,14 +27,6 @@ AOS.init({
     });
  }
 
-let bottomLoadingTextTop = document.getElementById("btm_loading_txt_top");
-let bottomLoadingTextBottom = document.getElementById("btm_loading_txt_bot");
-
-let circleTypeTop = new CircleType(bottomLoadingTextTop);
-let circleTypeBot = new CircleType(bottomLoadingTextBottom);
-circleTypeTop.radius(125);
-circleTypeBot.radius(125).dir(-1);
-
 const loader = document.querySelector(".loader");
 window.onload = function(){
   setTimeout(function(){
