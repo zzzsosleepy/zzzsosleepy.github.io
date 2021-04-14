@@ -551,7 +551,6 @@ hr {
 }
 
 .bg-primary-light {
-  color: var(--clr-neutral-100);
   background-color: var(--clr-primary-400);
 }
 
