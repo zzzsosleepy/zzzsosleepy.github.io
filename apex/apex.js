@@ -24,7 +24,7 @@ GetMapInfo();
 //Fetch JSON data from the API, and call functions to update the HTML when the data is received
 function GetMapInfo(){
     fetch(url)
-    .then((response) => { return response.json() })
+    .then((response) =>  response.json())
     .then((data) => {
         console.log(data)
         console.log(data.current.map);
@@ -42,7 +42,7 @@ function SetImages(current, next){
         case "Kings Canyon":
             main.style.backgroundImage = "url(apeximg/kc.png)";
             break;
-        case "Worlds Edge":
+        case "World's Edge":
             main.style.backgroundImage = "url(apeximg/we.png)";
             break;
         case "Olympus":
@@ -53,7 +53,7 @@ function SetImages(current, next){
         case "Kings Canyon":
             footer.style.backgroundImage = "url(apeximg/kc.png)";
             break;
-        case "Worlds Edge":
+        case "World's Edge":
             footer.style.backgroundImage = "url(apeximg/we.png)";
             break;
         case "Olympus":
