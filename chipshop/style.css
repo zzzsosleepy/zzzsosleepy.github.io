@@ -1,0 +1,245 @@
+* {
+  --clr-accent: #ffc721;
+}
+
+/*-- Offset to account for the navbar --*/
+.offset:before {
+  display: block;
+  content: "";
+  height: 4rem;
+  margin-top: -4rem;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#secondaryPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*-- NAVBAR --*/
+
+.active {
+  color: var(--clr-accent) !important;
+}
+
+.navbar {
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.navbar.bg-dark {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)) !important;
+}
+
+.navbar-brand img {
+  height: 2rem;
+  margin-left: 0.7rem;
+}
+
+.navbar-nav li {
+  padding-right: 0.7rem;
+}
+
+.navbar-dark {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.navbar-toggler {
+  margin-right: 1.1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  padding-top: 0.8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--clr-accent);
+}
+
+/*-- HERO --*/
+
+.hero img {
+  width: 100%;
+}
+
+.home-wrap {
+  background: black;
+}
+
+.home-inner {
+  opacity: 40%;
+}
+
+.captionBrand {
+  color: var(--clr-accent);
+}
+
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 38%;
+  z-index: 1;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.caption h1 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+  text-shadow: 0.1rem 0.1rem 0.8rem black;
+  padding-bottom: 1rem;
+}
+
+.caption h3 {
+  font-size: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.5rem black;
+  padding-bottom: 1.6rem;
+}
+
+.caption hr {
+  margin-inline: auto;
+  border: 2px solid white;
+  width: 30%;
+}
+
+.btn-lg {
+  border-width: medium;
+  border-radius: 0;
+  padding: 0.6rem 1.3rem;
+  font-size: 1.1rem;
+}
+
+/* WAVE */
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* PRODUCTS */
+.star {
+  color: red;
+}
+.card-img-actions {
+  display: grid;
+  place-items: center;
+  height: 300px;
+  width: 300px;
+  margin-inline: auto;
+}
+
+h6 a {
+  color: black;
+}
+
+.thumbnail {
+  margin-top: 20px;
+}
+
+.thumbnail img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #eee;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.thumbnail img:hover {
+  border: 1px solid #00000059;
+}
+
+/*--- About Page ---*/
+.aboutText {
+  margin-inline: auto;
+  max-width: 40rem;
+}
+
+.aboutText a,
+.aboutText a:visited,
+.aboutText a:active {
+  color: var(--clr-accent);
+}
+
+/*--- Contact Page ---*/
+form {
+  margin-inline: auto;
+  width: 25rem;
+  padding: 2rem 0 2rem 0;
+}
+
+.form-control {
+  max-width: 100%;
+}
+
+.form-text,
+form label {
+  color: rgb(24, 24, 24);
+}
+
+textarea {
+  resize: none;
+}
+/*--- Footer Section ---*/
+footer {
+  background-color: rgb(24, 24, 24);
+  color: #fff;
+  padding: 2rem 0 2rem;
+  margin-top: 1rem;
+}
+
+footer a {
+  color: var(--clr-accent) !important;
+}
+
+/*--- Media Queries ---*/
+@media (max-width: 991px) {
+  .navbar-nav a {
+    padding-left: 0.6rem !important;
+  }
+
+  .caption h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.15rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .caption h3 {
+    font-size: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .narrow h1 {
+    font-size: 1.5rem;
+  }
+
+  .clients img {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .aboutText {
+    margin-inline: auto;
+    max-width: 25rem;
+  }
+}

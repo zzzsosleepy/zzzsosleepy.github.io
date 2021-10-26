@@ -1,0 +1,685 @@
+<!-- -------------------------- -->
+<!-- -------------------------- -->
+<!-- ---------CHIPSHOP--------- -->
+<!-- -------------------------- -->
+<!-- PROG2700 ---- BOOTSTRAP -- -->
+<!-- JEFFREY CHIPMAN - W0449589 -->
+<!-- -------------------------- -->
+<!-- -------------------------- -->
+<!-- -------------------------- -->
+<!-- -------------------------- -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<!-- FontAwesome -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fixed.css">
+
+    <title>ChipShop - Nova Scotia's #1 Fictional Shop</title>
+  </head>
+  <body>
+
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a id="nav-link-home" class="nav-link active" aria-current="page" href="javascript:SwapToDiv('home')">Home</a>
+            </li>
+            <li class="nav-item">
+              <a id="nav-link-about" class="nav-link" href="javascript:SwapToDiv('about')">About</a>
+            </li>
+            <li class="nav-item">
+              <a id="nav-link-contact" class="nav-link" href="javascript:SwapToDiv('contact')">Contact</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+	
+	
+	<!-- Home Page -->
+    <div id="home">
+		<!-- Start Hero Section -->
+		<div class="landing">
+			<div class="home-wrap">
+				<div class="home-inner">
+					<div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="img/chip3.jpg" class="d-block" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="img/chip2.jpg" class="d-block" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="img/chip.jpg" class="d-block" alt="...">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!-- End Hero Section -->
+		
+		<!-- Start Caption -->
+		<div class="caption text-center">
+			<h1>Welcome To <span class="captionBrand">ChipShop</span></h1>
+			<hr />
+			<h3>Nova Scotia's #1 Trusted Fictional Shop</h3>
+			<a href="#products" class="btn btn-outline-warning btn-lg">Browse Our Wares</a>
+		</div>
+		<!-- End Caption -->
+		
+		<!-- Start Wave -->
+		<div class="wave">
+			<svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 170" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop><stop stop-color="rgba(189.4, 189.4, 189.4, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,136L48,127.5C96,119,192,102,288,102C384,102,480,119,576,113.3C672,108,768,79,864,68C960,57,1056,62,1152,76.5C1248,91,1344,113,1440,104.8C1536,96,1632,57,1728,48.2C1824,40,1920,62,2016,59.5C2112,57,2208,28,2304,25.5C2400,23,2496,45,2592,45.3C2688,45,2784,23,2880,34C2976,45,3072,91,3168,104.8C3264,119,3360,102,3456,85C3552,68,3648,51,3744,53.8C3840,57,3936,79,4032,96.3C4128,113,4224,125,4320,119C4416,113,4512,91,4608,82.2C4704,74,4800,79,4896,70.8C4992,62,5088,40,5184,25.5C5280,11,5376,6,5472,5.7C5568,6,5664,11,5760,14.2C5856,17,5952,17,6048,22.7C6144,28,6240,40,6336,45.3C6432,51,6528,51,6624,65.2C6720,79,6816,108,6864,121.8L6912,136L6912,170L6864,170C6816,170,6720,170,6624,170C6528,170,6432,170,6336,170C6240,170,6144,170,6048,170C5952,170,5856,170,5760,170C5664,170,5568,170,5472,170C5376,170,5280,170,5184,170C5088,170,4992,170,4896,170C4800,170,4704,170,4608,170C4512,170,4416,170,4320,170C4224,170,4128,170,4032,170C3936,170,3840,170,3744,170C3648,170,3552,170,3456,170C3360,170,3264,170,3168,170C3072,170,2976,170,2880,170C2784,170,2688,170,2592,170C2496,170,2400,170,2304,170C2208,170,2112,170,2016,170C1920,170,1824,170,1728,170C1632,170,1536,170,1440,170C1344,170,1248,170,1152,170C1056,170,960,170,864,170C768,170,672,170,576,170C480,170,384,170,288,170C192,170,96,170,48,170L0,170Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop><stop stop-color="rgba(255, 255, 255, 0)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,119L48,119C96,119,192,119,288,107.7C384,96,480,74,576,62.3C672,51,768,51,864,56.7C960,62,1056,74,1152,70.8C1248,68,1344,51,1440,62.3C1536,74,1632,113,1728,133.2C1824,153,1920,153,2016,130.3C2112,108,2208,62,2304,36.8C2400,11,2496,6,2592,2.8C2688,0,2784,0,2880,22.7C2976,45,3072,91,3168,104.8C3264,119,3360,102,3456,85C3552,68,3648,51,3744,56.7C3840,62,3936,91,4032,104.8C4128,119,4224,119,4320,121.8C4416,125,4512,130,4608,124.7C4704,119,4800,102,4896,93.5C4992,85,5088,85,5184,79.3C5280,74,5376,62,5472,73.7C5568,85,5664,119,5760,124.7C5856,130,5952,108,6048,87.8C6144,68,6240,51,6336,62.3C6432,74,6528,113,6624,130.3C6720,147,6816,142,6864,138.8L6912,136L6912,170L6864,170C6816,170,6720,170,6624,170C6528,170,6432,170,6336,170C6240,170,6144,170,6048,170C5952,170,5856,170,5760,170C5664,170,5568,170,5472,170C5376,170,5280,170,5184,170C5088,170,4992,170,4896,170C4800,170,4704,170,4608,170C4512,170,4416,170,4320,170C4224,170,4128,170,4032,170C3936,170,3840,170,3744,170C3648,170,3552,170,3456,170C3360,170,3264,170,3168,170C3072,170,2976,170,2880,170C2784,170,2688,170,2592,170C2496,170,2400,170,2304,170C2208,170,2112,170,2016,170C1920,170,1824,170,1728,170C1632,170,1536,170,1440,170C1344,170,1248,170,1152,170C1056,170,960,170,864,170C768,170,672,170,576,170C480,170,384,170,288,170C192,170,96,170,48,170L0,170Z"></path></svg>
+		</div>
+		<!-- End Wave -->
+
+		<!-- Start Product Section -->
+		<div id="products" class="products offset">
+			<h1 class="text-center">Free shipping on orders over $200!</h1>
+			<div class="container d-flex justify-content-center mt-50 mb-50">
+				<div class="row">
+
+					<!-- Start Product 1 -->
+					<div class="col-md-4 mt-2">
+						<div class="card h-100">
+							<div class="card-body">
+								<!-- Product Image -->
+								<div class="card-img-actions"> <img src="img/prod1_1.jpg" class="card-img img-fluid" width="96" height="350" alt=""> </div>
+								<!-- End Product Image -->
+							</div>
+							<div class="card-body bg-light text-center">
+								<!-- Product Info -->
+								<div class="mb-2">
+									<h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2">AMD Ryzen 5 5600X 6-core</a> </h6> 
+									<p>AMD's fastest 6 core processor for mainstream desktop, with 12 processing threads.</p>
+								</div>
+								<h3 class="mb-0 font-weight-semibold">$485.99</h3>
+								<!-- End Product Info -->
+
+								<!-- Stars -->
+								<div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+								<!-- End Stars -->
+
+								<div class="text-muted mb-3">34 reviews</div> 
+								<button type="button" class="btn btn-dark bg-primary " data-bs-toggle="modal" data-bs-target="#product1Modal">View</button>
+								
+								<!-- Start Modal -->
+								<div class="modal fade" id="product1Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Product1Modal" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+									  <div class="modal-content">
+										<div class="modal-header">
+										  <h5 class="modal-title" id="Product1Modal">AMD Ryzen 5 5600X 6-core</h5>
+										  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+
+											<!-- Product Images -->
+											<!-- Main Image -->
+											<div class="text-center p-4"> 
+												<a class="fancybox" rel="group1" href="img/prod1_1.jpg">
+													<img class="popup-image" id="main-image" src="img/prod1_1.jpg" width="300" />
+												</a> 
+											</div>
+											<!-- Thumbnail Images -->
+											<div class="thumbnail text-center"> 
+												<a class="fancybox" rel="group1" href="img/prod1_2.jpg">
+													<img src="img/prod1_2.jpg" width="70">
+												</a> 
+												<a class="fancybox" rel="group1" href="img/prod1_3.jpg">
+													<img src="img/prod1_3.jpg" width="70">
+												</a>
+												<a class="fancybox" rel="group1" href="img/prod1_4.jpg"> 
+													<img src="img/prod1_4.jpg" width="70">
+												</a> 
+											</div>
+											<!-- End Product Images -->
+
+											<h3 class="mb-0 font-weight-semibold">$485.99</h3>
+											AMD's fastest 6 core processor for mainstream desktop, with 12 processing threads.
+										</div>
+										<div class="modal-footer">
+										  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+										  <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="fa fa-cart-plus mr-2"></i>Add To Cart</button>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								<!-- End Modal -->
+
+							</div>
+						</div>
+					</div>
+					<!-- End Product 1 -->
+
+					<!-- Start Product 2 -->
+					<div class="col-md-4 mt-2">
+						<div class="card h-100">
+							<div class="card-body">
+								<!-- Product Image -->
+								<div class="card-img-actions"> <img src="img/prod2_1.jpg" class="card-img img-fluid" width="96" height="350" alt=""> </div>
+								<!-- End Product Image -->
+							</div>
+							<div class="card-body bg-light text-center">
+								<!-- Product Info -->
+								<div class="mb-2">
+									<h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2">Corsair CP-9020196-NA RM Series RM850 80 Plus Gold Fully Modular ATX Power Supply</a> </h6> 
+									<p>80 plus Gold certified: high efficiency operation for lower power consumption, less noise and cooler temperatures.</p>
+								</div>
+								<h3 class="mb-0 font-weight-semibold">$139.99</h3>
+								<!-- End Product Info -->
+
+								<!-- Stars -->
+								<div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+								<!-- End Stars -->
+
+								<div class="text-muted mb-3">34 reviews</div> 
+								<button type="button" class="btn btn-dark bg-primary " data-bs-toggle="modal" data-bs-target="#product2Modal">View</button>
+								
+								<!-- Start Modal -->
+								<div class="modal fade" id="product2Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Product2Modal" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+									  <div class="modal-content">
+										<div class="modal-header">
+										  <h5 class="modal-title" id="Product2Modal">Corsair CP-9020196-NA RM Series RM850 80 Plus Gold Fully Modular ATX Power Supply</h5>
+										  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+
+											<!-- Product Images -->
+											<!-- Main Image -->
+											<div class="text-center p-4"> 
+												<a class="fancybox" rel="group2" href="img/prod2_1.jpg">
+													<img class="popup-image" id="main-image" src="img/prod2_1.jpg" width="300" />
+												</a> 
+											</div>
+											<!-- Thumbnail Images -->
+											<div class="thumbnail text-center"> 
+												<a class="fancybox" rel="group2" href="img/prod2_2.jpg">
+													<img src="img/prod2_2.jpg" width="70">
+												</a> 
+												<a class="fancybox" rel="group2" href="img/prod2_3.jpg">
+													<img src="img/prod2_3.jpg" width="70">
+												</a>
+												<a class="fancybox" rel="group2" href="img/prod2_4.jpg"> 
+													<img src="img/prod2_4.jpg" width="70">
+												</a> 
+											</div>
+											<!-- End Product Images -->
+
+											<h3 class="mb-0 font-weight-semibold">$139.99</h3>
+											80 plus Gold certified: high efficiency operation for lower power consumption, less noise and cooler temperatures.
+										</div>
+										<div class="modal-footer">
+										  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+										  <button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="fa fa-cart-plus mr-2"></i>Add To Cart</button>
+										</div>
+									  </div>
+									</div>
+								  </div>
+								<!-- End Modal -->
+
+							</div>
+						</div>
+					</div>
+					<!-- End Product 2 -->
+
+					<!-- Start Product 3 -->
+					<div class="col-md-4 mt-2">
+						<div class="card h-100">
+							<div class="card-body">
+								<!-- Product Image -->
+								<div class="card-img-actions"> <img src="img/prod3_1.jpg" class="card-img img-fluid" width="96" height="350" alt=""> </div>
+								<!-- End Product Image -->
+							</div>
+							<div class="card-body bg-light text-center">
+								<!-- Product Info -->
+								<div class="mb-2">
+									<h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2">CanaKit Raspberry Pi 4 Starter Kit (4GB RAM)</a> </h6> 
+									<p>Includes Raspberry Pi 4 Model B with 1.5GHz 64-bit quad-core ARMv8 CPU (4GB RAM).</p>
+								</div>
+								<h3 class="mb-0 font-weight-semibold">$134.99</h3>
+								<!-- End Product Info -->
+
+								<!-- Stars -->
+								<div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+								<!-- End Stars -->
+
+								<div class="text-muted mb-3">178 reviews</div> 
+								<button type="button" class="btn btn-dark bg-primary " data-bs-toggle="modal" data-bs-target="#product3Modal">View</button>
+								
+								<!-- Start Modal -->
+								<div class="modal fade" id="product3Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Product3Modal" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="Product3Modal">CanaKit Raspberry Pi 4 Starter Kit (4GB RAM)</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+
+											<!-- Product Images -->
+											<!-- Main Image -->
+											<div class="text-center p-4"> 
+												<a class="fancybox" rel="group3" href="img/prod3_1.jpg">
+													<img class="popup-image" id="main-image" src="img/prod3_1.jpg" width="300" />
+												</a> 
+											</div>
+											<!-- Thumbnail Images -->
+											<div class="thumbnail text-center"> 
+												<a class="fancybox" rel="group3" href="img/prod3_2.jpg">
+													<img src="img/prod3_2.jpg" width="70">
+												</a> 
+												<a class="fancybox" rel="group3" href="img/prod3_3.jpg">
+													<img src="img/prod3_3.jpg" width="70">
+												</a>
+												<a class="fancybox" rel="group3" href="img/prod3_4.jpg"> 
+													<img src="img/prod3_4.jpg" width="70">
+												</a> 
+											</div>
+											<!-- End Product Images -->
+
+											<h3 class="mb-0 font-weight-semibold">$134.99</h3>
+											Includes Raspberry Pi 4 Model B with 1.5GHz 64-bit quad-core ARMv8 CPU (4GB RAM).
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="fa fa-cart-plus mr-2"></i>Add To Cart</button>
+										</div>
+										</div>
+									</div>
+									</div>
+								<!-- End Modal -->
+
+							</div>
+						</div>
+					</div>
+					<!-- End Product 3 -->
+
+					<!-- Start Product 4 -->
+					<div class="col-md-4 mt-2">
+						<div class="card h-100">
+							<div class="card-body">
+								<!-- Product Image -->
+								<div class="card-img-actions"> <img src="img/prod4_1.jpg" class="card-img img-fluid" width="96" height="350" alt=""> </div>
+								<!-- End Product Image -->
+							</div>
+							<div class="card-body bg-light text-center">
+								<!-- Product Info -->
+								<div class="mb-2">
+									<h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2">NZXT H510 Compact Atx Mid-Tower PC Gaming Case, Front I/O USB C Port, Tempered Glass Side Panel, Cable Management System</a> </h6> 
+									<p>New features: Front I/O USB Type-C Port and Tempered glass side panel with single screw installation.</p>
+								</div>
+								<h3 class="mb-0 font-weight-semibold">$90.37</h3>
+								<!-- End Product Info -->
+
+								<!-- Stars -->
+								<div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+								<!-- End Stars -->
+
+								<div class="text-muted mb-3">124 reviews</div> 
+								<button type="button" class="btn btn-dark bg-primary " data-bs-toggle="modal" data-bs-target="#product4Modal">View</button>
+								
+								<!-- Start Modal -->
+								<div class="modal fade" id="product4Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Product4Modal" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="Product4Modal">NZXT H510 Compact Atx Mid-Tower PC Gaming Case, Front I/O USB C Port, Tempered Glass Side Panel, Cable Management System</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+
+											<!-- Product Images -->
+											<!-- Main Image -->
+											<div class="text-center p-4"> 
+												<a class="fancybox" rel="group4" href="img/prod4_1.jpg">
+													<img class="popup-image" id="main-image" src="img/prod4_1.jpg" width="300" />
+												</a> 
+											</div>
+											<!-- Thumbnail Images -->
+											<div class="thumbnail text-center"> 
+												<a class="fancybox" rel="group4" href="img/prod4_2.jpg">
+													<img src="img/prod4_2.jpg" width="70">
+												</a> 
+												<a class="fancybox" rel="group4" href="img/prod4_3.jpg">
+													<img src="img/prod4_3.jpg" width="70">
+												</a>
+												<a class="fancybox" rel="group4" href="img/prod4_4.jpg"> 
+													<img src="img/prod4_4.jpg" width="70">
+												</a> 
+											</div>
+											<!-- End Product Images -->
+
+											<h3 class="mb-0 font-weight-semibold">$90.37</h3>
+											New features: Front I/O USB Type-C Port and Tempered glass side panel with single screw installation.
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="fa fa-cart-plus mr-2"></i>Add To Cart</button>
+										</div>
+										</div>
+									</div>
+									</div>
+								<!-- End Modal -->
+
+							</div>
+						</div>
+					</div>
+					<!-- End Product 4 -->
+
+					<!-- Start Product 5 -->
+					<div class="col-md-4 mt-2">
+						<div class="card h-100">
+							<div class="card-body">
+								<!-- Product Image -->
+								<div class="card-img-actions"> <img src="img/prod5_1.jpg" class="card-img img-fluid" width="96" height="350" alt=""> </div>
+								<!-- End Product Image -->
+							</div>
+							<div class="card-body bg-light text-center">
+								<!-- Product Info -->
+								<div class="mb-2">
+									<h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2">Xhwykzz 8 Pin PCI-E to 2 PCI-E 8 Pin (6 Pin + 2 Pin) Power Cable, Splitter PCI Express Graphics Card Connector PC Power Cable GPU Graphics Video Card Wire (4/Pack 12 Inches)</a> </h6> 
+									<p>GPU 8 pin female, Connector B: PCI-E 8 pin (6P + 2P) male (CPU-PCIe cable), material: plastic + metal, 18AWG wire.</p>
+								</div>
+								<h6 class="mb-0 font-weight-semibold text-muted" style="text-decoration: line-through;">$35.99</h6><h3 class="mb-0 font-weight-semibold">$27.99</h3>
+								<!-- End Product Info -->
+
+								<!-- Stars -->
+								<div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+								<!-- End Stars -->
+
+								<div class="text-muted mb-3">4 reviews</div> 
+								<button type="button" class="btn btn-dark bg-primary " data-bs-toggle="modal" data-bs-target="#product5Modal">View</button>
+								
+								<!-- Start Modal -->
+								<div class="modal fade" id="product5Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Product5Modal" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="Product5Modal">Xhwykzz 8 Pin PCI-E to 2 PCI-E 8 Pin (6 Pin + 2 Pin) Power Cable, Splitter PCI Express Graphics Card Connector PC Power Cable GPU Graphics Video Card Wire (4/Pack 12 Inches)</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+
+											<!-- Product Images -->
+											<!-- Main Image -->
+											<div class="text-center p-4"> 
+												<a class="fancybox" rel="group5" href="img/prod5_1.jpg">
+													<img class="popup-image" id="main-image" src="img/prod5_1.jpg" width="300" />
+												</a> 
+											</div>
+											<!-- Thumbnail Images -->
+											<div class="thumbnail text-center"> 
+												<a class="fancybox" rel="group5" href="img/prod5_2.jpg">
+													<img src="img/prod5_2.jpg" width="70">
+												</a> 
+												<a class="fancybox" rel="group5" href="img/prod5_3.jpg">
+													<img src="img/prod5_3.jpg" width="70">
+												</a>
+												<a class="fancybox" rel="group5" href="img/prod5_4.jpg"> 
+													<img src="img/prod5_4.jpg" width="70">
+												</a> 
+											</div>
+											<!-- End Product Images -->
+
+											<h3 class="mb-0 font-weight-semibold">$27.99</h3>
+											GPU 8 pin female, Connector B: PCI-E 8 pin (6P + 2P) male (CPU-PCIe cable), material: plastic + metal, 18AWG wire.
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="fa fa-cart-plus mr-2"></i>Add To Cart</button>
+										</div>
+										</div>
+									</div>
+									</div>
+								<!-- End Modal -->
+
+							</div>
+						</div>
+					</div>
+					<!-- End Product 5 -->
+
+					<!-- Start Product 6 -->
+					<div class="col-md-4 mt-2">
+						<div class="card h-100">
+							<div class="card-body">
+								<!-- Product Image -->
+								<div class="card-img-actions"> <img src="img/prod6_1.jpg" class="card-img img-fluid" width="96" height="350" alt=""> </div>
+								<!-- End Product Image -->
+							</div>
+							<div class="card-body bg-light text-center">
+								<!-- Product Info -->
+								<div class="mb-2">
+									<h6 class="font-weight-semibold mb-2"> <a href="#" class="text-default mb-2">XPG Gammix D10 DDR4 16GB (2x8GB) 3200MHz 288-Pin CL16 PC4-25600 Desktop U-DIMM Memory Retail Kit Black</a> </h6> 
+									<p>Support Intel XMP 2.0 for overclocking.</p>
+								</div>
+								<h3 class="mb-0 font-weight-semibold">$53.99</h3>
+								<!-- End Product Info -->
+
+								<!-- Stars -->
+								<div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+								<!-- End Stars -->
+
+								<div class="text-muted mb-3">45 reviews</div> 
+								<button type="button" class="btn btn-dark bg-primary " data-bs-toggle="modal" data-bs-target="#product6Modal">View</button>
+								
+								<!-- Start Modal -->
+								<div class="modal fade" id="product6Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Product6Modal" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="Product6Modal">XPG Gammix D10 DDR4 16GB (2x8GB) 3200MHz 288-Pin CL16 PC4-25600 Desktop U-DIMM Memory Retail Kit Black</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+
+											<!-- Product Images -->
+											<!-- Main Image -->
+											<div class="text-center p-4"> 
+												<a class="fancybox" rel="group6" href="img/prod6_1.jpg">
+													<img class="popup-image" id="main-image" src="img/prod6_1.jpg" width="300" />
+												</a> 
+											</div>
+											<!-- Thumbnail Images -->
+											<div class="thumbnail text-center"> 
+												<a class="fancybox" rel="group6" href="img/prod6_2.jpg">
+													<img src="img/prod6_2.jpg" width="70">
+												</a> 
+												<a class="fancybox" rel="group6" href="img/prod6_3.jpg">
+													<img src="img/prod5_3.jpg" width="70">
+												</a>
+												<a class="fancybox" rel="group6" href="img/prod6_4.jpg"> 
+													<img src="img/prod6_4.jpg" width="70">
+												</a> 
+											</div>
+											<!-- End Product Images -->
+
+											<h3 class="mb-0 font-weight-semibold">$53.99</h3>
+											Support Intel XMP 2.0 for overclocking.
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-warning" data-bs-dismiss="modal"><i class="fa fa-cart-plus mr-2"></i>Add To Cart</button>
+										</div>
+										</div>
+									</div>
+									</div>
+								<!-- End Modal -->
+
+							</div>
+						</div>
+					</div>
+					<!-- End Product 6 -->
+
+				</div>
+			</div>
+		</div>
+		<!-- End Product Section -->
+
+	</div>
+    <!-- End Home Page -->
+
+    
+	<!-- About Page -->
+    <div id="about">	
+		<div id="secondaryPage" class="offset text-center">
+			<div class="home-wrap">
+				<div class="home-inner">
+					<img src="img/aboutbg.jpg" alt="">
+				</div>
+			</div>	
+			<!-- Start Caption -->
+			<div class="caption text-center">
+				<h1>About <span class="captionBrand">Us</span></h1>
+				<hr />
+				<div class="aboutText">
+					<h3><span class="captionBrand">ChipShop</span> is a fictional e-commerce shop built using the latest Bootstrap 5, HTML 5, and CSS3.</h3>
+					<h4>This page page was created by <span class="captionBrand">Jeffrey Chipman</span> in April of 2021.</h4>
+					<br />
+					<h3>Please visit my website at <a target="_blank" rel="noopener noreferrer" href="https://www.jeffreychipman.com">jeffreychipman.com</a></h3>
+				</div>
+			</div>
+			<!-- End Caption -->
+		</div>
+	</div>
+    <!-- End About Page -->
+
+	<!-- Contact Page -->
+	<div id="contact">
+		<!-- Start Hero Section -->
+		<div class="landing">
+			<div class="home-wrap">
+				<div class="home-inner">
+					<div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="img/chip3.jpg" class="d-block" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="img/chip2.jpg" class="d-block" alt="...">
+							</div>
+							<div class="carousel-item">
+								<img src="img/chip.jpg" class="d-block" alt="...">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!-- End Hero Section -->
+		<!-- Start Caption -->
+		<div class="caption text-center">
+			<h1>Contact <span class="captionBrand">Us</span></h1>
+			<hr />
+		</div>
+		<!-- End Caption -->
+			<div class="contactForm">
+				<form action="process.php" method="POST">
+					<div class="mb-3">
+					  <label for="inputEmail" class="form-label">Email address</label>
+					  <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Your email">
+					  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+					</div>
+					<div class="mb-3">
+						<label for="inputSubject" class="form-label">Subject</label>
+						<input type="text" class="form-control" id="inputSubject" aria-describedby="subjectHelp" placeholder="Subject">
+					  </div>
+					<div class="mb-3">
+						<label for="inputMessage" class="form-label">Message</label>
+						<textarea class="form-control" id="inputMessage" rows="3" placeholder="Your message"></textarea>
+					  </div>
+					<button type="submit" class="btn btn-warning">Submit</button>
+				  </form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Start Footer -->
+	<footer>
+		<!-- Grid container -->
+		<div class="container p-4">
+		<!-- Section: Text -->
+		<section class="mb-4">
+			<p class="text-center">
+				This website was created by Jeffrey Chipman using Bootstrap 5, HTML 5, and CSS 3. <br>ChipShop is not a real shop and unfortunately does not sell any wares. 
+			</p>
+		</section>
+		<!-- Section: Text -->
+	
+	
+		<!-- Section: Links -->
+		<section class="text-center">
+			<!--Grid row-->
+			<div class="row">
+			<!--Grid column-->
+			<div class="col-lg-12 col-md-12 mb-4 mb-md-0">
+				<h5 class="text-uppercase">Links</h5>
+	
+				<ul class="list-unstyled mb-0">
+				<li>
+					<a href="#home">Home</a>
+				</li>
+				<li>
+					<a href="#products">Products</a>
+				</li>
+				<li>
+					<a href="#!">About</a>
+				</li>
+				<li>
+					<a href="#!">Contact</a>
+				</li>
+				</ul>
+			</div>
+			<!--Grid column-->
+			</div>
+			<!--Grid row-->
+		</section>
+		<!-- Section: Links -->
+	
+		</div>
+		<!-- Grid container -->
+	
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+		© 2021 Copyright:
+		<a href="#home">ChipShop.com</a>
+		</div>
+		<!-- Copyright -->
+	
+	</footer>
+	<!-- End Footer -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	
+	<!-- JQuery -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+
+	<!-- Fancybox -->
+	<link rel="stylesheet" href="js/plugins/fancybox/jquery.fancybox.css?v=2.1.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/plugins/fancybox/jquery.fancybox.pack.js?v=2.1.7"></script>
+
+	<!-- Custom JS -->
+	<script src="index.js"></script>
+  </body>
+</html>
