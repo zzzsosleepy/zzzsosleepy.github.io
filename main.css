@@ -142,6 +142,7 @@ header h1 {
   font-family: var(--ff-accent);
   font-weight: normal;
 }
+
 section h2 {
   font-size: 4rem;
   font-weight: normal;
@@ -162,7 +163,7 @@ section h2 {
 
 .resume h3 {
   font-family: var(--ff-primary);
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .resume a {
@@ -223,6 +224,7 @@ section h2 {
   color: var(--clr-neutral-900);
   text-align: center;
 }
+
 .loader .bottomLoadingTextBottom {
   font-family: var(--ff-accent);
   font-weight: normal;
@@ -234,6 +236,7 @@ section h2 {
   color: var(--clr-neutral-900);
   text-align: center;
 }
+
 .loader .ring {
   height: 200px;
   width: 200px;
@@ -244,6 +247,7 @@ section h2 {
   align-items: center;
   justify-content: center;
 }
+
 .loader .ring:after {
   position: absolute;
   content: "";
@@ -265,6 +269,7 @@ section h2 {
   align-items: center;
   justify-content: center;
 }
+
 .loader .ring2:after {
   position: absolute;
   content: "";
@@ -286,19 +291,24 @@ section h2 {
   transform-origin: 50% bottom;
   padding-bottom: 10px;
 }
+
 @keyframes wave {
   0% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(-40deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
+
   75% {
     transform: rotate(20deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -309,6 +319,7 @@ section h2 {
     transform: rotate(360deg);
   }
 }
+
 @keyframes rotate-reverse {
   100% {
     transform: rotate(-360deg);
@@ -371,6 +382,7 @@ hr {
 .social-line ul a:visited {
   color: inherit;
 }
+
 .social-line ul a:active {
   color: inherit;
 }
@@ -487,6 +499,7 @@ hr {
 .project .projBtn {
   color: var(--clr-neutral-900);
 }
+
 .project .projBtn:hover {
   color: var(--clr-primary-200);
 }
@@ -524,7 +537,7 @@ hr {
   flex-direction: column;
 }
 
-.split > * + * {
+.split>*+* {
   margin-top: 2em;
 }
 
@@ -596,6 +609,7 @@ hr {
   .skillList {
     width: 70%;
   }
+
   .skillList li {
     padding: 5px 15px 5px 15px;
     margin: 5px 15px 5px 15px;
@@ -651,11 +665,11 @@ hr {
     flex-direction: row;
   }
 
-  .split > * {
+  .split>* {
     flex-basis: 100%;
   }
 
-  .split > * + * {
+  .split>*+* {
     margin-left: 2em;
     margin-top: 0;
   }
