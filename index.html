@@ -1,28 +1,44 @@
-<!-- CREATED BY JEFFREY CHIPMAN -->
+<!-- CREATED BY JEFFREY CHIPMAN 😊-->
 <!-- USING HTML 5, CSS 3, AND JAVASCRIPT -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- METADATA & TITLE-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeffrey Chipman - Web Developer</title>
+    <!-- END METADATA & TITLE -->
+
+    <!-- Load GoogleFonts faster with preconnect -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="https://kit.fontawesome.com/f39575d584.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="plugins/CircleType/dist/circletype.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--  -->
+
+    <!-- Google font imports for 👌 Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Fredoka+One&Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
+    <!--  -->
+
+    <!-- FontAwesome import for Icons -->
+    <script src="https://kit.fontawesome.com/f39575d584.js" crossorigin="anonymous"></script>
+    <!--  -->
+
+    <!-- Animate on Scroll import for Animated Divs -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!--  -->
+
+    <!-- Style imports -->
     <link rel="stylesheet" href="main.css">
     <script src="index.js" defer></script>
+    <!--  -->
+
 </head>
 
 <body>
+    <!-- LOADING SCREEN -->
     <div class="loader">
         <div class="ring">
             <div class="loadingText">
@@ -32,6 +48,9 @@
         <div class="ring2">
         </div>
     </div>
+    <!-- END LOADING SCREEN -->
+
+    <!-- HERO SECTION -->
     <header class="bg-light text-center" id="home">
         <div class="container">
             <p>Hello, my name is</p>
@@ -52,12 +71,17 @@
             </div>
         </div>
     </header>
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffd700" fill-opacity="1" d="M0,64L48,96C96,128,192,192,288,208C384,224,480,192,576,165.3C672,139,768,117,864,106.7C960,96,1056,96,1152,117.3C1248,139,1344,181,1392,202.7L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> -->
+    <!-- END HERO -->
+
+    <!-- SVG WAVE #1 -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#ffd700" fill-opacity="1"
             d="M0,320L48,298.7C96,277,192,235,288,186.7C384,139,480,85,576,101.3C672,117,768,203,864,250.7C960,299,1056,309,1152,288C1248,267,1344,213,1392,186.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
         </path>
     </svg>
+    <!-- END WAVE #1 -->
+
+    <!-- NAVBAR -->
     <div class="nav">
         <ul>
             <li id="navHomeBtn" class="text-center"><i class="fas fa-home"></i></li>
@@ -66,6 +90,9 @@
             <li id="navProjectsBtn" class="text-center"><i class="fas fa-folder"></i></li>
         </ul>
     </div>
+    <!-- END NAVBAR -->
+
+    <!-- ABOUT ME SECTION -->
     <section id="about">
         <div class="container">
             <h2 data-aos="fade-down" class="text-center">Who am I?</h2>
@@ -88,6 +115,7 @@
                 </div>
             </div>
         </div>
+        <!-- SOCIAL LINKS -->
         <span class="social-line">
             <hr />
             <ul>
@@ -102,12 +130,19 @@
                             class="fab fa-github-square"></i></a></li>
             </ul>
         </span>
+        <!-- END SOCIAL LINKS -->
     </section>
+    <!-- END ABOUT ME -->
+
+    <!-- SVG WAVE #2 -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg--flipped">
         <path fill="#273036" fill-opacity="1"
             d="M0,256L48,218.7C96,181,192,107,288,80C384,53,480,75,576,96C672,117,768,139,864,144C960,149,1056,139,1152,138.7C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
         </path>
     </svg>
+    <!-- END WAVE #2 -->
+
+    <!-- SKILLS SECTION -->
     <section class="bg-dark" id="skills">
         <div class="container">
             <h2 data-aos="fade-down" class="text-center low-margin">What can I do for you?</h2>
@@ -115,6 +150,7 @@
             <divclass="split">
                 <div class="centered">
                     <p class="subHead text-center">Some of my skills include:</p>
+                    <!-- SKILLS -->
                     <ul class="skillList text-center">
                         <li data-aos="fade-up">HTML</li>
                         <li data-aos="fade-up">CSS</li>
@@ -130,20 +166,28 @@
                         <li data-aos="fade-up">Photoshop</li>
                         <li data-aos="fade-up">Blender</li>
                     </ul>
+                    <!-- END SKILLS -->
                 </div>
         </div>
         </div>
     </section>
+    <!-- END SKILLS SECTION -->
+
+    <!-- SVG WAVE #3 -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="dark-BG svg--flipped">
         <path fill="#ffd700" fill-opacity="1"
             d="M0,64L40,74.7C80,85,160,107,240,122.7C320,139,400,149,480,160C560,171,640,181,720,165.3C800,149,880,107,960,112C1040,117,1120,171,1200,181.3C1280,192,1360,160,1400,144L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
         </path>
     </svg>
+    <!-- END WAVE #3 -->
+
+    <!-- PROJECTS SECTION -->
     <section class="bg-primary-light" id="projects">
         <div class="container">
             <h2 data-aos="fade-down" class="text-center">My work</h2>
             <div class="projectList">
 
+                <!-- PROJECT #1 -->
                 <div data-aos="fade-up" data-aos-duration="1200" class="project">
                     <h1>Is It Dairy Free?</h1>
                     <img src="./img/project-images/dairy.png" alt="">
@@ -163,6 +207,9 @@
                         The data is retrieved from an external API and presented in a list form for the user.
                     </p>
                 </div>
+                <!-- END PROJECT #1 -->
+
+                <!-- PROJECT #2 -->
                 <div data-aos="fade-up" data-aos-duration="1400" class="project">
                     <h1>Tavern</h1>
                     <img src="./img/project-images/tavern.png" alt="">
@@ -182,6 +229,9 @@
                         I submitted it as part of an assignment for a Website Development class I took at NSCC.
                     </p>
                 </div>
+                <!-- END PROJECT #2 -->
+
+                <!-- PROJECT #3 -->
                 <div data-aos="fade-up" data-aos-duration="1600" class="project">
                     <h1>Sleepystory</h1>
                     <img src="./img/project-images/sleepy.png" alt="">
@@ -201,6 +251,9 @@
                         demo is outdated and does not contain the latest bug-fixes or updates to gameplay.)
                     </p>
                 </div>
+                <!-- END PROJECT #3 -->
+
+                <!-- PROJECT #4 -->
                 <div data-aos="fade-up" data-aos-duration="1600" class="project">
                     <h1>ChipShop</h1>
                     <img src="./img/project-images/chipshop.png" alt="">
@@ -221,9 +274,11 @@
                         for my Client-Side Programming class at NSCC.
                     </p>
                 </div>
+                <!-- END PROJECT #4 -->
             </div>
         </div>
     </section>
+    <!-- END PROJECTS -->
 
 </body>
 
