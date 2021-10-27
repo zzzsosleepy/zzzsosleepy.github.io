@@ -1,7 +1,5 @@
 :root {
   --clr-primary-200: #ffd700;
-  /* 00cba9 */
-  --clr-primary-400: #ffd700;
 
   --clr-neutral-100: rgb(233, 233, 233);
   --clr-neutral-900: #273036;
@@ -12,12 +10,14 @@
   --size-nav: 5rem;
 }
 
+/* ROOT */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* SEMANTIC STYLING */
 body {
   overflow-x: hidden;
   background-color: var(--clr-neutral-100);
@@ -44,7 +44,6 @@ h2 {
 }
 
 h2,
-h3,
 p {
   margin-bottom: 1em;
 }
@@ -53,6 +52,8 @@ img {
   max-width: 100%;
   display: block;
 }
+
+/* UTILITY STYLES */
 
 .text-center {
   text-align: center;
@@ -70,6 +71,31 @@ img {
 .circle {
   border-radius: 50%;
 }
+
+.bg-light {
+  background-color: var(--clr-primary-200);
+}
+
+.bg-primary {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-200);
+}
+
+.bg-dark {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-primary-200);
+}
+
+.bg-primary-light {
+  background-color: var(--clr-primary-200);
+}
+
+/* NAVBAR */
 
 .nav {
   position: fixed;
@@ -153,12 +179,12 @@ section h2 {
   width: 35rem;
 }
 
-.resume {
+/* HERO BUTTONS (MY RESUME, GET IN TOUCH) */
+.heroButtons {
+  margin-top: 20px;
   display: flex;
-  gap: 3rem;
-  justify-content: space-around;
-  margin-inline: auto;
-  width: 60%;
+  justify-content: center;
+  gap: 25px;
 }
 
 .resume h3 {
@@ -167,15 +193,26 @@ section h2 {
 }
 
 .resume a {
+  color: var(--clr-primary-900);
+  margin-inline: auto;
+  width: 10rem;
+  padding: 0.375rem 1rem;
+  border-radius: 5px;
   font-family: var(--ff-primary);
-  color: var(--clr-neutral-00);
+  font-weight: 700;
+  transition: background-color 200ms ease;
+  border: 2px solid var(--clr-neutral-900);
   text-decoration: none;
+  background-color: var(--clr-primary-200);
+  transition: cursor, color, box-shadow, background-color, border 200ms ease;
 }
 
 .resume a:hover {
-  color: var(--clr-neutral-100);
-  text-shadow: 0px 0px 10px var(--clr-neutral-900);
-  transition: 200ms ease;
+  color: var(--clr-neutral-900);
+  cursor: pointer;
+  background-color: var(--clr-neutral-100);
+  border: 2px solid var(--clr-neutral-900);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .contactMe a {
@@ -200,6 +237,7 @@ section h2 {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* LOADING SCREEN */
 .loader {
   z-index: 11;
   position: fixed;
@@ -292,6 +330,7 @@ section h2 {
   padding-bottom: 10px;
 }
 
+/* WAVE ANIMATION */
 @keyframes wave {
   0% {
     transform: rotate(0deg);
@@ -314,6 +353,7 @@ section h2 {
   }
 }
 
+/* RING ROTATION ANIMATION */
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
@@ -326,6 +366,7 @@ section h2 {
   }
 }
 
+/* SUBHEADERS */
 .subHead {
   font-size: 3rem;
   font-family: var(--ff-accent);
@@ -333,6 +374,7 @@ section h2 {
   margin-bottom: 2rem;
 }
 
+/* HANDSOME IMAGE ;) */
 .img--head {
   width: 55%;
   margin-inline: auto;
@@ -345,6 +387,7 @@ section h2 {
   box-shadow: 25px 0px 0 var(--clr-neutral-900);
 }
 
+/* ABOUT ME SECTION */
 .aboutme-text {
   font-size: 1.5rem;
   display: flex;
@@ -357,6 +400,7 @@ hr {
   display: none;
 }
 
+/* SOCIAL LINKS */
 .social-line ul {
   display: flex;
   justify-content: center;
@@ -387,6 +431,7 @@ hr {
   color: inherit;
 }
 
+/* SKILLS LIST */
 .skillList {
   list-style: none;
   padding: 0;
@@ -412,9 +457,11 @@ hr {
 }
 
 .skillList li:hover {
-  background-color: var(--clr-primary-400);
+  background-color: var(--clr-primary-200);
   user-select: none;
 }
+
+/* PROJECT LIST */
 
 .project {
   background-color: var(--clr-neutral-900);
@@ -545,28 +592,7 @@ hr {
   max-width: 34rem;
 }
 
-.bg-light {
-  background-color: var(--clr-primary-200);
-}
-
-.bg-primary {
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-400);
-}
-
-.bg-dark {
-  color: var(--clr-neutral-100);
-  background-color: var(--clr-neutral-900);
-}
-
-.bg-primary h2,
-.bg-dark h2 {
-  color: var(--clr-primary-200);
-}
-
-.bg-primary-light {
-  background-color: var(--clr-primary-400);
-}
+/* MEDIA QUERIES */
 
 @media (min-width: 40em) {
   header h1 {
@@ -713,7 +739,3 @@ hr {
     font-size: 2rem;
   }
 }
-
-/* .text-center {
-
-} */
