@@ -22,23 +22,23 @@ let sec = 0;
 GetMapInfo();
 
 //Fetch JSON data from the API, and call functions to update the HTML when the data is received
-function GetMapInfo(){
+function GetMapInfo() {
     fetch(url)
-    .then((response) =>  response.json())
-    .then((data) => {
-        console.log(data)
-        console.log(data.current.map);
-        SetCurrentMap(data.current.map);
-        SetNextMap(data.next.map);
-        SetTimeLeft(data.current.remainingTimer);
-        SetImages(data.current.map, data.next.map);
-    })
-    .catch((err) => { console.log(err); })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data)
+            console.log(data.current.map);
+            SetCurrentMap(data.current.map);
+            SetNextMap(data.next.map);
+            SetTimeLeft(data.current.remainingTimer);
+            SetImages(data.current.map, data.next.map);
+        })
+        .catch((err) => { console.log(err); })
 }
 
 //Set the background images according the current and next maps
-function SetImages(current, next){
-    switch(current){
+function SetImages(current, next) {
+    switch (current) {
         case "Kings Canyon":
             main.style.backgroundImage = "url(apeximg/kc.png)";
             break;
@@ -48,8 +48,10 @@ function SetImages(current, next){
         case "Olympus":
             main.style.backgroundImage = "url(apeximg/ol.png)";
             break;
+        case "Storm Point":
+            main.style.backgroundImage = "url(apeximg/sp.png)";
     }
-    switch(next){
+    switch (next) {
         case "Kings Canyon":
             footer.style.backgroundImage = "url(apeximg/kc.png)";
             break;
@@ -59,31 +61,34 @@ function SetImages(current, next){
         case "Olympus":
             footer.style.backgroundImage = "url(apeximg/ol.png)";
             break;
+        case "Storm Point":
+            footer.style.backgroundImage = "url(apeximg/sp.png)";
+            break;
     }
 }
 
 //Set current map name
-function SetCurrentMap(current){
+function SetCurrentMap(current) {
     currentMap.innerText = current;
 }
 
 //Set next map name
-function SetNextMap(next){
+function SetNextMap(next) {
     nextMap.innerText = next;
 }
 
 //Set the time left counter
-function SetTimeLeft(time){
-    hour = time.slice(0,2);
-    mins = time.slice(3,5);
-    secs = time.slice(6,8);
+function SetTimeLeft(time) {
+    hour = time.slice(0, 2);
+    mins = time.slice(3, 5);
+    secs = time.slice(6, 8);
     sec = parseInt(secs);
     timeLeft.innerText = hour + ":" + mins + ":" + sec;
 }
 
 //Subtract one second from the counter
-function SubtractSeconds(){
-    if (sec - 1 <= -1){
+function SubtractSeconds() {
+    if (sec - 1 <= -1) {
         sec = 60;
         mins -= 1;
     }
