@@ -408,6 +408,15 @@ footer {
 }
 
 @media (max-width: 650px) {
+    nav ul {
+        display: flex;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
     .hero-description-box {
         display: flex;
         flex-direction: column;
