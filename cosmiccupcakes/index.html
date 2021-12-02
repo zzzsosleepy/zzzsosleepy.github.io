@@ -1,0 +1,191 @@
+<!-- WEBD3100 ASSIGNMENT #4 - WEBSITE -->
+<!-- COSMIC CUPCAKES -->
+<!-- CREATED BY JEFFREY CHIPMAN -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cosmic Cupcakes - #1 Gourmet Desserts</title>
+</head>
+
+<body>
+    <!-- LOADING SCREEN -->
+    <div class="loader">
+        <div class="loadingText">
+            🧁
+        </div>
+        <div class="loadingText">
+            🧁
+        </div>
+        <div class="loadingText">
+            🧁
+        </div>
+    </div>
+    <!-- END LOADING SCREEN -->
+
+    <!-- BACK TO TOP BUTTON -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">⇪</button>
+    <!-- END BACK TO TOP BUTTON -->
+
+    <!-- NAVBAR -->
+    <nav id="navBar">
+        <img src="img/logo.png" alt="Cosmic Cupcake Logo" id="navLogo" />
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="#" id="navHome">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" id="navProducts">Products</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-description-box">
+            <img src="img/logo.png" alt="">
+            <div class="hero-description">
+                <div class="hero-description-header">Our gourmet desserts are out of this universe!</div>
+                <hr class="hero-hr" />
+                <div class=" hero-description-para">Cosmic Cupcakes aims to be the one-stop-shop for all things baked
+                    and
+                    sweet;
+                    we strive to be the perfect pair for any sweet tooth.
+                </div>
+                <button onclick="galleryFunction()" title="Go to products" class="scroll-button"
+                    id="productCTA">Products</button>
+            </div>
+        </div>
+    </div>
+    <!-- HERO END -->
+
+    <!-- SVG WAVE -->
+    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 290" version="1.1"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                <stop stop-color="rgba(230, 230, 230, 1)" offset="0%"></stop>
+                <stop stop-color="rgba(230, 230, 230, 1)" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+            d="M0,203L26.7,193.3C53.3,184,107,164,160,164.3C213.3,164,267,184,320,169.2C373.3,155,427,106,480,101.5C533.3,97,587,135,640,154.7C693.3,174,747,174,800,159.5C853.3,145,907,116,960,116C1013.3,116,1067,145,1120,145C1173.3,145,1227,116,1280,130.5C1333.3,145,1387,203,1440,198.2C1493.3,193,1547,126,1600,120.8C1653.3,116,1707,174,1760,198.2C1813.3,222,1867,213,1920,203C1973.3,193,2027,184,2080,183.7C2133.3,184,2187,193,2240,203C2293.3,213,2347,222,2400,212.7C2453.3,203,2507,174,2560,169.2C2613.3,164,2667,184,2720,188.5C2773.3,193,2827,184,2880,193.3C2933.3,203,2987,232,3040,217.5C3093.3,203,3147,145,3200,101.5C3253.3,58,3307,29,3360,14.5C3413.3,0,3467,0,3520,43.5C3573.3,87,3627,174,3680,193.3C3733.3,213,3787,164,3813,140.2L3840,116L3840,290L3813.3,290C3786.7,290,3733,290,3680,290C3626.7,290,3573,290,3520,290C3466.7,290,3413,290,3360,290C3306.7,290,3253,290,3200,290C3146.7,290,3093,290,3040,290C2986.7,290,2933,290,2880,290C2826.7,290,2773,290,2720,290C2666.7,290,2613,290,2560,290C2506.7,290,2453,290,2400,290C2346.7,290,2293,290,2240,290C2186.7,290,2133,290,2080,290C2026.7,290,1973,290,1920,290C1866.7,290,1813,290,1760,290C1706.7,290,1653,290,1600,290C1546.7,290,1493,290,1440,290C1386.7,290,1333,290,1280,290C1226.7,290,1173,290,1120,290C1066.7,290,1013,290,960,290C906.7,290,853,290,800,290C746.7,290,693,290,640,290C586.7,290,533,290,480,290C426.7,290,373,290,320,290C266.7,290,213,290,160,290C106.7,290,53,290,27,290L0,290Z">
+        </path>
+    </svg>
+    <!-- SVG WAVE END -->
+
+    <!-- GALLERY -->
+    <div class="gallery-container">
+        <div class="gallery">
+            <h1>Sweets & Baked Goods</h1>
+            <hr />
+            <ul class="desserts">
+                <li class="dessert-item">
+                    <img src="img/products/cheesecake.png" alt="Item 1">
+                    <h3>Supernova Strawberry Cheesecake</h3>
+                    <h4>$15</h4>
+                    <hr />
+                    <p>Your tastebuds will go supernova when they experience
+                        this sweet treat. Made from locally grown strawberries
+                        and crunchy graham-cracker crust.
+                    </p>
+                </li>
+                <li class="dessert-item">
+                    <img src="img/products/cupcake.png" alt="Item 2">
+                    <h3>Chocolate Void Cupcakes</h3>
+                    <h4>$5</h4>
+                    <hr />
+                    <p>Drift through the void as you chow down on these decadent,
+                        cherry-topped, chocolate cupcakes.
+                        Make sure to always return to Earth afterwards.
+                    </p>
+                </li>
+                <li class="dessert-item">
+                    <img src="img/products/croissant.png" alt="Item 3">
+                    <h3>Gamma Raisin Croissants</h3>
+                    <h4>$10</h4>
+                    <hr />
+                    <p>Baked to perfection and teeming with tasty raisins,
+                        this treat is perfect for even the most daring adventurers.
+                        Make sure to strap in for this one.
+                    </p>
+                </li>
+                <li class="dessert-item">
+                    <img src="img/products/macaroons.png" alt="Item 4">
+                    <h3>Outer Planetary Macaroons</h3>
+                    <h4>$3</h4>
+                    <hr />
+                    <p>Captured from outside the solar system, these macaroons
+                        are otherwordly in taste and texture. Come visit a new world
+                        and bring your friends.
+                    </p>
+                </li>
+                <li class="dessert-item">
+                    <img src="img/products/chocolatecake.png" alt="Item 5">
+                    <h3>Deep Space Chocolate Cake</h3>
+                    <h4>$50</h4>
+                    <hr />
+                    <p>Arriving from a galaxy far away, this cake is both mysterious
+                        and magestic. It is also the greatest thing you've never had.
+                        Every bite reveals the mystery. Uncover its secrets ASAP!
+                    </p>
+                </li>
+                <li class="dessert-item">
+                    <img src="img/products/pops.png" alt="Item 6">
+                    <h3>Asteroid Pops</h3>
+                    <h4>$2</h4>
+                    <hr />
+                    <p>Usually found in groups, these treats are perfect for
+                        a small snack, but be prepared: big things come in small packages.
+                        Some cores are made of marshmallow and others are made of cake.
+                    </p>
+                </li>
+                <li class="dessert-item">
+                    <img src="img/products/squares.png" alt="Item 7">
+                    <h3>Rocket Squares</h3>
+                    <h4>$3</h4>
+                    <hr />
+                    <p>Blast off on the back of a rocket made of marshmallow,
+                        carrying a chocolatey candycane payload. Take the ride of a lifetime.
+                    </p>
+                </li>
+                <li class="dessert-item">
+                    <img src="img/products/lemoncake.png" alt="Item 8">
+                    <h3>Milky-Way Lemoncake</h3>
+                    <h4>$15</h4>
+                    <hr />
+                    <p>Bring your tastebuds into orbit in our very own galaxy.
+                        Sit back and ride the waves of flavor offered by this
+                        homemade treat. You deserve this vacation.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- GALLERY END -->
+
+    <!-- FOOTER -->
+    <footer>
+        Street: 4827 Oak Lane
+        <br />
+        Location: Barnard, Missouri(MO), 64423
+        <br />
+        Telephone: 660-652-7677
+        <br />
+        <br />
+        Copyright &copy; Cosmic Cupcakes 2021
+        <br />
+        <br />
+        Created by Jeffrey Chipman
+    </footer>
+    <!-- FOOTER END -->
+</body>
+<script src="index.js"></script>
+
+</html>
