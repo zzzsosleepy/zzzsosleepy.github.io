@@ -463,13 +463,13 @@ footer {
         font-size: 14px;
     }
 
+    .hero-description {
+        width: 100%;
+    }
+
     .hero img {
         max-width: 200px;
         margin-bottom: 5px;
-    }
-
-    .hero-description {
-        width: 100%;
     }
 
     .desserts {
@@ -492,6 +492,51 @@ footer {
 
     footer {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 370px) {
+    nav {
+        padding-inline: 15px;
+        width: 95%;
+        justify-content: center;
+    }
+
+    nav img {
+        max-width: 95px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    .hero-description {
+        width: 100%;
+    }
+
+    .hero img {
+        max-width: 150px;
+        margin-bottom: 5px;
+    }
+
+    .hero-description-header {
+        font-size: var(--para);
+        line-height: 25px;
+        margin-bottom: 0px;
+        width: 95%;
+    }
+
+    .hero-description-para {
+        font-size: 18px;
+        width: 95%;
+        text-align: center;
+        line-height: 20px;
+        margin-top: 15px;
     }
 }
 
