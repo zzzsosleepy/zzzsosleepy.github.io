@@ -454,13 +454,24 @@ footer {
 }
 
 @media (max-width: 500px) {
-    nav ul {
-        display: flex;
-        gap: 15px;
-    }
 
     nav ul li a {
         font-size: 14px;
+    }
+
+    nav {
+        padding-inline: 15px;
+        width: 95%;
+        justify-content: center;
+    }
+
+    nav img {
+        max-width: 95px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 10px;
     }
 
     .hero-description {
@@ -511,8 +522,8 @@ footer {
         gap: 10px;
     }
 
-    nav ul li {
-        list-style: none;
+    nav ul li a {
+        font-size: 14px;
     }
 
     .hero-description {
