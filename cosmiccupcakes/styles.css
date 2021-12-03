@@ -173,6 +173,8 @@ nav ul li a:hover {
     background-position: center;
     background-size: cover;
     height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,6 +237,8 @@ nav ul li a:hover {
 }
 
 .scroll-button {
+    position: relative;
+    z-index: 98;
     margin-top: 25px;
     text-transform: uppercase;
     font-family: var(--fnt-primary);
@@ -382,7 +386,8 @@ footer {
 /* FOOTER SECTION END-------------------------------- */
 
 /* MEDIA SECTION START-------------------------------- */
-@media (max-width: 1250px) {
+@media (max-width: 1250px),
+(max-height: 600px) {
     .hero img {
         max-width: 400px;
         margin-bottom: 25px;
@@ -407,7 +412,8 @@ footer {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 650px),
+(max-height: 400px) {
     nav ul {
         display: flex;
         gap: 15px;
@@ -453,7 +459,8 @@ footer {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px),
+(max-height: 200px) {
 
     nav ul li a {
         font-size: 14px;
@@ -502,7 +509,7 @@ footer {
     }
 
     footer {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -548,6 +555,10 @@ footer {
         text-align: center;
         line-height: 20px;
         margin-top: 15px;
+    }
+
+    footer {
+        font-size: 12px;
     }
 }
 
