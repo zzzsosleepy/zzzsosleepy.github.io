@@ -172,6 +172,8 @@ img {
 svg,
 svg path {
   line-height: 0;
+  /* Attempt to stop thin line bug on SVG waves */
+  shape-rendering: geometricPrecision;
 }
 
 header,
