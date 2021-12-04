@@ -12,6 +12,7 @@ let homeSection = document.getElementById("home");
 let aboutSection = document.getElementById("about");
 let skillsSection = document.getElementById("skills");
 let projectsSection = document.getElementById("projects");
+let footerSection = document.getElementById("footer");
 
 let accentColor = "#ffd700";
 //  STORE NAV BUTTONS IN VARIABLES
@@ -19,16 +20,20 @@ let navHomeBtn = document.getElementById("navHomeBtn");
 let navAboutBtn = document.getElementById("navAboutBtn");
 let navSkillsBtn = document.getElementById("navSkillsBtn");
 let navProjectsBtn = document.getElementById("navProjectsBtn");
+let navContactBtn = document.getElementById("navContactBtn");
+let contactBtn = document.getElementById("contactBtn");
 
 // CREATE AN ARRAY OF ALL NAV BUTTONS
 let btn_list = [];
-btn_list.push(navHomeBtn, navAboutBtn, navSkillsBtn, navProjectsBtn);
+btn_list.push(navHomeBtn, navAboutBtn, navSkillsBtn, navProjectsBtn, navContactBtn);
 
 // ADD LISTENERS TO ALL NAV BUTTONS
 navHomeBtn.addEventListener("click", () => ScrollToSection(homeSection));
 navAboutBtn.addEventListener("click", () => ScrollToSection(aboutSection));
 navSkillsBtn.addEventListener("click", () => ScrollToSection(skillsSection));
 navProjectsBtn.addEventListener("click", () => ScrollToSection(projectsSection));
+navContactBtn.addEventListener("click", () => ScrollToSection(footerSection));
+contactBtn.addEventListener("click", () => ScrollToSection(footerSection));
 
 // When the user scrolls down 50px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
