@@ -623,6 +623,50 @@ hr {
   max-width: 34rem;
 }
 
+/* END PROJECT STYLES */
+
+/* FOOTER START */
+.email-form {
+  width: 90%;
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  min-height: 3rem;
+  padding-inline: 15px;
+  padding-block: 15px;
+  font-size: 1.25rem;
+  font-family: var(--ff-accent);
+}
+
+.input-message {
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+}
+
+.form-button {
+  text-align: center;
+  height: 3rem;
+  width: 100%;
+  background-color: var(--clr-primary-200);
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-family: var(--ff-accent);
+}
+
+.form-button:hover {
+  cursor: pointer;
+  background-color: var(--clr-neutral-100);
+}
+
+/* END FOOTER STYLES */
+
 /* MEDIA QUERIES */
 
 @media (min-width: 40em) {
@@ -709,6 +753,14 @@ hr {
     font-family: var(--fnt-sub);
     min-height: 200px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .email-form {
+    width: 40%;
+  }
+
+  .form-button {
+    font-size: 2rem;
   }
 
 }

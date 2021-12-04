@@ -39,15 +39,17 @@ function scrollFunction() {
   } else {
     backToTopButton.style.opacity = 0;
   }
-  if (document.body.scrollTop > 1800 && document.body.scrollTop < 2800 || document.documentElement.scrollTop > 1800 && document.documentElement.scrollTop < 2800) {
-    backToTopButton.style.backgroundColor = "rgb(233, 233, 233)";
-    backToTopButton.style.color = "#273036";
-  } else if (document.body.scrollTop < 400 || document.documentElement.scrollTop < 400) {
+  if (document.body.scrollTop < 400 || document.documentElement.scrollTop < 400) {
     // AT TOP
     backToTopButton.style.backgroundColor = "#273036";
     backToTopButton.style.color = "rgb(233, 233, 233)";
-  } else if (document.body.scrollTop > 2800 || document.documentElement.scrollTop > 2800) {
-    backToTopButton.style.backgroundColor = "#273036";
+  }
+  if (document.body.scrollTop > 1800 && document.body.scrollTop < 2800 || document.documentElement.scrollTop > 1800 && document.documentElement.scrollTop < 2800) {
+    backToTopButton.style.backgroundColor = "rgb(233, 233, 233)";
+    backToTopButton.style.color = "#273036";
+  }
+  if (document.body.scrollTop > 6200 || document.documentElement.scrollTop > 6200) {
+    backToTopButton.style.backgroundColor = "rgb(233, 233, 233)";
     backToTopButton.style.color = "#273036";
   }
 }
