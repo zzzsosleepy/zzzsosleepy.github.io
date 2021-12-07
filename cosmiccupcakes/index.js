@@ -29,8 +29,10 @@ window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
     if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
         backToTopButton.style.opacity = 100;
+        backToTopButton.style.pointerEvents = "visiblePainted";
     } else {
         backToTopButton.style.opacity = 0;
+        backToTopButton.style.pointerEvents = "none";
     }
     if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
         navBar.style.backgroundColor = "#ff87ab";
@@ -41,6 +43,11 @@ function scrollFunction() {
         navBar.style.backgroundColor = "#e6e6e6";
         navLinks.forEach(link => link.style.color = navLinkDefaultColor);
         navLogo.src = "img/logo.png";
+    }
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        // bottom of page
+        backToTopButton.style.opacity = 0;
+        backToTopButton.style.pointerEvents = "none";
     }
 }
 
