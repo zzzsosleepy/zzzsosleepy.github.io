@@ -139,6 +139,10 @@ function SetImagesArenas(main, footer, current, next) {
             break;
         case "Phase Runner":
             main.style.backgroundImage = "url(apeximg/phs.png)";
+            break;
+        case "Drop Off":
+            main.style.backgroundImage = "url(apeximg/drop.png)";
+            break;
     }
     switch (next) {
         case "Habitat":
@@ -152,6 +156,9 @@ function SetImagesArenas(main, footer, current, next) {
             break;
         case "Phase Runner":
             footer.style.backgroundImage = "url(apeximg/phs.png)";
+            break;
+        case "Drop Off":
+            footer.style.backgroundImage = "url(apeximg/drop.png)";
             break;
     }
 }
