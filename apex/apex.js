@@ -81,7 +81,7 @@ function PopulateColumnArenas(currentMap, next, timeLeft, main, footer) {
 
 //Set the background images according the current and next maps
 function SetImagesBR(main, footer, current, next) {
-    console.log(current);
+    // console.log(current);
     switch (current) {
         case "Kings Canyon":
             main.style.backgroundImage = "url(apeximg/kc.png)";
@@ -126,7 +126,8 @@ function SetImagesRanked(main, current) {
     }
 }
 function SetImagesArenas(main, footer, current, next) {
-    console.log(current);
+    // console.log("Arenas Map: " + current);
+    // console.log("Arenas Next Map: " + next);
     switch (current) {
         case "Habitat":
             main.style.backgroundImage = "url(apeximg/hab.png)";
@@ -137,7 +138,7 @@ function SetImagesArenas(main, footer, current, next) {
         case "Overflow":
             main.style.backgroundImage = "url(apeximg/ovr.png)";
             break;
-        case "Phase Runner":
+        case "Phase runner":
             main.style.backgroundImage = "url(apeximg/phs.png)";
             break;
         case "Drop Off":
@@ -154,7 +155,7 @@ function SetImagesArenas(main, footer, current, next) {
         case "Overflow":
             footer.style.backgroundImage = "url(apeximg/ovr.png)";
             break;
-        case "Phase Runner":
+        case "Phase runner":
             footer.style.backgroundImage = "url(apeximg/phs.png)";
             break;
         case "Drop Off":
