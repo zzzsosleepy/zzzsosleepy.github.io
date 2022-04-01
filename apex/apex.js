@@ -68,6 +68,7 @@ function PopulateCrafting() {
     console.log("Crafting Stuff");
     // startDate, endDate
     // bundleContent [ { cost, itemType { name, rarity, asset, rarityHex } } ]
+    // TWO DAILY ITEMS, TWO WEEKLY WEAPONS, FOUR WEEKLY ITEMS
 }
 
 //Fetch JSON data from the API, and call functions to update the HTML when the data is received
