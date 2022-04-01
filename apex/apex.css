@@ -5,6 +5,9 @@
   --ff-main: "Oswald";
   --clr-100: rgb(212, 212, 212);
   --clr-200: rgb(24, 24, 24);
+  --clr-rarity-purple: #B200FF;
+  --clr-rarity-blue: #0094FF;
+  --clr-rarity-gray: #808080;
 }
 
 body {
