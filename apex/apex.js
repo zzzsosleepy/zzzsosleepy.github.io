@@ -66,6 +66,8 @@ function GetCraftingInfo() {
 
 function PopulateCrafting() {
     console.log("Crafting Stuff");
+    // startDate, endDate
+    // bundleContent [ { cost, itemType { name, rarity, asset, rarityHex } } ]
 }
 
 //Fetch JSON data from the API, and call functions to update the HTML when the data is received
