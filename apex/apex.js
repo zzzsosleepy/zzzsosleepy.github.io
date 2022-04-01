@@ -25,7 +25,13 @@ let footer_Arenas = document.getElementById("footer_Arenas");
 let apiKey = "yQIQPeqeq9RnbCh7s507";
 
 // let url = "https://api.mozambiquehe.re/maprotation?auth=" + apiKey;
-let url = "https://api.mozambiquehe.re/maprotation?version=2&auth=" + apiKey;
+
+// UPGRADED TO VERSION 5 OF THE API
+// MAP API
+let mapUrl = "https://api.mozambiquehe.re/maprotation?version=5&auth=" + apiKey;
+
+// CRAFTING API
+let craftUrl = "https://api.mozambiquehe.re/crafting?version=5&auth=" + apiKey;
 
 let hourBR = 0;
 let minsBR = 0;
@@ -41,8 +47,30 @@ let receivedData;
 GetMapInfo();
 
 //Fetch JSON data from the API, and call functions to update the HTML when the data is received
+function GetCraftingInfo() {
+    fetch(craftUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            receivedData = data;
+        })
+        .then(() => {
+            try {
+                PopulateCrafting();
+            }
+            catch (err) {
+                console.error(err.message);
+            }
+        })
+        .catch((err) => { console.log(err); })
+}
+
+function PopulateCrafting() {
+    console.log("Crafting Stuff");
+}
+
+//Fetch JSON data from the API, and call functions to update the HTML when the data is received
 function GetMapInfo() {
-    fetch(url)
+    fetch(mapUrl)
         .then((response) => response.json())
         .then((data) => {
             receivedData = data;
