@@ -63,6 +63,23 @@ let gun2_cost = document.getElementById("gun2_cost");
 
 let receivedData;
 
+//SET UP AND DISPLAY LOADING SCREEN 
+const loader = document.querySelector(".loader");
+window.onload = function () {
+    setTimeout(function () {
+        loader.style.opacity = "0";
+        loader.style.pointerEvents = "none";
+        setTimeout(function () {
+            loader.style.display = "none";
+        }, 1700);
+    }, 1800);
+}
+
+function pcd() {
+    var darkmode = document.body;
+    darkmode.classList.toggle('dark')
+}
+
 //Instantly get our map info from the api
 GetMapInfo();
 GetCraftingInfo();
