@@ -21,6 +21,12 @@ let timeLeft_Arenas = document.getElementById("timeLeft_Arenas");
 let main_Arenas = document.getElementById("main_Arenas");
 let footer_Arenas = document.getElementById("footer_Arenas");
 
+// Crafting
+
+let dailyItems = document.getElementsByClassName("dailyItem");
+let weeklyItems = document.getElementsByClassName("weeklyItem");
+let guns = document.getElementsByClassName("gun");
+
 
 let apiKey = "yQIQPeqeq9RnbCh7s507";
 
@@ -41,10 +47,24 @@ let hourArenas = 0;
 let minsArenas = 0;
 let secArenas = 0;
 
+let dailyItem1_name = document.getElementById("dailyItem1_name");
+let dailyItem1_img = document.getElementById("dailyItem1_img");
+let dailyItem1_cost = document.getElementById("dailyItem1_cost");
+
+let dailyItem2_name = document.getElementById("dailyItem2_name");
+let dailyItem2_img = document.getElementById("dailyItem2_img");
+let dailyItem2_cost = document.getElementById("dailyItem2_cost");
+
+let gun1_img = document.getElementById("gun1_img");
+let gun2_img = document.getElementById("gun2_img");
+let gun1_cost = document.getElementById("gun1_cost");
+let gun2_cost = document.getElementById("gun2_cost");
+
 let receivedData;
 
 //Instantly get our map info from the api
 GetMapInfo();
+GetCraftingInfo();
 
 //Fetch JSON data from the API, and call functions to update the HTML when the data is received
 function GetCraftingInfo() {
@@ -66,6 +86,61 @@ function GetCraftingInfo() {
 
 function PopulateCrafting() {
     console.log("Crafting Stuff");
+    // Daily Items
+
+    // Item 1
+    let img1_daily = receivedData[0].bundleContent[0].itemType.asset;
+    let cost1_daily = receivedData[0].bundleContent[0].cost;
+    let rarity1_daily = receivedData[0].bundleContent[0].itemType.rarityHex;
+
+    // Item 2
+    let img2_daily = receivedData[0].bundleContent[1].itemType.asset;
+    let cost2_daily = receivedData[0].bundleContent[1].cost;
+    let rarity2_daily = receivedData[0].bundleContent[1].itemType.rarityHex;
+
+    // Weekly Items
+
+    // Item 1
+    let img1_weekly = receivedData[1].bundleContent[0].itemType.asset;
+    let cost1_weekly = receivedData[1].bundleContent[0].cost;
+    let rarity1_weekly = receivedData[1].bundleContent[0].itemType.rarityHex;
+    console.log("Set weekly Item 1");
+
+    // Item 2
+    let img2_weekly = receivedData[1].bundleContent[1].itemType.asset;
+    let cost2_weekly = receivedData[1].bundleContent[1].cost;
+    let rarity2_weekly = receivedData[1].bundleContent[1].itemType.rarityHex;
+    console.log("Set weekly Item 2");
+
+    // Item 3
+    let img3_weekly = receivedData[4].bundleContent[0].itemType.asset;
+    let cost3_weekly = receivedData[4].bundleContent[0].cost;
+    let rarity3_weekly = receivedData[4].bundleContent[0].itemType.rarityHex;
+    console.log("Set weekly Item 3");
+
+    // Item 4
+    let img4_weekly = receivedData[5].bundleContent[0].itemType.asset;
+    let cost4_weekly = receivedData[5].bundleContent[0].cost;
+    let rarity4_weekly = receivedData[5].bundleContent[0].itemType.rarityHex;
+    console.log("Set weekly Item 4");
+
+    // Guns
+
+    // Gun 1
+    let img1_gun = receivedData[2].bundleContent[0].itemType.asset;
+    let cost1_gun = receivedData[2].bundleContent[0].cost;
+    let rarity1_gun = receivedData[2].bundleContent[0].itemType.rarityHex;
+    console.log("Set gun 1");
+
+    // Gun 2
+    let img2_gun = receivedData[3].bundleContent[0].itemType.asset;
+    let cost2_gun = receivedData[3].bundleContent[0].cost;
+    let rarity2_gun = receivedData[3].bundleContent[0].itemType.rarityHex;
+    console.log("Set gun 2");
+
+    SetDailyItems(img1_daily, cost1_daily, rarity1_daily, img2_daily, cost2_daily, rarity2_daily);
+    SetWeeklyItems(img1_weekly, cost1_weekly, rarity1_weekly, img2_weekly, cost2_weekly, rarity2_weekly, img3_weekly, cost3_weekly, rarity3_weekly, img4_weekly, cost4_weekly, rarity4_weekly);
+    SetGuns(img1_gun, cost1_gun, rarity1_gun, img2_gun, cost2_gun, rarity2_gun);
     // startDate, endDate
     // bundleContent [ { cost, itemType { name, rarity, asset, rarityHex } } ]
     // TWO DAILY ITEMS, TWO WEEKLY WEAPONS, FOUR WEEKLY ITEMS
@@ -91,6 +166,7 @@ function GetMapInfo() {
         .catch((err) => { console.log(err); })
 }
 
+// Populate the BR column with the current map name and the next map name and the time left until the next map
 function PopulateColumnBR(currentMap, next, timeLeft, main, footer) {
     SetCurrentMap(currentMap, receivedData.battle_royale.current.map);
     SetNextMap(next, receivedData.battle_royale.next.map);
@@ -98,11 +174,13 @@ function PopulateColumnBR(currentMap, next, timeLeft, main, footer) {
     SetImagesBR(main, footer, receivedData.battle_royale.current.map, receivedData.battle_royale.next.map);
 }
 
+// Populate the Ranked column with the current map name
 function PopulateColumnRanked(currentMap, main) {
     SetCurrentMap(currentMap, receivedData.ranked.current.map);
     SetImagesRanked(main, receivedData.ranked.current.map);
 }
 
+// Populate the Arean column with the current map name and the next map name and the time left until the next map
 function PopulateColumnArenas(currentMap, next, timeLeft, main, footer) {
     SetCurrentMap(currentMap, receivedData.arenas.current.map);
     SetNextMap(next, receivedData.arenas.next.map);
@@ -141,6 +219,7 @@ function SetImagesBR(main, footer, current, next) {
             break;
     }
 }
+
 function SetImagesRanked(main, current) {
     switch (current) {
         case "Kings Canyon":
@@ -156,6 +235,7 @@ function SetImagesRanked(main, current) {
             main.style.backgroundImage = "url(apeximg/sp.png)";
     }
 }
+
 function SetImagesArenas(main, footer, current, next) {
     // console.log("Arenas Map: " + current);
     // console.log("Arenas Next Map: " + next);
@@ -212,6 +292,40 @@ function SetTimeLeftBR(timeLeft, time) {
     secsBR = time.slice(6, 8);
     secBR = parseInt(secsBR);
     timeLeft.innerText = hourBR + ":" + minsBR + ":" + secBR;
+}
+
+function SetDailyItems(image1, cost1, rarity1, image2, cost2, rarity2) {
+    dailyItem1_img.src = image1;
+    dailyItem1_cost.innerText = cost1;
+    dailyItem2_img.src = image2;
+    dailyItem2_cost.innerText = cost2;
+    dailyItems[0].style.borderColor = rarity1;
+    console.log(rarity1);
+    dailyItems[1].style.borderColor = rarity2;
+}
+
+function SetWeeklyItems(image1, cost1, rarity1, image2, cost2, rarity2, image3, cost3, rarity3, image4, cost4, rarity4) {
+    weeklyItem1_img.src = image1;
+    weeklyItem1_cost.innerText = cost1;
+    weeklyItem2_img.src = image2;
+    weeklyItem2_cost.innerText = cost2;
+    weeklyItem3_img.src = image3;
+    weeklyItem3_cost.innerText = cost3;
+    weeklyItem4_img.src = image4;
+    weeklyItem4_cost.innerText = cost4;
+    weeklyItems[0].style.borderColor = rarity1;
+    weeklyItems[1].style.borderColor = rarity2;
+    weeklyItems[2].style.borderColor = rarity3;
+    weeklyItems[3].style.borderColor = rarity4;
+}
+
+function SetGuns(image1, cost1, rarity1, image2, cost2, rarity2) {
+    gun1_img.src = image1;
+    gun1_cost.innerText = cost1;
+    gun2_img.src = image2;
+    gun2_cost.innerText = cost2;
+    guns[0].style.borderColor = rarity1;
+    guns[1].style.borderColor = rarity2;
 }
 
 //Subtract one second from the counter
