@@ -60,6 +60,7 @@ let gun2_img = document.getElementById("gun2_img");
 let gun1_cost = document.getElementById("gun1_cost");
 let gun2_cost = document.getElementById("gun2_cost");
 
+
 let receivedData;
 
 //Instantly get our map info from the api
