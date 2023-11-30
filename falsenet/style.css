@@ -331,6 +331,7 @@ position: relative;
 
 .features-text {
   /* margin-bottom: 20px; */
+  font-family: var(--font-main);
 }
 
 .features-text h2 {
@@ -423,6 +424,7 @@ position: relative;
 .contact-text {
   flex-basis: 50%;
   max-width: 30rem;
+  font-family: var(--font-main);
   text-align: center;
 }
 
@@ -447,6 +449,7 @@ position: relative;
 .testimonials {
   flex-basis: 50%;
   text-align: center;
+  font-family: var(--font-main);
 }
 
 .testimonials h2 {
