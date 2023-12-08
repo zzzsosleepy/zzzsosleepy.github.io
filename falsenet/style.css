@@ -14,6 +14,7 @@
 *::after {
   box-sizing: border-box;
 }
+/* --- --- --- */
 
 body {
     margin: 0;
@@ -98,17 +99,95 @@ body {
   cursor: pointer;
 }
 
+/* Burger Menu */
 .burger {
-  display: none;
+  display: block;
 }
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: var(--clr-black-main);
-  margin: 5px;
-  transition: all 0.3s ease;
+.burger-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-accent-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
+
+.burger-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#burger-btn {
+  padding: 10px;
+  color: var(--clr-white-main);
+  transition: all 0.2s ease;
+  font-size: 1.5rem;
+}
+
+#burger-btn:hover {
+  cursor: pointer;
+  color: var(--clr-accent-main-light);
+  transform: rotate(90deg);
+}
+
+#burger-close {
+  /* padding: 5px; */
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: var(--clr-white-main);
+  transition: all 0.2s ease;
+}
+
+#burger-close:hover {
+  color: var(--clr-accent-main-light);
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.burger-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.burger-list li {
+  margin-bottom: 20px;
+}
+
+.burger-list .nav-link {
+  font-family: var(--font-secondary);
+  color: var(--clr-white-main);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px;
+  transition: all 0.2s ease;
+}
+
+.burger-list .nav-link:hover {
+  color: var(--clr-accent-main-light);
+  cursor: pointer;
+}
+
+.burger-link {
+  font-family: var(--font-secondary);
+  font-weight: 900 !important;
+}
+/* --- --- --- */
 
 .nav-active {
   transform: translateX(0%);
@@ -125,6 +204,7 @@ body {
 .line3 {
   transform: rotate(-45deg) translate(5px, -6px);
 }
+/* --- --- --- */
 
 /* Hero Section */
 .hero {
@@ -237,6 +317,7 @@ body {
 .custom-shape-divider-bottom-1699999139 .shape-fill {
   fill: #E6E6E6;
 }
+/* --- --- --- */
 
 /* About Section */
 .about {
@@ -308,6 +389,8 @@ body {
 .custom-shape-divider-top-1699998639 .shape-fill {
   fill: #E6E6E6;
 }
+/* --- --- --- */
+
 /* Features Section */
 .features {
 width: 100%;
@@ -418,6 +501,7 @@ position: relative;
 .custom-shape-divider-bottom-1699999185 .shape-fill {
   fill: #E6E6E6;
 }
+/* --- --- --- */
 
 /* Contact Section */
 .contact {
@@ -482,6 +566,7 @@ position: relative;
   font-size: 1.2rem;
   font-weight: bold;
 }
+/* --- --- --- */
 
 /* Footer */
 footer {
@@ -541,6 +626,17 @@ footer {
   padding: 0;
 }
 
+.footer-pages li * {
+  color: var(--clr-accent-main-light);
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.footer-pages li *:hover {
+  color: var(--clr-white-main);
+  cursor: pointer;
+}
+
 .footer-socials {
   display: flex;
   flex-direction: row;
@@ -558,12 +654,19 @@ footer {
 .footer-socials i:hover {
   color: var(--clr-white-main);
 }
+/* --- --- --- */
 
 /* Media query for larger screens & desktop */
 @media screen and (min-width: 25em) {
   .button {
     font-size: 1.2rem;
   }
+
+  /* NAV */
+  .burger-link {
+    font-size: 2rem !important;
+  }
+/* --- --- --- */
 
   /* HERO */
   .hero {
@@ -582,7 +685,7 @@ footer {
   .hero-text h1 {
     font-size: 2rem;
   }
-  /*  */
+/* --- --- --- */
 
   /* ABOUT */
   .about-image img {
@@ -596,7 +699,7 @@ footer {
   .about-text p {
     font-size: 1.2rem;
   }
-  /*  */
+/* --- --- --- */
 
   /* FEATURES */
   .features-text h2 {
@@ -606,7 +709,7 @@ footer {
   .feature p {
     font-size: 1.2rem;
   }
-  /*  */
+/* --- --- --- */
 
   /* CONTACT */
 
@@ -617,7 +720,7 @@ footer {
   .contact-text p {
     font-size: 1.2rem;
   }
-  /*  */
+/* --- --- --- */
 
   /* TESTIMONIALS */
   .testimonials h2 {
@@ -627,14 +730,14 @@ footer {
   .testimonial p {
     font-size: 1.2rem;
   }
-  /*  */
+/* --- --- --- */
 
   /* FOOTER */
   .footer-copyright p {
     font-size: 1rem;
   }
 
-  .footer-links a {
+  .footer-pages li * {
     font-size: 1.2rem;
   }
 }
@@ -648,7 +751,11 @@ footer {
     width: 50%;
     padding-inline-start: 0;
   }
-  /*  */
+
+  .burger {
+    display: none;
+  }
+/* --- --- --- */
 
   /* HERO */
   .hero {
@@ -676,7 +783,7 @@ footer {
   .hero-buttons {
     justify-content: flex-start;
   }
-  /*  */
+/* --- --- --- */
 
   /* ABOUT */
   .about-content {
@@ -695,7 +802,7 @@ footer {
   .about-text p {
     font-size: 1.5rem;
   }
-  /*  */
+/* --- --- --- */
 
   /* FEATURES */
   .features-list {
@@ -720,7 +827,7 @@ footer {
   .feature p {
     font-size: 1.5rem;
   }
-  /*  */
+/* --- --- --- */
 
   /* CONTACT */
   .contact {
@@ -734,13 +841,13 @@ footer {
   .contact-buttons {
     justify-content: flex-start;
   }
-  /*  */
+/* --- --- --- */
 
   /* TESTIMONIALS */
   .testimonials {
     text-align: left;
   }
-  /*  */
+/* --- --- --- */
 
   /* FOOTER */
   .footer-content {
@@ -751,7 +858,8 @@ footer {
     font-size: 1.2rem;
   }
 
-  .footer-links a {
+  .footer-pages li * {
     font-size: 1.5rem;
   }
+  /* --- --- --- */
 }
