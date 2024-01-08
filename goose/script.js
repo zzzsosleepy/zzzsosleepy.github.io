@@ -3,7 +3,7 @@ const container = document.querySelector('.content');
 
 gooseImg.addEventListener('click', function () {
     // Play a quack sound from sound/quack.wav
-    const quackSound = new Audio('sound/quack.wav');
+    const quackSound = new Audio('sound/quack.mp3');
     quackSound.play();
     // Make the goose-img element bounce when clicked
     gooseImg.classList.add('animate__animated', 'animate__bounce');
