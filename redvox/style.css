@@ -1460,7 +1460,7 @@ footer {
   .featured-album-container {
     flex-direction: column;
     width: 99%;
-    padding-inline: 5px;
+    padding-inline: 15px;
   }
 
   .featured-album-inner {
@@ -1605,12 +1605,6 @@ footer {
     height: 250px;
     min-width: 250px;
   }
-/* 
-  .featured-song-list li {
-    max-width: 47%;
-    width: 47%;
-    padding: 5px;
-  } */
 
   .album-navigation-btn {
     font-size: 1.5rem;
@@ -1624,19 +1618,6 @@ footer {
   .album-navigation-btn h4 {
     font-size: 0.9rem;
     width: min-content;
-  }
-
-  .collapsable-songlist {
-    overflow: hidden;
-  }
-
-  #expand-contract {
-    margin-top: -100%;
-    transition: all 0.2s ease;
-  }
-
-  #expand-contract.expanded {
-    margin-top: 0;
   }
 
   .featured-song-list li {
