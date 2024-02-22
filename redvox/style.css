@@ -91,19 +91,6 @@ html { height: 100%;}
     transform: rotate(-180deg);
   }
 }
-
-/* RING ROTATION ANIMATION */
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-reverse {
-  100% {
-    transform: rotate(-360deg);
-  }
-}
 /* END ANIMATIONS */
 
 body {
@@ -1516,8 +1503,6 @@ footer {
 
   .featured-song-list li {
     font-size: 0.8rem;
-    /* color: var(--clr-white);
-    background-color: var(--clr-accent-main); */
     opacity: 0.4;
   }
 
@@ -1599,6 +1584,10 @@ footer {
 
   .footer-content a {
     font-size: 1rem;
+  }
+
+  .footer-socials i {
+    font-size: 2rem;
   }
 }
 
