@@ -80,6 +80,30 @@ html { height: 100%;}
       transform: translateX(0);
   }
 }
+
+/* WAVE ANIMATION */
+@keyframes speen {
+  0% {
+    transform: rotate(110deg);
+  }
+
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+/* RING ROTATION ANIMATION */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-reverse {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 /* END ANIMATIONS */
 
 body {
@@ -150,6 +174,32 @@ body {
   opacity: 0.9;
   }
 /* END BG OVERLAYS */
+
+/* LOADING SCREEN */
+.loader {
+  z-index: 11;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, var(--clr-accent-main) 25%, var(--clr-accent-main-dark) 75%, rgba(0,0,0,1) 100%);
+  transition: all 0.5s;
+  transition: opacity 300ms ease-out;
+}
+
+.loader .loadingText {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-brand);
+  text-align: center;
+  font-size: 50px;
+  font-weight: normal;
+  animation: speen 5s linear infinite;
+  padding-bottom: 10px;
+}
+/* END LOADING SCREEN */
 
 /* NAVBAR */
 
@@ -1125,7 +1175,7 @@ footer {
   border-top: 4px solid var(--clr-accent-main-dark);
   width: 100%;
   position: relative;
-  z-index: 98;
+  z-index: 10;
 }
 
 .footer-content {

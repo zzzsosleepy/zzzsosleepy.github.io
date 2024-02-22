@@ -5,7 +5,22 @@ $(document).ready(() => {
 
   // Sets up event listeners for navigation buttons for smooth scrolling
   initNavButtonListeners();
+  showLoadingScreen();
 });
+
+/** 
+ * Set up and display loading screen
+ * */
+function showLoadingScreen() {
+  const loader = document.querySelector(".loader");
+  setTimeout(function () {
+    loader.style.opacity = "0";
+    loader.style.pointerEvents = "none";
+    setTimeout(function () {
+      loader.style.display = "none";
+    }, 1700);
+  }, 1800);
+}
 
 /**
  * Fetches album data from a JSON file and initializes the carousel.
@@ -56,6 +71,21 @@ function initNavButtonListeners() {
   });
 
   $('#scroll-indicator').click(() => {
+    smoothScrollToSection('#featured-album-section');
+  });
+
+  $('#footer-btn-home').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('body');
+  });
+
+  $('#footer-btn-about').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#about-section');
+  });
+
+  $('#footer-btn-listen').click((e) => {
+    e.preventDefault();
     smoothScrollToSection('#featured-album-section');
   });
 

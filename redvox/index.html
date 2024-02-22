@@ -23,6 +23,18 @@
 </head>
 
 <body>
+    <!-- LOADING SCREEN -->
+    <div class="loader">
+        <div class="bg bg-overlay-paper"></div>
+        <div class="bg bg-overlay-ashphalt"></div>
+        <div class="bg bg-overlay-band"></div>
+        <div class="bg bg-overlay-fade"></div>
+        <div class="bg bg-overlay-accent"></div>
+        <div class="loadingText">
+            <img src="img/logo_nobg-transformed.webp" alt="Red Vox" />
+        </div>
+    </div>
+    <!-- END LOADING SCREEN -->
     <!-- NAVBAR -->
     <nav>
         <div class="bg bg-overlay"></div>
@@ -111,7 +123,7 @@
             <img class="hero-logo" src="img/logo_nobg-transformed.webp" alt="Red Vox">
         </div>
         <div class="streaming-links-hero">
-            <a href="https://open.spotify.com/artist/3Zy9Sz7WPIetWqQbYq4UoK?si=6cgOeSjsTkuaE-6_A4aKcw"
+            <a href="https://open.spotify.com/artist/3Zy9Sz7WPIetWqQbYq4UoK?si=kRv1fE3hSN6UeNhsnBXJIg"
                 class="streaming-link" rel="noreferrer noopener" target="_blank">Stream on Spotify<i
                     class="fab fa-spotify"></i></a>
             <a href="https://vine.bandcamp.com/album/afterthoughts" class="streaming-link" rel="noreferrer noopener"
@@ -145,7 +157,7 @@
             <div class="bg bg-overlay-paper"></div>
             <div class="bg bg-overlay-ashphalt"></div>
             <!-- Focused album title -->
-            <div class="featured-album-title">
+            <div class="featured-album-title" data-aos="fade-up">
                 <h1 id="featured-album-title-header">Visions & Afterthoughts</h1>
                 <hr class="featured-album-divider" />
                 <h3>Available Now</h3>
@@ -370,23 +382,24 @@
         <div class="footer-links">
             <ul class="footer-pages">
                 <li class="footer-page">
-                    <div class="home-btn">Home</div>
+                    <div class="home-btn" id="footer-btn-home">Home</div>
                 </li>
                 <li class="footer-page">
-                    <div class="features-btn">About</div>
+                    <div class="features-btn" id="footer-btn-about">About</div>
                 </li>
                 <li class="footer-page">
-                    <div class="listen-btn">Listen</div>
+                    <div class="listen-btn" id="footer-btn-listen">Listen</div>
                 </li>
                 <li class="footer-page">
-                    <div class="merch-btn">Merch</div>
+                    <div class="merch-btn" id="footer-btn-merch">Merch</div>
                 </li>
             </ul>
             <ul class="footer-socials">
-                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-spotify"></i></a></li>
-                <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
-                <li><a href="#"><i class="fab fa-bandcamp"></i></a></li>
+                <li><a href="https://twitter.com/redvoxband"><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="https://open.spotify.com/artist/3Zy9Sz7WPIetWqQbYq4UoK?si=6cgOeSjsTkuaE-6_A4aKcw"><i
+                            class="fab fa-spotify"></i></a></li>
+                <li><a href="https://www.youtube.com/@RedVox"><i class="fab fa-youtube-square"></i></a></li>
+                <li><a href="https://vine.bandcamp.com"><i class="fab fa-bandcamp"></i></a></li>
             </ul>
         </div>
         <!-- END FOOTER LINKS & SOCIALS -->
