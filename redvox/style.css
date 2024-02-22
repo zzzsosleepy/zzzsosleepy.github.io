@@ -91,22 +91,20 @@ body {
 }
 
 /* BG OVERLAYS */
-.bg-overlay {
+
+.bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+.bg-overlay {
   z-index: -1;
   opacity: 0.1;
 }
 
 .bg-overlay-paper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: url(img/black-paper.webp);
   background-size: 400px 400px;
   background-position: center;
@@ -116,11 +114,6 @@ body {
 }
 
 .bg-overlay-ashphalt {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: url(img/asphalt-dark.webp);
   background-size: 700px 700px;
   background-position: center;
@@ -130,11 +123,6 @@ body {
 }
 
 .bg-overlay-band {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: url(img/bandbg.webp);
   background-size: cover;
   background-position: center;
@@ -144,22 +132,12 @@ body {
 }
 
 .bg-overlay-accent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: rgb(132,31,32);
   background: radial-gradient(circle, rgba(132,31,32,1) 50%, rgba(104,27,28,1) 100%); 
   z-index: -2;
 }
 
 .bg-overlay-fade {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-color: rgb(18,18,18);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.262) 19%, rgba(0, 0, 0, 0.46) 34%, rgba(0, 0, 0, 0.62) 47%, rgba(0, 0, 0, 0.806) 65%, rgba(0, 0, 0, 0.874) 73%, rgba(0, 0, 0, 0.98) 91%, rgb(0, 0, 0) 100%, rgba(0, 0, 0, 0.72) 56.5%, rgba(0, 0, 0, 0.925) 80.2%, rgba(0, 0, 0, 0.958) 86.1%, rgba(0, 0, 0, 0.992) 95.2%, rgba(0, 0, 0, 0.998) 98.2%);
   z-index: -3;
@@ -167,11 +145,6 @@ body {
   }
 
 .bg-overlay-fade-flip-Y {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.262) 19%, rgba(0, 0, 0, 0.46) 34%, rgba(0, 0, 0, 0.62) 47%, rgba(0, 0, 0, 0.806) 65%, rgba(0, 0, 0, 0.874) 73%, rgba(0, 0, 0, 0.98) 91%, rgb(0, 0, 0) 100%, rgba(0, 0, 0, 0.72) 56.5%, rgba(0, 0, 0, 0.925) 80.2%, rgba(0, 0, 0, 0.958) 86.1%, rgba(0, 0, 0, 0.992) 95.2%, rgba(0, 0, 0, 0.998) 98.2%);
   z-index: 1;
   opacity: 0.9;
@@ -1433,7 +1406,7 @@ footer {
     align-items: stretch;
     padding: 0;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 15px;
   }
 
   .streaming-link {
@@ -1620,6 +1593,11 @@ footer {
     width: min-content;
   }
 
+  .featured-song-list {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2;    /* Firefox */
+    column-count: 2;         /* standard syntax */
+  }
   .featured-song-list li {
     font-size: 0.8rem;
   }
