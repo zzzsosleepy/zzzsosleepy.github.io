@@ -186,6 +186,11 @@ body {
   animation: speen 5s linear infinite;
   padding-bottom: 10px;
 }
+
+.loadingText img {
+  width: 500px;
+  height: 500px;
+}
 /* END LOADING SCREEN */
 
 /* NAVBAR */
@@ -1244,6 +1249,13 @@ footer {
 /* MOBILE-SPECIFIC CSS */
 @media screen and (max-width: 1023px) {
 
+
+  /* LOADER */
+  .loadingText img {
+    width: 300px;
+    height: 300px;
+  }
+  /* END LOADER */
   /* NAVBAR */
   nav {
     padding: 25px 10px;
@@ -1574,6 +1586,13 @@ footer {
 /* Tablet query */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* LOADER */
+    .loadingText img {
+      width: 500px;
+      height: 500px;
+    }
+    /* END LOADER */
   /* HERO SECTION */
 
   .hero-logo {
