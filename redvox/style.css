@@ -573,12 +573,7 @@ nav {
 }
 
 .featured-album-container {
-  /* overflow: hidden; */
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center; */
   gap: 25px;
   text-align: left;
   width: 65%;
@@ -591,20 +586,6 @@ nav {
   outline-offset: 14px;
 }
 
-.featured-album-text p {
-  max-width: 55%;
-}
-
-.featured-album-text h3 {
-  font-family: var(--font-main);
-  font-weight: 800;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 0;
-  text-align: center;
-}
-
 .featured-album-divider {
   width: 50%;
   height: 4px;
@@ -612,17 +593,6 @@ nav {
   border: none;
   opacity: 1;
   border-radius: 5px;
-}
-
-.featured-album-text h1 {
-  font-family: var(--font-main);
-  font-weight: 800;
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
 }
 
 .featured-album-art {
@@ -1019,7 +989,7 @@ nav {
 }
 
 .about-section-member-socials i {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: var(--clr-accent-main-dark);
   transition: all 0.2s ease;
 }
@@ -1540,6 +1510,16 @@ footer {
   .about-section-member-img {
     width: 150px;
     height: 150px;
+  }
+
+  .about-section-member-socials {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .about-section-member-socials i {
+    font-size: 2.5rem;
   }
 
   .about-section-member-info {

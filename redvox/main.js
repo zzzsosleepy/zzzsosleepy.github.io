@@ -189,7 +189,6 @@ function createAlbumElement(album, index) {
     }).click(() => updateIframe(song.spotify_embed_link));
     $songListUl.append($songLi);
   });
-
   $innerAlbumDiv.append($songListUl);
   $albumDiv.append($innerAlbumDiv);
   return $albumDiv;
