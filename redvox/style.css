@@ -229,6 +229,35 @@ body {
 }
 /* END LOADING SCREEN */
 
+/* BACK TO TOP BUTTON */
+#back-to-top-btn {
+  display: visible;
+  opacity: 0;
+  /* Hidden by default */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  width: 55px;
+  border: none;
+  outline: 2px solid var(--clr-accent-main);
+  outline-offset: 4px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 24px;
+  box-shadow: 0 5px 20px 5px rgba(0,0,0,0.8);
+  transition: background-color 0.5s ease, color 0.3s ease, opacity 0.5s ease;
+  background-color: var(--clr-accent-main);
+  color: var(--clr-black);
+}
+
+#back-to-top-btn:hover {
+  background-color: var(--clr-accent-main-dark);
+  color: var(--clr-white);
+}
+/* END BACK TO TOP BUTTON */
+
 /* NAVBAR */
 
 nav {
@@ -883,7 +912,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(img/logo-symbol.png);
+  background-image: url(img/logo-symbol.webp);
   background-size: 75%;
   background-position: center;
   background-repeat: no-repeat;
@@ -1287,6 +1316,12 @@ footer {
     height: 300px;
   }
   /* END LOADER */
+
+  /* BACK TO TOP BUTTON */
+  #back-to-top-btn {
+    display: none;
+  }
+  /* END BACK TO TOP BUTTON */
 
   /* MISC STYLES */
 

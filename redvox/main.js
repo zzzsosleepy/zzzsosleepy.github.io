@@ -1,12 +1,21 @@
-// Document ready function ensures the DOM is fully loaded before executing code
+
+
+// ----------------- DOCUMENT READY -----------------
+
 $(document).ready(() => {
+  // Shows the loading screen while the page is loading
+  showLoadingScreen();
+
   // Fetches album data and initializes the carousel once data is successfully loaded
   fetchAlbumData();
 
   // Sets up event listeners for navigation buttons for smooth scrolling
   initNavButtonListeners();
-  showLoadingScreen();
 });
+
+// ---------------------------------------------------
+
+// ----------------- LOADING SCREEN -----------------
 
 /** 
  * Set up and display loading screen
@@ -22,6 +31,48 @@ function showLoadingScreen() {
   }, 1800);
 }
 
+// ---------------------------------------------------
+
+// ----------------- BACK TO TOP BUTTON -----------------
+
+/**
+ * Initializes the back-to-top button functionality.
+*/
+const backToTopBtn = document.getElementById("back-to-top-btn");
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  window.scroll({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
+window.onscroll = function () { scrollFunction() };
+
+/**
+ * Handles the scroll event and updates the visibility of the back-to-top button.
+ */
+function scrollFunction() {
+  // Get the position of the bottom of the footer
+  const footer = document.querySelector('footer');
+  const footerPosition = footer.offsetTop + footer.offsetHeight;
+
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    backToTopBtn.style.opacity = 100;
+  } else {
+    backToTopBtn.style.opacity = 0;
+  }
+
+  // If the scroll position is at the footer, hide the button
+  if (document.body.scrollTop + window.innerHeight >= footerPosition || document.documentElement.scrollTop + window.innerHeight >= footerPosition) {
+    backToTopBtn.style.opacity = 0;
+  }
+}
+
+// ---------------------------------------------------
+
+// ----------------- Album Carousel -----------------
+
 /**
  * Fetches album data from a JSON file and initializes the carousel.
  */
@@ -30,84 +81,6 @@ function fetchAlbumData() {
     .fail((error) => {
       console.error('Error loading album data:', error);
     });
-}
-
-/**
- * Initializes navigation button listeners to enable smooth scrolling to sections.
- */
-function initNavButtonListeners() {
-  // Each button is assigned a click event listener to scroll to the respective section
-  $('#nav-listen-btn').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('#featured-album-section');
-  });
-
-  $('#nav-about-btn').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('#about-section');
-  });
-
-  $('#nav-socials-btn').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('#socials-section');
-  });
-
-  $('#mobile-nav-listen-btn').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('#featured-album-section');
-    $('#mobile-menu').removeClass('active');
-  });
-
-  $('#mobile-nav-about-btn').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('#about-section');
-    $('#mobile-menu').removeClass('active');
-  });
-
-  $('#mobile-nav-socials-btn').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('#socials-section');
-    $('#mobile-menu').removeClass('active');
-  });
-
-  $('#scroll-indicator').click(() => {
-    smoothScrollToSection('#featured-album-section');
-  });
-
-  $('#footer-btn-home').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('body');
-  });
-
-  $('#footer-btn-about').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('#about-section');
-  });
-
-  $('#footer-btn-listen').click((e) => {
-    e.preventDefault();
-    smoothScrollToSection('#featured-album-section');
-  });
-
-  // Hamburger menu open and close
-  let $mobileMenu = $('#mobile-menu');
-  $('#hamburger-menu-open').click(() => {
-    $('#mobile-menu').addClass('active');
-  });
-
-  $('#hamburger-menu-close').click(() => {
-    $('#mobile-menu').removeClass('active');
-  });
-}
-
-/**
- * Scrolls the page smoothly to the specified section.
- * @param {string} selector - The CSS selector of the section to scroll to.
- */
-function smoothScrollToSection(selector) {
-  $('html, body').animate({
-    scrollTop: $(selector).offset().top
-  }, 'smooth');
 }
 
 /**
@@ -194,6 +167,88 @@ function createAlbumElement(album, index) {
   return $albumDiv;
 }
 
+// ---------------------------------------------------
+
+// ----------------- Navigation -----------------
+
+/**
+ * Initializes navigation button listeners to enable smooth scrolling to sections.
+ */
+function initNavButtonListeners() {
+  // Each button is assigned a click event listener to scroll to the respective section
+  $('#nav-listen-btn').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#featured-album-section');
+  });
+
+  $('#nav-about-btn').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#about-section');
+  });
+
+  $('#nav-socials-btn').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#socials-section');
+  });
+
+  $('#mobile-nav-listen-btn').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#featured-album-section');
+    $('#mobile-menu').removeClass('active');
+  });
+
+  $('#mobile-nav-about-btn').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#about-section');
+    $('#mobile-menu').removeClass('active');
+  });
+
+  $('#mobile-nav-socials-btn').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#socials-section');
+    $('#mobile-menu').removeClass('active');
+  });
+
+  $('#scroll-indicator').click(() => {
+    smoothScrollToSection('#featured-album-section');
+  });
+
+  $('#footer-btn-home').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('body');
+  });
+
+  $('#footer-btn-about').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#about-section');
+  });
+
+  $('#footer-btn-listen').click((e) => {
+    e.preventDefault();
+    smoothScrollToSection('#featured-album-section');
+  });
+
+  // Hamburger menu open and close
+  let $mobileMenu = $('#mobile-menu');
+  $('#hamburger-menu-open').click(() => {
+    $('#mobile-menu').addClass('active');
+  });
+
+  $('#hamburger-menu-close').click(() => {
+    $('#mobile-menu').removeClass('active');
+  });
+}
+
+/**
+ * Scrolls the page smoothly to the specified section.
+ * @param {string} selector - The CSS selector of the section to scroll to.
+ */
+function smoothScrollToSection(selector) {
+  $('html, body').animate({
+    scrollTop: $(selector).offset().top
+  }, 'smooth');
+}
+
 /**
  * Updates the src attribute of the iframe to play a new song.
  * @param {string} embedLink - The Spotify embed link of the song to play.
@@ -201,3 +256,5 @@ function createAlbumElement(album, index) {
 function updateIframe(embedLink) {
   $('#track-iframe').attr('src', embedLink);
 }
+
+// ---------------------------------------------------
