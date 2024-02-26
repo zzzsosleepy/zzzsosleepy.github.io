@@ -99,6 +99,42 @@ body {
   color: var(--clr-black);
   line-height: 1.5;
   font-size: 1rem;
+  overflow-x: hidden;
+}
+
+.section-header-divider {
+  height: 5px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.section-header h1 {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: 3rem;
+  color: var(--clr-white-dark);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: center;
+}
+
+.section-header h3 {
+  font-family: var(--font-brand);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--clr-white-dark);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  padding: 0;
+  text-align: center;
 }
 
 /* BG OVERLAYS */
@@ -538,6 +574,10 @@ nav {
   width: 100%;
 }
 
+#featured-album-title-header {
+  letter-spacing: 1px;
+}
+
 .featured-album-title h1 {
   font-family: var(--font-main);
   font-weight: 400;
@@ -589,15 +629,6 @@ nav {
   border-radius: 10px;
   border: 2px solid var(--clr-white-dark);
   outline-offset: 14px;
-}
-
-.featured-album-divider {
-  width: 50%;
-  height: 4px;
-  background: linear-gradient(90deg, rgba(255,255,255, 0) 0%, rgba(255,255,255, 0.5) 50%, rgba(255,255,255, 0) 100%);
-  border: none;
-  opacity: 1;
-  border-radius: 5px;
 }
 
 .featured-album-art {
@@ -1004,54 +1035,53 @@ nav {
 }
 /* END ABOUT THE BAND SECTION */
 
-/* SOCIALS SECTION */
-.socials-section {
-  min-height: 100dvh;
-  height: 100dvh;
-  padding: 25px;
+/* LATEST VIDEO SECTION */
+.latest-video-section {
+  min-height: 50dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 3;
+  padding: 25px 25px 50px 25px;
+  background-color: var(--clr-black);
+  outline: 3px solid var(--clr-accent-main-dark);
+  outline-offset: 4px;
+  border-top: 3px solid var(--clr-accent-main-dark);
+  border-bottom: 3px solid var(--clr-accent-main-dark);
+}
+
+.latest-video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  outline: 3px solid var(--clr-accent-main-dark);
+  outline-offset: 4px;
+  border: 2px solid var(--clr-accent-main);
+  border-radius: 10px;
+}
+
+.latest-video-container iframe {
+  border-radius: 10px;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+/* END LATEST VIDEO SECTION */
+
+/* SOCIALS SECTION */
+.socials-section {
+  padding: 125px 25px 150px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
   font-family: var(--font-secondary);
   z-index: 5;
   background: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--clr-black) 50%, var(--clr-black) 100%);
-}
-
-.socials-section h1 {
-  font-family: var(--font-main);
-  font-weight: 600;
-  font-size: 3rem;
-  color: var(--clr-white-dark);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 0;
-  text-align: center;
-}
-
-.socials-section h3 {
-  font-family: var(--font-brand);
-  font-weight: 800;
-  font-size: 1.2rem;
-  color: var(--clr-white-dark);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin: 0;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  padding: 0;
-  text-align: center;
-}
-
-.socials-section-divider {
-  height: 5px;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
-  border: none;
-  border-radius: 10px;
-  width: 100%;
 }
 
 .socials-section-links {
@@ -1060,9 +1090,10 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 25px;
   width: 75%;
+  /* height: 100%; */
   padding: 40px 40px;
   background-color: var(--clr-accent-main);
   outline: 2px solid var(--clr-accent-main);
@@ -1256,6 +1287,18 @@ footer {
     height: 300px;
   }
   /* END LOADER */
+
+  /* MISC STYLES */
+
+  .section-header h1{
+    font-size: 1.8rem;
+  }
+
+  .section-header h3 {
+    font-size: 1rem;
+  }
+  /* END MISC STYLES */
+
   /* NAVBAR */
   nav {
     padding: 25px 10px;
@@ -1459,14 +1502,6 @@ footer {
     padding-inline: 5px;
   }
 
-  .featured-album-title h1{
-    font-size: 1.8rem;
-  }
-
-  .featured-album-title h3 {
-    font-size: 1rem;
-  }
-
   .featured-album-info {
     flex-direction: column;
   }
@@ -1506,7 +1541,7 @@ footer {
 
   /* ABOUT SECTION */
   .about-section {
-    padding: 50px 10px;
+    padding: 50px 10px 125px 10px;
   }
 
   .about-section-logo img {
