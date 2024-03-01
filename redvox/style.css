@@ -646,6 +646,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .featured-album-container {
@@ -704,22 +705,19 @@ nav {
   -webkit-column-count: 2; /* Chrome, Safari, Opera */
   -moz-column-count: 2;    /* Firefox */
   column-count: 2;         /* standard syntax */
-  
   -webkit-column-gap: 25px;
   -moz-column-gap: 25px;
   column-gap: 25px;
-
   row-gap: 25px;
-
   list-style: none;
   font-size: 0.9rem;
   border-radius: 10px;
   padding: 15px;
   color: var(--clr-white);
   font-family: var(--font-brand);
-  width: 100%;
+  width: 85%;
   text-align: left;
-  min-width: 450px;
+  min-width: 300px;
   transition: all 0.2s ease;
   height: 100%;
 }
@@ -743,38 +741,53 @@ nav {
   padding-top: 10px;
 }
 
+/* Song element */
 .featured-song-list li {
+  padding: 5px 10px;
+  max-height: 50px;
   margin-bottom: 20px;
-  /* Update or remove properties that conflict with column layout */
   page-break-inside: avoid; /* Avoid breaks in list items */
   break-inside: avoid-column;
   -webkit-column-break-inside: avoid;
   word-wrap: break-word;
-  transition: all 0.2s ease;
-  /* margin-inline: 10px; might need adjustment or removal */
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-weight: 800;
-  font-size: 0.8rem;
-  /* width: 42%; Remove this as column-count will handle the width */
   outline: 2px solid var(--clr-white-dark);
-  background-color: var(--clr-white-dark);
   outline-offset: 4px;
+  background-color: var(--clr-white-dark);
+  border-radius: 5px;
   opacity: 0.25;
-  max-height: 50px;
-  color: var(--clr-bg-main);
-  /* height might need to be adjusted or removed */
+  transition: all 0.2s ease;
 }
 
 .featured-song-list li:hover {
   cursor: pointer;
-  color: var(--clr-white);
-  transform: translateX(8px) rotateZ(-2deg);
+  transform: translateX(8px) rotateZ(-1deg);
   background-color: var(--clr-accent-main-dark);
   outline: 2px solid var(--clr-accent-main-dark);
   outline-offset: 4px;
   opacity: 1;
   z-index: 2;
+}
+
+.featured-song-list li:hover .featured-song-button {
+  color: var(--clr-white);
+}
+
+.featured-song-button {
+  color: var(--clr-bg-main);
+  font-weight: 800;
+  font-size: 0.8rem;
+  font-family: var(--font-brand);
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.featured-song-button:hover {
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .track-preview-iframe {

@@ -17,9 +17,7 @@ $(document).ready(() => {
 
 // ----------------- LOADING SCREEN -----------------
 
-/** 
- * Set up and display loading screen
- * */
+// Set up and display loading screen
 function showLoadingScreen() {
   const loader = document.querySelector(".loader");
   setTimeout(function () {
@@ -35,9 +33,7 @@ function showLoadingScreen() {
 
 // ----------------- BACK TO TOP BUTTON -----------------
 
-/**
- * Initializes the back-to-top button functionality.
-*/
+// Initializes the back-to-top button functionality.
 const backToTopBtn = document.getElementById("back-to-top-btn");
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -49,9 +45,8 @@ function topFunction() {
 
 window.onscroll = function () { scrollFunction() };
 
-/**
- * Handles the scroll event and updates the visibility of the back-to-top button.
- */
+
+// Handles the scroll event and updates the visibility of the back-to-top button.
 function scrollFunction() {
   // Get the position of the bottom of the footer
   const footer = document.querySelector('footer');
@@ -73,9 +68,7 @@ function scrollFunction() {
 
 // ----------------- Album Carousel -----------------
 
-/**
- * Fetches album data from a JSON file and initializes the carousel.
- */
+// Fetches album data from a JSON file and initializes the carousel.
 function fetchAlbumData() {
   $.getJSON('content/songlist.json', initializeAlbumCarousel)
     .fail((error) => {
@@ -147,7 +140,8 @@ function createAlbumElement(album, index) {
     const $albumArtDiv = $('<div>', { class: 'featured-album-art' });
     const $albumImage = $('<img>', {
       src: album.album_art_url,
-      alt: `Cover art for ${album.title}`
+      alt: `Cover art for ${album.title}`,
+      loading: "lazy",
     });
     $albumArtDiv.append($albumImage);
     $innerAlbumDiv.append($albumArtDiv);
@@ -156,10 +150,13 @@ function createAlbumElement(album, index) {
   // Create a list of songs in the album
   const $songListUl = $('<ul>', { class: 'featured-song-list' });
   $.each(album.songlist, (songIndex, song) => {
-    const $songLi = $('<li>', {
-      class: 'featured-song',
-      html: `${songIndex + 1}. <span class="featured-song-title">${song.name}</span>`
-    }).click(() => updateIframe(song.spotify_embed_link));
+    const $songLi = $('<li>', { class: 'featured-song' });
+    const $songButton = $('<button>', {
+      class: 'featured-song-button',
+      html: `${songIndex + 1}. <span class="featured-song-title">${song.name}</span>`,
+      click: () => updateIframe(song.spotify_embed_link)
+    });
+    $songLi.append($songButton);
     $songListUl.append($songLi);
   });
   $innerAlbumDiv.append($songListUl);
@@ -171,9 +168,7 @@ function createAlbumElement(album, index) {
 
 // ----------------- Navigation -----------------
 
-/**
- * Initializes navigation button listeners to enable smooth scrolling to sections.
- */
+// Initializes navigation button listeners to enable smooth scrolling to sections.
 function initNavButtonListeners() {
   // Each button is assigned a click event listener to scroll to the respective section
   $('#nav-listen-btn').click((e) => {
@@ -228,14 +223,22 @@ function initNavButtonListeners() {
     smoothScrollToSection('#featured-album-section');
   });
 
-  // Hamburger menu open and close
   let $mobileMenu = $('#mobile-menu');
+  // Open the mobile menu when the hamburger button is clicked
   $('#hamburger-menu-open').click(() => {
     $('#mobile-menu').addClass('active');
   });
 
+  // Close the mobile menu when the close button is clicked
   $('#hamburger-menu-close').click(() => {
     $('#mobile-menu').removeClass('active');
+  });
+
+  // Close the mobile menu when the escape key is pressed
+  $(document).keyup((e) => {
+    if (e.key === 'Escape') {
+      $('#mobile-menu').removeClass('active');
+    }
   });
 }
 
