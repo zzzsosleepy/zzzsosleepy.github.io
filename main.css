@@ -704,6 +704,12 @@ textarea {
   background-color: var(--clr-neutral-100);
 }
 
+.recaptcha {
+  display: grid;
+  place-items: center;
+  margin-block: 5px;
+}
+
 /* END FOOTER STYLES */
 
 /* MEDIA QUERIES */
