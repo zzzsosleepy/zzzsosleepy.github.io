@@ -1,0 +1,403 @@
+/* EPK STYLING */
+.epk-container {
+    width: 100%;
+}
+
+/* EPK HEADER */
+.epk-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+}
+
+hr {
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--clr-white);
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 8px 25px 5px var(--clr-accent-main);
+    z-index: 9;
+}
+
+.epk-header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.epk-header h1 {
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.epk-header-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    height: min-content;
+}
+
+.epk-header-links a {
+    font-size: 2rem;
+    color: var(--clr-white);
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.epk-header-links a:hover {
+    color: var(--clr-black);
+}
+
+/* END HEADER */
+
+/* BAND LOGO */
+.epk-band-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 9;
+}
+
+.epk-band-logo img {
+    width: 400px;
+    border-radius: 5px;
+}
+
+/* END BAND LOGO */
+
+/* MAIN SECTION */
+.epk-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 5px;
+    z-index: 9;
+}
+
+.epk-main {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.epk-main-content {
+    width: 100%;
+}
+
+.epk-main h3 {
+    text-decoration: underline;
+}
+
+/* IMAGES */
+.epk-image {
+    margin-inline: auto;
+    max-width: 100%;
+    width: 50%;
+    /* Ensure the container itself is responsive */
+    position: relative;
+    border-radius: 5px;
+}
+
+.epk-image img,
+.epk-photos img {
+    box-shadow: 0 8px 55px 0 var(--clr-accent-main-dark);
+    max-width: 100%;
+    /* Ensure the image does not exceed the container width */
+    width: 100%;
+    /* Make the image responsive */
+    border-radius: 10px;
+}
+
+.epk-photos {
+    margin-inline: auto;
+    width: 100%;
+    /* Ensure the container itself is responsive */
+    position: relative;
+    border-radius: 5px;
+}
+
+.epk-photos img {
+    margin-bottom: 15px;
+    max-width: 100%;
+    /* Ensure the image does not exceed the container width */
+    width: 100%;
+    /* Make the image responsive */
+}
+
+/* END IMAGES */
+
+/* VIDEOS */
+.epk-videos {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: space-between;
+    width: 100%;
+}
+
+.epk-video {
+    display: flex;
+    flex-direction: column;
+}
+
+.epk-video iframe {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 8px 55px 0 var(--clr-accent-main-dark);
+}
+
+.epk-video p {
+    background-color: var(--clr-accent-main-semi-transparent);
+    padding: 10px 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+/* END VIDEOS */
+
+/* CONTACT */
+.epk-contact-email {
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(120deg, var(--clr-accent-main-semi-transparent) 0%, transparent 100%);
+    border-radius: 5px;
+    width: fit-content;
+}
+
+/* END CONTACT */
+
+/* ALBUMS */
+
+.epk-album-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+}
+
+.epk-album {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0px 55px 0 var(--clr-accent-main-semi-transparent);
+}
+
+.epk-album-title {
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.epk-album-title p:nth-child(1) {
+    font-size: 1.3rem;
+}
+
+.epk-album-title p:nth-child(2) {
+    background-color: var(--clr-accent-main-dark-semi-transparent);
+    font-size: 1.2rem;
+    /* color: var(--clr-accent-main); */
+    opacity: 0.8;
+    width: fit-content;
+    /* margin-inline: auto; */
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.epk-album img {
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+/* END ALBUMS */
+
+/* END MAIN SECTION */
+
+/* MEDIA QUERIES */
+/* MOBILE-SPECIFIC CSS */
+@media screen and (max-width: 1023px) {
+
+    .epk-hero {
+        padding: 2rem 10px 10rem 10px !important;
+    }
+
+    .epk-image {
+        width: 100%;
+    }
+
+    .epk-main {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .epk-main-container {
+        padding: 15px;
+    }
+
+    .epk-header h1 {
+        font-size: 3rem;
+    }
+
+    .epk-header h2 {
+        font-size: 1rem;
+    }
+
+    .epk-header-links a {
+        font-size: 1.5rem;
+    }
+
+    .epk-band-logo img {
+        width: 250px;
+    }
+
+    .epk-album-title {
+        margin-left: 0;
+    }
+
+    .epk-album-title p:nth-child(1) {
+        font-size: 1rem;
+    }
+
+    .epk-album-title p:nth-child(2) {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet query */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .epk-hero {
+        padding: 2rem 5% 10rem 5% !important;
+    }
+
+    .epk-main {
+        flex-direction: column;
+    }
+
+    .epk-album-title p:nth-child(1) {
+        font-size: 1.3rem;
+    }
+
+    .epk-album-title p:nth-child(2) {
+        font-size: 1rem;
+    }
+}
+
+/* Ultrawide query */
+@media screen and (min-width: 3440px) {
+    .epk-hero {
+        padding: 2rem 10% 10rem 10% !important;
+    }
+
+    .epk-main {
+        flex-direction: column;
+        max-width: 50%;
+        margin-inline: auto;
+    }
+
+    .epk-album-title p:nth-child(1) {
+        font-size: 1.5rem;
+    }
+
+    .epk-album-title p:nth-child(2) {
+        font-size: 1.2rem;
+    }
+
+    .epk-image {
+        max-width: 50%;
+    }
+
+    .epk-photos {
+        max-width: 100%;
+    }
+
+    .epk-video {
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .epk-video iframe {
+        height: 700px;
+    }
+}
+
+/* Print view should be only black and white, aside from images*/
+@media print {
+
+    * {
+        box-shadow: none !important;
+        --clr-bg-dark: #000 !important;
+        --clr-accent-main: #fff !important;
+        --clr-accent-main-dark: #fff !important;
+        --clr-accent-main-semi-transparent: #fff !important;
+        --clr-accent-main-dark-semi-transparent: #fff !important;
+    }
+
+    .bg,
+    .svg-bg,
+    .hero-bg {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .epk-container {
+        background-color: white;
+        color: black;
+    }
+
+    .epk-hero {
+        background-color: white;
+    }
+
+    .epk-header-links a {
+        color: black;
+    }
+
+    .epk-header-links a:hover {
+        color: black;
+    }
+
+    .epk-band-logo {
+        background-color: var(--clr-bg-dark);
+        border-radius: 10px;
+        width: fit-content;
+        padding-inline: 20px;
+        margin-inline: auto;
+    }
+
+    .epk-header {
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+    }
+
+    .epk-main-container {
+        background-color: #fff;
+    }
+}
